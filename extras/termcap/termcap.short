@@ -1,0 +1,190 @@
+# termcap	Termcap entries for the VT family.
+#		All termcap entries have been freed of the 'ks' and
+#		'ke' entries, that put the keypad into applications
+#		mode. This is a generally misused entry, not ment
+#		for the vt100 "applications" mode. Now cursor and
+#		function keys will work in all programs.
+#
+#		Also, there is a "generic" vt entry with common
+#		entries for all terminals, on which all other entries
+#		are built.
+#
+# Version:	@(#) vt-termcap 1.37 12-Mar-1996 MvS
+#
+
+# Generic VT entry.
+vg|vt-generic|Generic VT entries:\
+	:bs:mi:ms:pt:xn:xo:it#8:\
+	:RA=\E[?7l:SA=\E?7h:\
+	:bl=^G:cr=^M:ta=^I:\
+	:cm=\E[%i%d;%dH:\
+	:le=^H:up=\E[A:do=\E[B:nd=\E[C:\
+	:LE=\E[%dD:RI=\E[%dC:UP=\E[%dA:DO=\E[%dB:\
+	:ho=\E[H:cl=\E[H\E[2J:ce=\E[K:cb=\E[1K:cd=\E[J:sf=\ED:sr=\EM:\
+	:ct=\E[3g:st=\EH:\
+	:cs=\E[%i%d;%dr:sc=\E7:rc=\E8:\
+	:ei=\E[4l:ic=\E[@:IC=\E[%d@:al=\E[L:AL=\E[%dL:\
+	:dc=\E[P:DC=\E[%dP:dl=\E[M:DL=\E[%dM:\
+	:so=\E[7m:se=\E[m:us=\E[4m:ue=\E[m:\
+	:mb=\E[5m:mh=\E[2m:md=\E[1m:mr=\E[7m:me=\E[m:\
+	:sc=\E7:rc=\E8:kb=\177:\
+	:ku=\E[A:kd=\E[B:kr=\E[C:kl=\E[D:
+
+# Linux console. One should really set TERM=linux instead of TERM=console.
+lx|linux|console|con80x25|LINUX System Console:\
+	:co#80:li#25:am:\
+	:is=\E[m\E[?1l\E>\E[10m:\
+	:rs=\E[m\E[?1l\E>\E[10m:\
+	:ch=\E[%i%dG:cv=\E[%i%dd:\
+	:eA=\E)0:as=^N:ae=^O:ac=aaffggjjkkllmmnnooqqssttuuvvwwxx:\
+	:ve=\E[?25h:vi=\E[?25l:\
+	:se=\E[27m:ue=\E[24m:mh=\E[2m:\
+	:ks=:ke=:\
+	:kh=\E[1~:kH=\E[4~:kI=\E[2~:kD=\E[3~:kP=\E[5~:kN=\E[6~:\
+	:k1=\E[[A:k2=\E[[B:k3=\E[[C:k4=\E[[D:k5=\E[[E:\
+	:k6=\E[17~:k7=\E[18~:k8=\E[19~:k9=\E[20~:k0=\E[21~:\
+	:F1=\E[23~:F2=\E[24~:\
+	:tc=vt-generic:
+
+# Some other, commonly used linux console entries.
+lx|con80x25:co#80:li#25:tc=linux:
+lx|con80x28:co#80:li#25:tc=linux:
+lx|con80x43:co#80:li#43:tc=linux:
+lx|con80x50:co#80:li#50:tc=linux:
+lx|con100x37:co#100:li#37:tc=linux:
+lx|con100x40:co#100:li#40:tc=linux:
+lx|con132x43:co#132:li#43:tc=linux:
+
+# vt102 - vt100 + insert line etc. VT102 does not have insert character.
+v2|vt102|DEC vt102 compatible:\
+	:co#80:li#24:\
+	:ic@:IC@:\
+	:is=\E[m\E[?1l\E>:\
+	:rs=\E[m\E[?1l\E>:\
+	:eA=\E)0:as=^N:ae=^O:ac=aaffggjjkkllmmnnooqqssttuuvvwwxx:\
+	:ks=:ke=:\
+	:k1=\EOP:k2=\EOQ:k3=\EOR:k4=\EOS:\
+	:tc=vt-generic:
+
+# vt100 - really vt102 without insert line, insert char etc.
+vt|vt100|DEC vt100 compatible:\
+	:im@:mi@:al@:dl@:ic@:dc@:AL@:DL@:IC@:DC@:\
+	:tc=vt102:
+
+# Standard vt320 (based on my own digital vt320)
+v3|vt320|DEC vt320:\
+	:co#80:li#24:hs:es:\
+	:is=\E[m\E[2$~\E[?1l\E>:\
+	:rs=\E[m\E[?1l\E>:\
+	:ve=\E[?25h:vi=\E[?25l:\
+	:se=\E[27m:ue=\E[24m:mh=\E[2m:\
+	:eA=\E)0:as=^N:ae=^O:ac=aaffggjjkkllmmnnooqqssttuuvvwwxx:\
+	:ts=\E[1$}\E[1;%i%dH:fs=\E[0$}:ds=\E[1$}\r\E[m\E[K\E[0$}:\
+	:ks=:ke=:\
+	:kI=\E[2~:kD=\E[3~:kP=\E[5~:kN=\E[6~:\
+	:@4=\E[29~:@0=\E[1~:*6=\E[4~:\
+	:k1=\EOP:k2=\EOQ:k3=\EOR:k4=\EOS:k5=\E[16~\
+	:k6=\E[17~:k7=\E[18~:k8=\E[19~:k9=\E[20~:k0=\E[21~:\
+	:F1=\E[23~:F2=\E[24~:F3=\E[25~:F4=\E[26~:F5=\E[28~:\
+	:F6=\E[29~:F7=\E[31~:F8=\E[32~:\
+	:tc=vt-generic:
+
+v8|vt320-8|DEC vt320 in 8-bit mode:\
+	:kI=\2332~:kD=\2333~:kP=\2335~:kN=\2336~:\
+	:@4=\23329~:@0=\2331~:*6=\2334~:\
+	:k1=\EOP:k2=\EOQ:k3=\EOR:k4=\EOS:k5=\23316~\
+	:k6=\23317~:k7=\23318~:k8=\23319~:k9=\23320~:k0=\23321~:\
+	:F1=\23323~:F2=\23324~:F3=\23325~:F4=\23326~:F5=\23328~:\
+	:F6=\23329~:F7=\23331~:F8=\23332~:\
+	:ku=\233A:kd=\233B:kr=\233C:kl=\233D:\
+	:tc=vt320:
+
+# Entry for minicom so it uses the PC (IBM) character set.
+# If this doesn't work for kernels between 1.1.18 and 1.1.80,
+# change \E(U -> \E[11m  (enter ANSI mode)
+# and    \E(B -> \E[10m  (leave ANSI mode)
+mc|minicom|ansi-mc|termcap entry for minicom on the console:\
+	:is=\E[m\E>\E(U:\
+	:rs=\E[m\E>\E(B:\
+	:as@:ae@:eA@:ac@:\
+	:bl=\E(B\007\E(U:\
+	:vb=\E(B\007\E(U:\
+	:tc=linux:
+
+# Entry for an xterm. Insert mode has been disabled.
+vs|xterm|vs100|xterm terminal emulator (X Window System):\
+	:am:bs:mi@:km:co#80:li#55:\
+	:im@:ei@:\
+	:ct=\E[3k:ue=\E[m:\
+	:is=\E[m\E[?1l\E>:\
+	:rs=\E[m\E[?1l\E>:\
+	:eA=\E)0:as=^N:ae=^O:ac=aaffggjjkkllmmnnooqqssttuuvvwwxx:\
+	:kI=\E[2~:kD=\177:kP=\E[5~:kN=\E[6~:\
+	:k1=\E[11~:k2=\E[12~:k3=\E[13~:k4=\E[14~:k5=\E[15~:\
+	:k6=\E[17~:k7=\E[18~:k8=\E[19~:k9=\E[20~:k0=\E[21~:\
+	:F1=\E[23~:F2=\E[24~:\
+	:kh=\E[H:kH=\EOw:\
+	:ks=:ke=:\
+	:te=\E[2J\E[?47l\E8:ti=\E7\E[?47h:\
+	:tc=vt-generic:
+
+# Some other entries for the same xterm.
+v2|xterms|vs100s|xterm small window:\
+	:co#80:li#24:tc=xterm:
+vb|xterm-bold|xterm with bold instead of underline:\
+	:us=\E[1m:tc=xterm:
+vi|xterm-ins|xterm with insert mode:\
+	:mi:im=\E[4h:ei=\E[4l:tc=xterm:
+
+# DOS terminal emulator such as Telix or TeleMate.
+# This probably also works for the SCO console, though it's incomplete.
+an|ansi|ansi-bbs|ANSI terminals (emulators):\
+	:co#80:li#24:am:\
+	:is=:rs=\Ec:kb=^H:\
+	:as=\E[m:ae=:eA=:\
+	:ac=0\333+\257,\256.\031-\030a\261f\370g\361j\331k\277l\332m\300n\305q\304t\264u\303v\301w\302x\263~\025:\
+	:kD=\177:kH=\E[Y:kN=\E[U:kP=\E[V:kh=\E[H:\
+	:k1=\EOP:k2=\EOQ:k3=\EOR:k4=\EOS:k5=\EOT:\
+	:k6=\EOU:k7=\EOV:k8=\EOW:k9=\EOX:k0=\EOY:\
+	:tc=vt-generic:
+
+# This seems to be an entry for other x86 based unices.
+at|at386-m|386AT-M|386at-m|at/386 console:\
+	:am:bw:eo:xt:co#80:li#25:\
+	:ae=\E[10m:as=\E[12m:\
+	:is=\E[0;10;38m:\
+	:k1=\EOP:k2=\EOQ:k3=\EOR:k4=\EOS:k5=\EOT:\
+	:k6=\EOU:k7=\EOV:k8=\EOW:k9=\EOX:\
+	:kh=\E[H:us=\E[4m:vb=^G:nl=\E[B:kb=^H:\
+	:tc=vt-generic:
+
+# Yeah - Minix still lives :)
+ma|minix|minix-am|minix-vcam|MINIX 1.5 Virtual Console:\
+	:am:bs:co#80:li#25:km:ms:\
+	:is=\E[0m\EPlinewrap.on\E\\:\
+	:rs=\Ec\EPlinewrap.on\E\\:\
+	:as=:ae=:eA=:\
+	:ac=0\333+\257,\256.\031-\030a\261f\370g\361j\331k\277l\332m\300n\305q\304t\264u\303v\301w\302x\263~\025:\
+	:k1=\EOP:k2=\EOQ:k3=\EOR:k4=\EOS:k5=\EOT:\
+	:k6=\EOU:k7=\EOV:k8=\EOW:k9=\EOX:k0=\EOY:\
+	:kD=\177:kH=\E[Y:kN=\E[U:kP=\E[V:kh=\E[H:kb=^H:\
+	:ve=\EPcursor.on\E\\:vi=\EPcursor.off\E\\:\
+	:tc=vt-generic:
+
+# Some obligatory historic entries.
+sa|network|ethernet|arpanet:co#80:os:am:
+su|dumb|un|unknown:co#80:os:am:
+sd|du|dialup:co#80:os:am:
+t7|37|tty37|model 37 teletype:\
+	:cr=^M:do=^J:nl=^J:bl=^G:le=^H:bs:hc:hu=\E8:hd=\E9:up=\E7:os:
+
+# Yes, there really are people that login from a Sun Console.
+mu|sun|Sun Microsystems Workstation console:\
+	:am:bs:km:mi:ms:pt:\
+	:li#34:co#80:cl=^L:cm=\E[%i%d;%dH:nd=\E[C:up=\E[A:\
+	:ce=\E[K:cd=\E[J:so=\E[7m:se=\E[m:\
+	:kd=\E[B:kl=\E[D:ku=\E[A:kr=\E[C:kh=\E[H:\
+	:k1=\EOP:k2=\EOQ:k3=\EOR:k4=\EOS:\
+	:al=\E[L:dl=\E[M:im=:ei=:ic=\E[@:dc=\E[P:\
+	:rs=\E[s:
+

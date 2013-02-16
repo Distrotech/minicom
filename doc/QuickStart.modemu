@@ -1,0 +1,34 @@
+Getting started quickly with modemu
+===================================
+Prepared for the Debian package by John Goerzen <jgoerzen@complete.org>
+
+Here are a few brief hints on getting started with modemu.
+
+IMPORTANT:
+
+ * To exit a modemu run from a command prompt, type:
+   AT%Q
+
+   Ctrl-C will *not* abort modemu!
+
+ * To exit a Minicom running Modemu, just use the normal Minicom exit
+   key.
+ * modemu by default uses a 7-bit connection.  You need to use special
+   commands to use an 8-bit clean connection.  (see below)
+ * When using atdt, don't forget the quotation mark.  For instance, to
+   telnet to somehost.somewhere.net, you would type:
+   ATDT"somehost.somewhere.net
+
+   This is probably the most common mistake people make.
+ * You can use ZModem and Kermit over a modemu connection (for instance,
+   to BBSs).  Just make sure you are in 8-bit clean mode.  (aka binary
+   mode)
+ * Here is a sample command line to start Minicom using modemu in 8-bit
+   mode:
+
+   modemu -e "AT%B0=1%B1=1&W" -c "minicom -p tty%s"
+
+   You might want to alias this with your shell or put it into a script.
+ * You can use modemu from UUCP by using the port type "pipe" and
+   using a command like modemu -e "AT%B0=1%B1=1&W"
+ * Finally, read the manpage and the README file.

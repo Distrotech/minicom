@@ -1,0 +1,47 @@
+### This is the INSTALL script for the the stuff in the linux directory. 
+### (2-22-98)
+
+DIR=$PWD
+
+cp -p modemu /usr/bin
+cp -p mtelnet /usr/bin
+cp -p lrz /usr/bin
+cp -p lsz /usr/bin
+
+if [ -d /usr/man/man1 ]; then
+cp ../man/lrz.1 ../man/lsz.1 ../man/modemu.1 /usr/man/man1
+elif [ -d /usr/local/man/man1 ]; then
+cp ../man/lrz.1 ../man/lsz.1 ../man/modemu.1 /usr/local/man/man1
+else
+MSG="NO"
+fi
+
+cd /usr/bin
+ln -sf lrz rz
+ln -sf lrz rx
+ln -sf lrz rb
+ln -sf lsz sz
+ln -sf lsz sx
+ln -sf lsz sb
+
+cd $DIR
+
+if [ ! -L /lib/libncurses.so.4 -a ! -L /usr/lib/libncurses.so.4 ]; then
+echo
+echo "You need libncurses.so.? to use minicom."
+echo "You also need a link to libncurses.so.? called libncurses.so.4."
+echo "ln -sf libncurses.so.? libncurses.so.4   <-Create link.)"
+fi
+
+echo
+echo "The programs (lrz lsz modemu) are in /usr/bin."
+
+if [ "$MSG" = "NO" ]; then
+echo "Man pages not installed, no /usr/man/man1 or /usr/local/man/man1 directory."
+else
+echo "The man pages for the programs are in /usr/man/man1 or /usr/local/man/man1."
+fi
+
+echo
+echo "Done... I hope there were no problems."
+echo

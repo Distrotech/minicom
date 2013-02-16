@@ -1,0 +1,1897 @@
+# Russian translation of minicom messages to Russian
+# Copyright (C) 2001, 2005, 2008 Free Software Foundation, Inc.
+# Dmitry 'MAD' Artamonow <mad_soft@inbox.ru>, 2001
+# Vitaly Lipatov <lav@etersoft.ru> 2006, 2008
+# Pavel Maryanov <acid_jack@ukr.net>, 2008
+msgid ""
+msgstr ""
+"Project-Id-Version: minicom 2.3-rc1\n"
+"Report-Msgid-Bugs-To: minicom-devel@lists.alioth.debian.org\n"
+"POT-Creation-Date: 2013-02-06 18:21+0100\n"
+"PO-Revision-Date: 2008-01-21 21:26+0200\n"
+"Last-Translator: Pavel Maryanov <acid_jack@ukr.net>\n"
+"Language-Team: Russian <gnu@mx.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: src/config.c:75
+#, c-format
+msgid "minicom: cannot open macro file %s\n"
+msgstr "minicom: невозможно открыть файл макроса %s\n"
+
+#: src/config.c:245
+msgid " A - File name (empty=disable) :"
+msgstr " A - Имя файла (пустое=лог отключен)   :"
+
+#: src/config.c:246
+msgid " B - Log connects and hangups  :"
+msgstr " B - Вести журнал соединений/разрывов  :"
+
+#: src/config.c:247
+msgid " C - Log file transfers        :"
+msgstr " C - Вести журнал переданных файлов    :"
+
+#: src/config.c:248 src/config.c:302 src/config.c:544 src/config.c:652
+#: src/config.c:1197 src/dial.c:1187
+msgid "Change which setting?"
+msgstr "Какую настройку изменить?"
+
+#: src/config.c:252
+msgid "Logging options"
+msgstr "Параметры журналирования"
+
+#: src/config.c:294
+msgid " A - Download directory :"
+msgstr " A - Каталог для приёма        :"
+
+#: src/config.c:295
+msgid " B - Upload directory   :"
+msgstr " B - Каталог для отправки      :"
+
+#: src/config.c:296
+msgid " C - Script directory   :"
+msgstr " C - Каталог для скриптов      :"
+
+#: src/config.c:297
+msgid " D - Script program     :"
+msgstr " D - Программа для скриптов    :"
+
+#: src/config.c:298
+msgid " E - Kermit program     :"
+msgstr " E - Программа Kermit          :"
+
+#: src/config.c:300
+msgid " F - Logging options"
+msgstr " F - Параметры журналирования"
+
+#: src/config.c:355 src/rwconf.c:114 src/rwconf.c:147 src/rwconf.c:148
+msgid "Yes"
+msgstr "Да "
+
+#: src/config.c:355
+msgid "No "
+msgstr "Нет"
+
+#: src/config.c:430
+msgid "M  Zmodem download string activates..."
+msgstr "M  Приём Zmodem-ом активирует........."
+
+#: src/config.c:431
+msgid "N  Use filename selection window......"
+msgstr "N  Использовать окно выбора файла......"
+
+#: src/config.c:432
+msgid "O  Prompt for download directory......"
+msgstr "O  Запрашивать каталог для приёма"
+
+#: src/config.c:433
+msgid "Change which setting? (SPACE to delete)"
+msgstr "Какую изменить настройку? (ПРОБЕЛ - удалить)"
+
+#: src/config.c:436
+msgid "     Name             Program"
+msgstr "   Название         Программа"
+
+#. TRANSLATORS:
+#. * Name: Protocol sends filename internally
+#. * U/D: Command is used for upload or download
+#. * FullScr: Command runs fullscreen
+#. * IO-Red: Redirect output of commands to logfile
+#. * Multi: Protocol can transfer multiple files at once
+#: src/config.c:445
+msgid "Name U/D FullScr IO-Red. Multi"
+msgstr "Имя  U/D ПолнЭкр IO-Red. Много"
+
+#: src/config.c:476
+msgid "Delete which protocol? "
+msgstr "Какой протокол удалить?"
+
+#: src/config.c:537
+msgid " A -    Serial Device      :"
+msgstr " A - Последовательный порт          :"
+
+#: src/config.c:538
+msgid " B - Lockfile Location     :"
+msgstr " B - Размещение lock-файла          :"
+
+#: src/config.c:539
+msgid " C -   Callin Program      :"
+msgstr " C - Программа при выходе           :"
+
+#: src/config.c:540
+msgid " D -  Callout Program      :"
+msgstr " D - Программа при запуске          :"
+
+#: src/config.c:541
+msgid " E -    Bps/Par/Bits       :"
+msgstr " E - Скорость/Чётность/Биты         :"
+
+#: src/config.c:542
+msgid " F - Hardware Flow Control :"
+msgstr " F - Аппаратное управление потоком  :"
+
+#: src/config.c:543
+msgid " G - Software Flow Control :"
+msgstr " G - Программное управление потоком :"
+
+#: src/config.c:622
+msgid "DTE speed "
+msgstr "DTE  "
+
+#: src/config.c:624
+msgid "line speed"
+msgstr "линии"
+
+#: src/config.c:632
+msgid " A - Init string ........."
+msgstr " A - Строка инициализации."
+
+#: src/config.c:633
+msgid " B - Reset string ........"
+msgstr " B - Строка сброса........"
+
+#: src/config.c:634
+msgid " C - Dialing prefix #1...."
+msgstr " C - Префикс набора #1...."
+
+#: src/config.c:635
+msgid " D - Dialing suffix #1...."
+msgstr " D - Суффикс набора #1...."
+
+#: src/config.c:636
+msgid " E - Dialing prefix #2...."
+msgstr " E - Префикс набора #2...."
+
+#: src/config.c:637
+msgid " F - Dialing suffix #2...."
+msgstr " F - Суффикс набора #2...."
+
+#: src/config.c:638
+msgid " G - Dialing prefix #3...."
+msgstr " G - Префикс набора #3...."
+
+#: src/config.c:639
+msgid " H - Dialing suffix #3...."
+msgstr " H - Суффикс набора #3...."
+
+#: src/config.c:640
+msgid " I - Connect string ......"
+msgstr " I - Строка соединения...."
+
+#: src/config.c:641
+msgid " J - No connect strings .."
+msgstr " J - Строки отсут. связи.."
+
+#: src/config.c:642
+msgid " K - Hang-up string ......"
+msgstr " K - Строка разрыва связи."
+
+#: src/config.c:643
+msgid " L - Dial cancel string .."
+msgstr " L - Строка отмены набора."
+
+#: src/config.c:644
+msgid " M - Dial time ..........."
+msgstr " M - Время на дозвон.........."
+
+#: src/config.c:645
+msgid " N - Delay before redial ."
+msgstr " N - Задержка между звонками.."
+
+#: src/config.c:646
+msgid " O - Number of tries ....."
+msgstr " O - Число попыток............"
+
+#: src/config.c:647
+msgid " P - DTR drop time (0=no)."
+msgstr " P - Время сброса DTR (0=нет)."
+
+#: src/config.c:648
+msgid " Q - Auto bps detect ....."
+msgstr " Q - Автоопределение BPS.........."
+
+#: src/config.c:649
+msgid " R - Modem has DCD line .."
+msgstr " R - Модем имеет DCD-линию........"
+
+#: src/config.c:650
+msgid " S - Status line shows ..."
+msgstr " S - В строке состояния скорость.."
+
+#: src/config.c:651
+msgid " T - Multi-line untag ...."
+msgstr " T - Многолинейная разотметка....."
+
+#: src/config.c:663
+msgid "Modem and dialing parameter setup"
+msgstr "Настройка параметров модема и дозвона"
+
+#: src/config.c:696
+#, fuzzy
+msgid "    Return or Esc to exit. Edit A+B to get defaults."
+msgstr "      (Enter или Esc - выход)"
+
+#: src/config.c:834
+msgid " A - Command key is         :"
+msgstr " A - Командная клавиша         :"
+
+#: src/config.c:835
+msgid " B - Backspace key sends    :"
+msgstr " B - Backspace посылает        :"
+
+#: src/config.c:836
+msgid " C - Status line is         :"
+msgstr " C - Строка состояния          :"
+
+#: src/config.c:837
+msgid " D - Alarm sound            :"
+msgstr " D - Звуковой сигнал           :"
+
+#: src/config.c:838
+msgid " E - Foreground Color (menu):"
+msgstr " E - Цвет символов (меню)      :"
+
+#: src/config.c:839
+msgid " F - Background Color (menu):"
+msgstr " F - Цвет фона (меню)          :"
+
+#: src/config.c:840
+msgid " G - Foreground Color (term):"
+msgstr " G - Цвет символов (терминал)  :"
+
+#: src/config.c:841
+msgid " H - Background Color (term):"
+msgstr " H - Цвет фона (терминал)      :"
+
+#: src/config.c:842
+msgid " I - Foreground Color (stat):"
+msgstr " I - Цвет символов (статус)    :"
+
+#: src/config.c:843
+msgid " J - Background Color (stat):"
+msgstr " J - Цвет фона (статус)        :"
+
+#: src/config.c:844
+msgid " K - History Buffer Size    :"
+msgstr " K - Размер буфера истории     :"
+
+#: src/config.c:845
+msgid " L - Macros file            :"
+msgstr " L - Файл макроса              :"
+
+#: src/config.c:846
+msgid " N - Macros enabled         :"
+msgstr " N - Макрос включен            :"
+
+#: src/config.c:847
+msgid " O - Character conversion   :"
+msgstr " O - Перекодировка символов    :"
+
+#: src/config.c:848
+msgid " P - Add linefeed           :"
+msgstr " P - Добавить перевод строки   :"
+
+#: src/config.c:849
+msgid " Q - Local echo             :"
+msgstr " Q - Локальное эхо             :"
+
+#: src/config.c:850
+#, fuzzy
+msgid " R - Line Wrap              :"
+msgstr " J - Перенос строк             :"
+
+#: src/config.c:851
+#, fuzzy
+msgid " S - Hex Display            :"
+msgstr " E - Скрипт                :"
+
+#: src/config.c:852
+msgid " T - Add carriage return    :"
+msgstr ""
+
+#: src/config.c:853 src/config.c:1607
+msgid "Change which setting?  (Esc to exit)"
+msgstr "Какую изменить настройку? (Esc - выход)"
+
+#: src/config.c:857 src/config.c:1379
+msgid "Screen and keyboard"
+msgstr "Экран и клавиатура"
+
+#: src/config.c:876
+msgid " M - Edit Macros\n"
+msgstr " M - Редактировать макрос\n"
+
+#: src/config.c:904
+msgid "You can't change colors in black and white mode"
+msgstr "Вы не можете поменять цвета в чёрно-белом режиме"
+
+#: src/config.c:916
+msgid "Menu foreground == background color, change!"
+msgstr "Цвет символов меню тот же, что и цвет фона, поменяйте!"
+
+#: src/config.c:925
+msgid "Terminal foreground == background color, change!"
+msgstr "Цвет символов терминала тот же, что и цвет фона, поменяйте!"
+
+#: src/config.c:937
+msgid "History Buffer Size"
+msgstr "Размер буфера истории"
+
+#: src/config.c:938
+msgid ""
+"\n"
+"                You have changed the history buffer size.\n"
+"                You will need to save the configuration file and\n"
+"                restart minicom for the change to take effect.\n"
+"\n"
+"                Hit a key to Continue... "
+msgstr ""
+"\n"
+"                  Вы поменяли размер буфера истории.\n"
+"                  Необходимо сохранить файл конфигурации и\n"
+"                  перезапустить minicom для получения эффекта.\n"
+"\n"
+"                  Нажмите любую клавишу для продолжения... "
+
+#: src/config.c:955
+msgid "Program new command key"
+msgstr "Выбор командной клавиши"
+
+#: src/config.c:957
+msgid ""
+"\n"
+" Press the new command key. If you want to use\n"
+" the META or ALT key enter:\n"
+"\n"
+"  o SPACE if your meta key sets the 8th bit high\n"
+"  o ESC   if your meta key sends the ESCAPE prefix (standard)\n"
+"\n"
+"\n"
+" Press new command key: "
+msgstr ""
+"\n"
+" Нажмите новую управляющую клавишу. Если вы хотите использовать\n"
+" клавишу META или ALT, нажмите:\n"
+"\n"
+"  o ПРОБЕЛ если мета-клавиша устанавливает 8-й бит\n"
+"  o ESC   если мета-клавиша отправляет префикс ESCAPE (как обычно)\n"
+"\n"
+"\n"
+" Нажмите новую управляющую клавишу: "
+
+#: src/config.c:966
+msgid "Meta-8th bit "
+msgstr "Meta 8-й бит"
+
+#: src/config.c:968
+msgid "Escape (Meta)"
+msgstr "Escape (Meta)"
+
+#: src/config.c:1002 src/config.c:1250
+msgid "disabled"
+msgstr "отключена"
+
+#: src/config.c:1005 src/config.c:1253 src/rwconf.c:146
+msgid "enabled"
+msgstr "включена"
+
+#: src/config.c:1120
+msgid "ERROR: you do not have permission to create a file there!"
+msgstr "ОШИБКА: недостаточно прав для создания файла здесь!"
+
+#: src/config.c:1126
+#, c-format
+msgid "ERROR: cannot open macro file %s"
+msgstr "ОШИБКА: невозможно открыть файл макроса %s"
+
+#: src/config.c:1132
+msgid "Reading macros"
+msgstr "Считывается макрос"
+
+#: src/config.c:1191
+#, fuzzy
+msgid " A -      Terminal emulation :"
+msgstr " A - Эмуляция терминала      :"
+
+#: src/config.c:1192
+#, fuzzy
+msgid " B -     Backspace key sends :"
+msgstr " B - Backspace посылает      :"
+
+#: src/config.c:1193
+#, fuzzy
+msgid " C -          Status line is :"
+msgstr " C - Строка состояния        :"
+
+#: src/config.c:1194
+#, fuzzy
+msgid " D -   Newline tx delay (ms) :"
+msgstr " D - Задержка нов.строки (мс):"
+
+#: src/config.c:1195
+#, fuzzy
+msgid " E -          ENQ answerback :"
+msgstr " E - Подтверждение приёма ENQ:"
+
+#: src/config.c:1196
+#, fuzzy
+msgid " F - Character tx delay (ms) :"
+msgstr " D - Задержка нов.строки (мс):"
+
+#: src/config.c:1200
+msgid "Terminal settings"
+msgstr "Настройки терминала"
+
+#: src/config.c:1304
+#, c-format
+msgid "Cannot write to %s"
+msgstr "Невозможно записать в %s"
+
+#: src/config.c:1311
+msgid "Configuration saved"
+msgstr "Конфигурация сохранена"
+
+#: src/config.c:1326
+msgid "ERROR: Macros have changed but no filename is set!"
+msgstr "ОШИБКА: Макрос изменен, но название файла не задано!"
+
+#: src/config.c:1330
+#, c-format
+msgid "Cannot write macros file %s"
+msgstr "Невозможно записать макрос в файл %s"
+
+#: src/config.c:1336
+msgid "Macros saved"
+msgstr "Макрос сохранён"
+
+#: src/config.c:1353
+msgid "Give name to save this configuration?"
+msgstr "Укажите название для сохраняемой конфигурации"
+
+#: src/config.c:1375
+msgid "Filenames and paths"
+msgstr "Каталоги и файлы"
+
+#: src/config.c:1376
+msgid "File transfer protocols"
+msgstr "Протоколы"
+
+#: src/config.c:1377
+msgid "Serial port setup"
+msgstr "Настройка последовательного порта"
+
+#: src/config.c:1378
+msgid "Modem and dialing"
+msgstr "Модем и дозвон"
+
+#: src/config.c:1381
+msgid "Save setup as.."
+msgstr "Сохранить настройки как..."
+
+#: src/config.c:1382
+msgid "Exit"
+msgstr "Выход"
+
+#: src/config.c:1383
+msgid "Exit from Minicom"
+msgstr "Выход из Minicom"
+
+#: src/config.c:1395
+#, c-format
+msgid "Save setup as %s"
+msgstr "Сохранить настройки как %s"
+
+#: src/config.c:1401
+msgid "configuration"
+msgstr "конфигурация"
+
+#: src/config.c:1410
+msgid "BLACK"
+msgstr "ЧЁРНЫЙ"
+
+#: src/config.c:1410
+msgid "RED"
+msgstr "КРАСНЫЙ"
+
+#: src/config.c:1410
+msgid "GREEN"
+msgstr "ЗЕЛЁНЫЙ"
+
+#: src/config.c:1410
+msgid "YELLOW"
+msgstr "ЖЁЛТЫЙ"
+
+#: src/config.c:1411
+msgid "BLUE"
+msgstr "СИНИЙ"
+
+#: src/config.c:1411
+msgid "MAGENTA"
+msgstr "РОЗОВЫЙ"
+
+#: src/config.c:1411
+msgid "CYAN"
+msgstr "ГОЛУБОЙ"
+
+#: src/config.c:1411
+msgid "WHITE"
+msgstr "БЕЛЫЙ"
+
+#: src/config.c:1441
+msgid "Comm Parameters"
+msgstr "Параметры связи"
+
+#: src/config.c:1446
+msgid " Speed            Parity      Data\n"
+msgstr " Скорость      Чётность      Бит данных\n"
+
+#: src/config.c:1447
+msgid " A: <next>        L: None     S: 5\n"
+msgstr " A: <next>        L: Нет      S: 5\n"
+
+#: src/config.c:1448
+msgid " B: <prev>        M: Even     T: 6\n"
+msgstr " B: <prev>        M: Чёт      T: 6\n"
+
+#: src/config.c:1449
+msgid " C:   9600        N: Odd      U: 7\n"
+msgstr " C:   9600        N: Нечёт    U: 7\n"
+
+#: src/config.c:1450
+msgid " D:  38400        O: Mark     V: 8\n"
+msgstr " D:  38400        O: Маркер   V: 8\n"
+
+#: src/config.c:1451
+msgid " E: 115200        P: Space\n"
+msgstr " E: 115200        P: Пробел\n"
+
+#: src/config.c:1453
+msgid " Stopbits\n"
+msgstr " Стоповые биты\n"
+
+#: src/config.c:1454
+msgid " W: 1             Q: 8-N-1\n"
+msgstr " W: 1             Q: 8-N-1\n"
+
+#: src/config.c:1455
+msgid " X: 2             R: 7-E-1\n"
+msgstr " X: 2             R: 7-E-1\n"
+
+#: src/config.c:1457
+msgid " K: Current\n"
+msgstr " K: Текущая\n"
+
+#: src/config.c:1460
+msgid ""
+"\n"
+" Choice, or <Enter> to exit? "
+msgstr ""
+"\n"
+" Выбирайте или <Enter> для выхода"
+
+#: src/config.c:1468
+#, c-format
+msgid "Current: %5s %s%s%s  "
+msgstr "Текущие: %5s %s%s%s  "
+
+#: src/config.c:1610
+msgid "F1 to F10 Macros"
+msgstr "Макрос F1 - F10"
+
+#: src/config.c:1629
+msgid " (LEGEND: ^M = C-M, ^L = C-L, ^G = C-G, ^R = C-R, ^~ = pause 1 second,"
+msgstr ""
+" (ЛЕГЕНДА: ^M = C-M, ^L = C-L, ^G = C-G, ^R = C-R, ^~ = пауза 1 секунда,"
+
+#: src/config.c:1631
+msgid "  \\u = username, \\p = password, \\\\ = \\, \\e = toggle echo, "
+msgstr "  \\u = логин, \\p = пароль, \\\\ = \\, \\e = переключить эхо, "
+
+#: src/config.c:1633
+#, fuzzy
+msgid ""
+"  \\l = toggle LF, \\bX1..Xn<sp> = change baud rate. Example: \"\\beq \""
+msgstr ""
+"  \\l = переключить LF, \\bX1..Xn<sp> = изменить скорость передачи. Пример: "
+"\"\\bfq \""
+
+#: src/config.c:1635
+#, fuzzy
+msgid ""
+"  = 115200 8N1. (See the \"Comm Parameters\" menu for valid values of X.))"
+msgstr ""
+"  = 19200 8N1. (См. меню \"Параметры передачи\" для корректных значений X.))"
+
+#: src/config.c:1650
+msgid "CHANGED"
+msgstr "ИЗМЕНЕН"
+
+#: src/config.c:1737
+msgid "Character conversion"
+msgstr "Перекодировка символов"
+
+#: src/config.c:1742
+msgid " char    in out    char    in out    char    in out    char    in out\n"
+msgstr ""
+"символ вход выход символ вход выход символ вход выход символ вход выход\n"
+
+#: src/config.c:1764
+msgid ""
+"\n"
+" A - load table\tB - save table"
+msgstr ""
+"\n"
+" A - загрузить таблицу\t\tB - сохранить таблицу"
+
+#: src/config.c:1766
+#, c-format
+msgid "\tfile:%s"
+msgstr "\tфайл:%s"
+
+#: src/config.c:1767
+msgid ""
+"\n"
+" C - edit char\tD - next screen\tE - prev screen\n"
+msgstr ""
+"\n"
+" C - редактировать символ\tD - следующий экран\tE - предыдущий экран\n"
+
+#: src/config.c:1768
+#, c-format
+msgid " F - convert capture: %s\n"
+msgstr " F - перекодировать захват: %s\n"
+
+#: src/config.c:1783
+#, c-format
+msgid "Load file: %s"
+msgstr "Загрузить файл: %s"
+
+#: src/config.c:1795
+#, c-format
+msgid "Save as file: %s"
+msgstr "Сохранить в файл: %s"
+
+#: src/config.c:1806
+msgid "Character to be edited: "
+msgstr "Редактируемый символ: "
+
+#: src/config.c:1814 src/config.c:1826 src/config.c:1838
+msgid "Input character ascii value 0-255"
+msgstr "Введите ascii-код символа 0-255"
+
+#: src/config.c:1820
+#, c-format
+msgid "Change input to: %s"
+msgstr "Изменить вход на: %s"
+
+#: src/config.c:1832
+#, c-format
+msgid "Change output to: %s"
+msgstr "Изменить выход на: %s"
+
+#: src/config.c:1870
+#, c-format
+msgid "Cannot open conversion table %s"
+msgstr "Невозможно открыть таблицу перекодировки %s"
+
+#: src/config.c:1876
+#, fuzzy, c-format
+msgid "Cannot read conversion table %s"
+msgstr "Невозможно записать таблицу перекодировки %s"
+
+#: src/config.c:1888
+#, c-format
+msgid "Cannot write conversion table %s"
+msgstr "Невозможно записать таблицу перекодировки %s"
+
+#: src/dial.c:251
+msgid "Initializing Modem"
+msgstr "Инициализируется модем"
+
+#: src/dial.c:267
+msgid "Resetting Modem"
+msgstr "Сбрасывается модем"
+
+#: src/dial.c:281
+msgid "Hanging up"
+msgstr "Вешаем трубку"
+
+#: src/dial.c:285
+#, c-format
+msgid "Hangup (%ld:%02ld:%02ld)"
+msgstr "Трубка повешена (%ld:%02ld:%02ld)"
+
+#: src/dial.c:317
+msgid "Sending BREAK"
+msgstr "Посылается BREAK"
+
+#: src/dial.c:383
+#, c-format
+msgid "    No connection: %s.      \n"
+msgstr "    Нет соединения : %s.    \n"
+
+#: src/dial.c:385
+msgid "   Press any key to continue..    "
+msgstr " Нажмите клавишу для продолжения... "
+
+#: src/dial.c:390 src/dial.c:402
+#, c-format
+msgid "     Retry in %2d seconds             "
+msgstr "     Повтор через %2d секунд          "
+
+#: src/dial.c:428
+msgid "Max retries"
+msgstr "Максимум повторов"
+
+#: src/dial.c:438
+msgid "You are already online! Hang up first."
+msgstr "Вы уже на линии! Повесьте вначале трубку."
+
+#: src/dial.c:443
+msgid "Autodial"
+msgstr "Автодозвон"
+
+#: src/dial.c:447 src/dial.c:477
+msgid "Dialing"
+msgstr "Набираю"
+
+#: src/dial.c:448 src/dial.c:480
+#, c-format
+msgid "      At : %s"
+msgstr " Телефон : %s"
+
+#: src/dial.c:451 src/dial.c:484
+#, c-format
+msgid " Last on : %s at %s"
+msgstr "Посл.раз : %s в %s"
+
+#: src/dial.c:499
+#, c-format
+msgid "    Time : %-3d"
+msgstr "   Время : %-3d"
+
+#: src/dial.c:501
+#, c-format
+msgid "     Attempt #%d"
+msgstr "    Попытка #%d"
+
+#: src/dial.c:502
+msgid ""
+"\n"
+"\n"
+"\n"
+" Escape to cancel, space to retry."
+msgstr ""
+"\n"
+"\n"
+"\n"
+" Escape - отмена, пробел - повтор."
+
+#: src/dial.c:543
+msgid "Cancelled"
+msgstr "Отменено"
+
+#: src/dial.c:599
+msgid "Connected. Press any key to continue"
+msgstr "Соединение установлено. Нажмите любую клавишу"
+
+#: src/dial.c:679
+msgid "Timeout"
+msgstr "Тайм-аут"
+
+#: src/dial.c:881
+msgid "Manually entered number"
+msgstr "Введённый вручную номер"
+
+#: src/dial.c:890
+msgid "Cannot open ~/.dialdir: permission denied"
+msgstr "Невозможно открыть ~/.dialdir: нет доступа"
+
+#: src/dial.c:912
+#, fuzzy
+msgid "Failed to read dialing directory\n"
+msgstr "Не хватает памяти, чтобы считать телефонную книгу"
+
+#: src/dial.c:946
+msgid "Phonelist garbled (unknown version?)"
+msgstr "Список телефонов искажён (неизвестная версия?)"
+
+#: src/dial.c:953 src/dial.c:961
+msgid "Phonelist corrupted"
+msgstr "Список телефонов испорчен"
+
+#: src/dial.c:966
+msgid "Unknown dialing directory version"
+msgstr "Неизвестная версия телефонной книги"
+
+#: src/dial.c:973
+msgid "Phonelist garbled (?)"
+msgstr "Список телефонов искажён (?)"
+
+#: src/dial.c:995
+msgid "Out of memory while reading dialing directory"
+msgstr "Не хватает памяти, чтобы считать телефонную книгу"
+
+#: src/dial.c:1047
+#, c-format
+msgid "Converted dialdir to new format, old saved as %s.v%hd"
+msgstr ""
+
+#: src/dial.c:1082
+msgid "Cannot open ~/.dialdir for writing!"
+msgstr "Невозможно открыть ~/.dialdir для записи!"
+
+#: src/dial.c:1098 src/dial.c:1110
+msgid "Error writing to ~/.dialdir!"
+msgstr "Ошибка записи в ~/.dialdir!"
+
+#: src/dial.c:1175
+msgid " A -  Name                :"
+msgstr " A - Название              :"
+
+#: src/dial.c:1176
+msgid " B -  Number              :"
+msgstr " B - Номер                 :"
+
+#: src/dial.c:1177
+msgid " C -  Dial string #       :"
+msgstr " C - Строка набора #       :"
+
+#: src/dial.c:1178
+msgid " D -  Local echo          :"
+msgstr " D - Локальное эхо             :"
+
+#: src/dial.c:1179
+msgid " E -  Script              :"
+msgstr " E - Скрипт                :"
+
+#: src/dial.c:1180
+msgid " F -  Username            :"
+msgstr " F - Имя пользователя      :"
+
+#: src/dial.c:1181
+msgid " G -  Password            :"
+msgstr " G - Пароль                :"
+
+#: src/dial.c:1182
+msgid " H -  Terminal Emulation  :"
+msgstr " H - Эмуляция терминала    :"
+
+#: src/dial.c:1183
+msgid " I -  Backspace key sends :"
+msgstr " I - Backspace посылает    :"
+
+#: src/dial.c:1184
+msgid " J -  Linewrap            :"
+msgstr " J - Перенос строк             :"
+
+#: src/dial.c:1185
+msgid " K -  Line Settings       :"
+msgstr " K - Настройки линии      :"
+
+#: src/dial.c:1186
+msgid " L -  Conversion table    :"
+msgstr " L - Таблица перекодировки :"
+
+#: src/dial.c:1199 src/dial.c:1271 src/dial.c:1278
+msgid "Delete"
+msgstr "Delete"
+
+#: src/dial.c:1199 src/dial.c:1271 src/dial.c:1278
+msgid "Backspace"
+msgstr "Backspace"
+
+#: src/dial.c:1201 src/dial.c:1273 src/dial.c:1283
+msgid "On"
+msgstr "Включен"
+
+#: src/dial.c:1201 src/dial.c:1273 src/dial.c:1283
+msgid "Off"
+msgstr "Выключен"
+
+#: src/dial.c:1205
+#, c-format
+msgid "      Last dialed         : %s %s\n"
+msgstr "     Последний дозвон      : %s %s\n"
+
+#: src/dial.c:1206
+#, c-format
+msgid "      Times on            : %d"
+msgstr "     Всего раз             : %d"
+
+#. TRANSLATORS: Translation of each of these menu items should not be
+#. * longer than 7 characters. The upper-case letter is a shortcut,
+#. * so keep them unique and ASCII; 'h', 'j', 'k', 'l' are reserved
+#: src/dial.c:1307
+msgid "Dial"
+msgstr "Набрать"
+
+#: src/dial.c:1307
+msgid "Find"
+msgstr "Искать"
+
+#: src/dial.c:1307
+msgid "Add"
+msgstr "Создать"
+
+#: src/dial.c:1307
+msgid "Edit"
+msgstr "Править"
+
+#: src/dial.c:1307
+msgid "Remove"
+msgstr "Удалить"
+
+#: src/dial.c:1307
+msgid "moVe"
+msgstr "Сдвинуть"
+
+#: src/dial.c:1308
+msgid "Manual"
+msgstr "Справка"
+
+#: src/dial.c:1454 src/file.c:71 src/minicom.c:68 src/minicom.c:71
+msgid "   Yes  "
+msgstr "   Да   "
+
+#: src/dial.c:1454 src/file.c:71 src/minicom.c:68 src/minicom.c:71
+msgid "   No   "
+msgstr "  Нет   "
+
+#: src/dial.c:1547
+#, c-format
+msgid "Entry \"%s\" not found. Enter dialdir?"
+msgstr "Запись \"%s\" не найдена. Войти в тел. книгу?"
+
+#: src/dial.c:1577 src/file.c:429
+msgid "( Escape to exit, Space to tag )"
+msgstr "( Escape - выход, пробел - пометить )"
+
+#: src/dial.c:1578
+msgid " Move entry up/down, Escape to exit"
+msgstr " Передвигайте запись вверх/вниз, Escape - выход"
+
+#: src/dial.c:1598
+msgid "Dialing Directory"
+msgstr "Телефонная книга"
+
+#: src/dial.c:1600
+msgid "     Name            Number            Last on      Times Script\n"
+msgstr "   Название          Номер           Послед. дозвон  Раз  Скрипт\n"
+
+#: src/dial.c:1774
+msgid "Find an entry"
+msgstr "Найти запись"
+
+#: src/dial.c:1835
+msgid "Remove entry?"
+msgstr "Удалить запись?"
+
+#: src/dial.c:1879
+msgid "Enter number"
+msgstr "Введите номер"
+
+#. TRANSLATORS: Translation of each of these menu items should not be
+#. * longer than 7 characters. The upper-case letter is a shortcut,
+#. * so keep them unique and ASCII; 'h', 'j', 'k', 'l' are reserved
+#: src/file.c:59
+msgid "[Goto]"
+msgstr "[Перейти]"
+
+#: src/file.c:59
+msgid "[Prev]"
+msgstr "[Пред]"
+
+#: src/file.c:59
+msgid "[Show]"
+msgstr "[Показать]"
+
+#: src/file.c:59
+msgid "[Tag]"
+msgstr "[Отметка]"
+
+#: src/file.c:59
+msgid "[Untag]"
+msgstr "[Снять]"
+
+#: src/file.c:60
+msgid "[Okay]"
+msgstr "[OK]"
+
+#: src/file.c:322
+#, c-format
+msgid "Could not change to directory %s (%s)"
+msgstr ""
+
+#: src/file.c:346
+msgid "Select one or more files for download"
+msgstr "Выберите один или несколько файлов для приёма"
+
+#: src/file.c:348
+msgid "Select a file for download"
+msgstr "Выберите файл для приёма"
+
+#: src/file.c:350
+msgid "Select a directory for download"
+msgstr "Выберите каталог для приёма"
+
+#: src/file.c:353
+msgid "Select one or more files for upload"
+msgstr "Выберите один или несколько файлов для отправки"
+
+#: src/file.c:355
+msgid "Select a file for upload"
+msgstr "Выберите файл для отправки"
+
+#: src/file.c:357
+msgid "Select a directory for upload"
+msgstr "Выберите каталог для отправки"
+
+#: src/file.c:366
+#, c-format
+msgid "Directory: %%-%ds"
+msgstr "Каталог %%-%ds"
+
+#: src/file.c:454
+msgid "Can't back up!"
+msgstr "Невозможно подняться выше!"
+
+#: src/file.c:552 src/file.c:565
+msgid "Too many files tagged - buffer would overflow"
+msgstr "Слишком много помечено файлов - буфер переполнится"
+
+#: src/file.c:669 src/file.c:796
+msgid "Can select only one!"
+msgstr "Можно выбрать только один файл!"
+
+#: src/file.c:771
+msgid "Goto directory:"
+msgstr "Сменить каталог:"
+
+#: src/file.c:785
+msgid "Filename pattern:"
+msgstr "Маска названия файла:"
+
+#: src/file.c:802
+msgid "Tag pattern:"
+msgstr "Пометить по маске:"
+
+#: src/file.c:806
+msgid "No file(s) tagged"
+msgstr "Ни один файл не помечен"
+
+#: src/file.c:823
+msgid "Untag pattern:"
+msgstr "Снять отметку по маске:"
+
+#: src/file.c:827
+msgid "No file(s) untagged"
+msgstr "Ни с одного файла не снята отметка"
+
+#: src/file.c:843
+msgid "No file selected - enter filename:"
+msgstr "Нет выбранных файлов - введите название:"
+
+#: src/file.c:853
+#, c-format
+msgid "File: \"%s\" exists! Overwrite?"
+msgstr "Файл: \"%s\" существует!. Перезаписать?"
+
+#: src/file.c:864
+msgid "no such file!"
+msgstr "нет такого файла!"
+
+#: src/getsdir.c:315
+#, c-format
+msgid "%d files:\n"
+msgstr "%d файлов:\n"
+
+#: src/help.c:41
+msgid "Minicom Command Summary"
+msgstr "Список команд minicom"
+
+#: src/help.c:45
+#, c-format
+msgid "Commands can be called by %s<key>"
+msgstr "Команды могут быть вызваны нажатием %s<клавиша>"
+
+#: src/help.c:51
+msgid "Main Functions"
+msgstr "Основные функции"
+
+#: src/help.c:53
+msgid "Other Functions"
+msgstr "Прочие функции"
+
+#: src/help.c:55
+msgid " Dialing directory..D  run script (Go)....G | Clear Screen.......C\n"
+msgstr " Телефонная книга...D  Запустить скрипт...G | Очистить экран.....C\n"
+
+#: src/help.c:56
+msgid " Send files.........S  Receive files......R | cOnfigure Minicom..O\n"
+msgstr " Отправить файлы....S  Принять файлы......R | Конфигурация.......O\n"
+
+#: src/help.c:57
+msgid " comm Parameters....P  Add linefeed.......A | "
+msgstr " Параметры порта....P  Добавлять LF.......A | "
+
+#: src/help.c:59
+msgid "Suspend minicom....J\n"
+msgstr "Приостановить......J\n"
+
+#: src/help.c:61
+msgid "Jump to a shell....J\n"
+msgstr "Выход в оболочку...J\n"
+
+#: src/help.c:63
+msgid " Capture on/off.....L  Hangup.............H | eXit and reset.....X\n"
+msgstr " Захват вкл/выкл....L  Повесить трубку....H | Выход и сброс......X\n"
+
+#: src/help.c:64
+msgid " send break.........F  initialize Modem...M | Quit with no reset.Q\n"
+msgstr " Отправить break....F  Инициализировать...M | Выход без сброса...Q\n"
+
+#: src/help.c:65
+msgid " Terminal settings..T  run Kermit.........K | Cursor key mode....I\n"
+msgstr " Настр. терминала...T  Запустить Kermit...K | Режим курсора......I\n"
+
+#: src/help.c:66
+msgid " lineWrap on/off....W"
+msgstr " Перенос вкл/выкл...W"
+
+#: src/help.c:67
+msgid "  local Echo on/off..E | Help screen........Z\n"
+msgstr "  Местное эхо вк/вык.E | Экран подсказки....Z\n"
+
+#: src/help.c:68
+msgid " Paste file.........Y  Timestamp toggle...N | scroll Back........B\n"
+msgstr ""
+
+#: src/help.c:69
+msgid " Add Carriage Ret...U"
+msgstr ""
+
+#: src/help.c:71
+msgid "Select function or press Enter for none."
+msgstr "Выберите функцию или нажмите Enter для выхода"
+
+#: src/help.c:79
+msgid "Written by Miquel van Smoorenburg 1991-1995"
+msgstr "Автор - Miquel van Smoorenburg 1991-1995"
+
+#: src/help.c:81
+msgid "Some additions by Jukka Lahtinen 1997-2000"
+msgstr "Некоторые добавления - Jukka Lahtinen 1997-2000"
+
+#: src/help.c:83
+msgid "i18n by Arnaldo Carvalho de Melo 1998"
+msgstr "Интернационализация - Arnaldo Carvalho de Melo 1998"
+
+#: src/main.c:213
+#, c-format
+msgid "Lockfile is stale. Overriding it..\n"
+msgstr "Lock-файл устарел. Игнорируем...\n"
+
+#: src/main.c:222 src/updown.c:494
+#, c-format
+msgid "Device %s is locked.\n"
+msgstr "Устройство %s заблокировано.\n"
+
+#: src/main.c:237
+#, c-format
+msgid "Could not setup for dial out.\n"
+msgstr "Невозможно подготовиться к дозвону.\n"
+
+#: src/main.c:288
+#, c-format
+msgid "minicom: cannot open %s: %s\n"
+msgstr "minicom: невозможно открыть %s: %s\n"
+
+#: src/main.c:291
+#, c-format
+msgid "minicom: cannot open %s. Sorry.\n"
+msgstr "minicom: невозможно открыть %s. Извините.\n"
+
+#: src/main.c:298 src/main.c:754
+#, c-format
+msgid "Cannot open %s!"
+msgstr "Невозможно открыть %s!"
+
+#: src/main.c:477
+msgid "Offline"
+msgstr "Не на линии"
+
+#: src/main.c:477
+msgid "OFFLINE"
+msgstr "НЕ НА ЛИНИИ"
+
+#: src/main.c:479
+msgid "Online"
+msgstr "На линии"
+
+#: src/main.c:479
+msgid "ONLINE"
+msgstr "НА ЛИНИИ"
+
+#: src/main.c:554
+#, c-format
+msgid "Gone offline (%ld:%02ld:%02ld)"
+msgstr "Отключился (%ld:%02ld:%02ld)"
+
+#: src/main.c:635
+#, c-format
+msgid " %7.7sZ for help |           |     | Minicom %-6.6s |       | "
+msgstr "%7.7sZ подсказка |           |     | Minicom %-6.6s |       | "
+
+#: src/main.c:735
+msgid "Could not re-initialize window system."
+msgstr "Невозможно переинициализировать оконную систему."
+
+#: src/minicom.c:56 src/minicom.c:58
+#, c-format
+msgid "Got signal %d"
+msgstr "Поймал сигнал %d"
+
+#: src/minicom.c:69 src/minicom.c:70
+msgid "  Close "
+msgstr " Закрыть"
+
+#: src/minicom.c:69
+msgid " Pause  "
+msgstr " Пауза  "
+
+#: src/minicom.c:69 src/minicom.c:70
+msgid "  Exit  "
+msgstr " Выход  "
+
+#: src/minicom.c:70
+msgid " Unpause"
+msgstr "Продолжить"
+
+#: src/minicom.c:85
+msgid "Hang-up line?"
+msgstr "Повесить трубку?"
+
+#: src/minicom.c:96
+#, c-format
+msgid "Killed by signal %d !\n"
+msgstr "Убит сигналом %d !\n"
+
+#: src/minicom.c:120
+msgid "Suspended. Type \"fg\" to resume.\n"
+msgstr "Приостановлен. Наберите \"fg\" для возврата.\n"
+
+#: src/minicom.c:139
+msgid "SHELL variable not set"
+msgstr "Переменная SHELL не установлена"
+
+#: src/minicom.c:143 src/updown.c:314 src/updown.c:522 src/updown.c:721
+msgid "Out of memory: could not fork()"
+msgstr "Не хватает памяти: невозможно сделать fork()"
+
+#: src/minicom.c:153
+msgid "Shelled out. Type \"exit\" to return.\n"
+msgstr "Вышел в shell. Наберите \"exit\" для возврата.\n"
+
+#: src/minicom.c:266
+msgid "SEARCH FOR (ESC=Exit)"
+msgstr "ИСКАТЬ (ESC=Выход)"
+
+#: src/minicom.c:316 src/minicom.c:337
+msgid "Search Wrapping Around to Start!"
+msgstr "Продолжаем искать с самого начала!"
+
+#: src/minicom.c:462
+msgid ""
+"HISTORY: U=Up D=Down F=PgDn B=PgUp s=Srch S=CaseLess N=Next C=Cite ESC=Exit "
+msgstr ""
+"ИСТОРИЯ: U=Вврх D=Вниз F=СтрВн B=СтрВв s=Поиск S=БезРег N=След C=Цитир "
+"ESC=Вых "
+
+#: src/minicom.c:501
+msgid "History buffer Disabled!"
+msgstr "Буфер истории отключен!"
+
+#: src/minicom.c:506
+msgid "History buffer empty!"
+msgstr "Буфер истории пуст!"
+
+#: src/minicom.c:564
+msgid ""
+"No previous search!\n"
+"  Please 's' or 'S' first!"
+msgstr "Ничего еще не искалось! Нажмите вначале 's' или 'S'!"
+
+#: src/minicom.c:721 src/minicom.c:764
+msgid ""
+"  CITATION: ENTER=select start line ESC=exit                               "
+msgstr ""
+"  ЦИТИРОВАНИЕ: ENTER=выбор начальной строки "
+"ESC=выход                         "
+
+#: src/minicom.c:738
+msgid ""
+"  CITATION: ENTER=select end line ESC=exit                                 "
+msgstr ""
+"  ЦИТИРОВАНИЕ: ENTER=выбор конечной строки "
+"ESC=выход                          "
+
+#: src/minicom.c:798
+#, c-format
+msgid "Wrong option in environment MINICOM=\"%s\"\n"
+msgstr "Неверный параметр в переменной окружения MINICOM=\"%s\"\n"
+
+#: src/minicom.c:799
+#, c-format
+msgid "Type \"minicom %s\" for help.\n"
+msgstr "Наберите \"minicom %s\" для получения подсказки.\n"
+
+#: src/minicom.c:809
+#, fuzzy, c-format
+msgid ""
+"Usage: %s [OPTION]... [configuration]\n"
+"A terminal program for Linux and other unix-like systems.\n"
+"\n"
+"  -b, --baudrate         : set baudrate (ignore the value from config)\n"
+"  -D, --device           : set device name (ignore the value from config)\n"
+"  -s, --setup            : enter setup mode\n"
+"  -o, --noinit           : do not initialize modem & lockfiles at startup\n"
+"  -m, --metakey          : use meta or alt key for commands\n"
+"  -M, --metakey8         : use 8bit meta key for commands\n"
+"  -l, --ansi             : literal; assume screen uses non IBM-PC character "
+"set\n"
+"  -L, --iso              : don't assume screen uses ISO8859\n"
+"  -w, --wrap             : Linewrap on\n"
+"  -H, --displayhex       : display output in hex\n"
+"  -z, --statline         : try to use terminal's status line\n"
+"  -7, --7bit             : force 7bit mode\n"
+"  -8, --8bit             : force 8bit mode\n"
+"  -c, --color=on/off     : ANSI style color usage on or off\n"
+"  -a, --attrib=on/off    : use reverse or highlight attributes on or off\n"
+"  -t, --term=TERM        : override TERM environment variable\n"
+"  -S, --script=SCRIPT    : run SCRIPT at startup\n"
+"  -d, --dial=ENTRY       : dial ENTRY from the dialing directory\n"
+"  -p, --ptty=TTYP        : connect to pseudo terminal\n"
+"  -C, --capturefile=FILE : start capturing to FILE\n"
+"  -T, --disabletime      : disable display of online time\n"
+"  -R, --remotecharset    : character set of communication partner\n"
+"  -v, --version          : output version information and exit\n"
+"  configuration          : configuration file to use\n"
+"\n"
+"These options can also be specified in the MINICOM environment variable.\n"
+msgstr ""
+"Использование: %s [ПАРАМЕТР]... [конфигурация]\n"
+"Программа терминала для Linux и других unix-подобных систем.\n"
+"\n"
+"  -s, --setup            : вход в режим настройки (только как root)\n"
+"  -o, --noinit           : не инициализировать модем и файлы блокировки при "
+"запуске\n"
+"  -m, --metakey          : использовать для команд клавишу META или ALT\n"
+"  -M, --metakey8         : использовать для команд 8-битную клавишу META\n"
+"  -l, --ansi             : текст; считать, что для дисплея используется\n"
+"                           набор символов IBM-PC\n"
+"  -L, --iso              : считать, что для дисплея используется ISO8859\n"
+"  -w, --wrap             : переносить длинные строки\n"
+"  -z, --statline         : пытаться использовать строку статуса терминала\n"
+"  -7, --7bit             : включить 7-битный режим\n"
+"  -8, --8bit             : включить 8-битный режим\n"
+"  -c, --color=on/off     : вкл/выкл цветовую подсветку ANSI\n"
+"  -a, --attrib=on/off    : вкл/выкл инвертирование или подсвечивание "
+"атрибутов\n"
+"  -t, --term=TERM        : переопределить переменную окружения TERM\n"
+"  -S, --script=СКРИПТ    : выполнить при запуске СКРИПТ\n"
+"  -d, --dial=НОМЕР       : набрать НОМЕР из каталога дозвона\n"
+"  -p, --ptty=TTYP        : подключиться к псевдотерминалу\n"
+"  -C, --capturefile=ФАЙЛ : писать захваченные данные в ФАЙЛ\n"
+"  -T, --disabletime      : выключить дисплей в интерактивном режиме\n"
+"  -v, --version          : показать сведения о версии и выйти\n"
+"  конфигурация           : используемый конфигурационный файл\n"
+"\n"
+"Эти параметры также можно указать в переменной окружения MINICOM.\n"
+
+#: src/minicom.c:838
+#, c-format
+msgid "This variable is currently set to \"%s\".\n"
+msgstr "Данная переменная сейчас установлена в \"%s\".\n"
+
+#: src/minicom.c:840
+#, c-format
+msgid "This variable is currently unset.\n"
+msgstr "Данная переменная сейчас не установлена.\n"
+
+#: src/minicom.c:843
+#, c-format
+msgid ""
+"The configuration directory for the access file and the configurations\n"
+"is compiled to %s.\n"
+"\n"
+"Report bugs to <minicom-devel@lists.alioth.debian.org>.\n"
+msgstr ""
+"Каталог конфигурации для файла доступа и настроек скомпилирован в %s.\n"
+"\n"
+"Сообщайте об ошибках в <minicom-devel@lists.alioth.debian.org>.\n"
+
+#: src/minicom.c:1159
+#, c-format
+msgid "%s version %s"
+msgstr "%s версия %s"
+
+#: src/minicom.c:1161
+#, c-format
+msgid " (compiled %s)"
+msgstr " (откомпилирован %s)"
+
+#: src/minicom.c:1164
+#, c-format
+msgid ""
+"Copyright (C) Miquel van Smoorenburg.\n"
+"\n"
+msgstr ""
+"Copyright (C) Miquel van Smoorenburg.\n"
+"\n"
+
+#: src/minicom.c:1187
+#, c-format
+msgid "minicom: argument to -p must be a pty\n"
+msgstr "minicom: аргументом для -p должно быть pty\n"
+
+#: src/minicom.c:1251 src/minicom.c:1571
+msgid "Cannot open capture file"
+msgstr "Не могу открыть файл захвата"
+
+#: src/minicom.c:1310
+msgid "You don't exist. Go away.\n"
+msgstr "Вас не существует. Проваливайте.\n"
+
+#: src/minicom.c:1385
+msgid "Sorry. Your screen is too small.\n"
+msgstr "Извините. Ваш экранчик слишком мал.\n"
+
+#: src/minicom.c:1454
+msgid "Welcome to minicom"
+msgstr "Добро пожаловать в minicom"
+
+#: src/minicom.c:1455
+msgid "OPTIONS"
+msgstr "ПАРАМЕТРЫ"
+
+#: src/minicom.c:1457
+msgid "Compiled on"
+msgstr "Дата компиляции"
+
+#: src/minicom.c:1473
+msgid "Port"
+msgstr ""
+
+#: src/minicom.c:1476
+#, fuzzy
+msgid "Using character set conversion"
+msgstr "Перекодировка символов"
+
+#: src/minicom.c:1477
+#, c-format
+msgid ""
+"\n"
+"Press %sZ for help on special keys%c\n"
+"\n"
+msgstr ""
+"\n"
+"Нажмите %sZ для получения подсказки по клавишам%c\n"
+"\n"
+
+#: src/minicom.c:1498
+msgid "Add linefeed ON"
+msgstr "Добавление LF включено"
+
+#: src/minicom.c:1498
+msgid "Add linefeed OFF"
+msgstr "Добавление LF отключено"
+
+#: src/minicom.c:1503
+msgid "Add carriage return ON"
+msgstr ""
+
+#: src/minicom.c:1503
+msgid "Add carriage return OFF"
+msgstr ""
+
+#: src/minicom.c:1508
+msgid "Local echo ON"
+msgstr "Локальное эхо включено"
+
+#: src/minicom.c:1508
+msgid "Local echo OFF"
+msgstr "Локальное эхо отключено"
+
+#: src/minicom.c:1527
+msgid "You are online. Really initialize?"
+msgstr "Вы на линии. Действительно инициализировать?"
+
+#: src/minicom.c:1534
+msgid "Leave without reset?"
+msgstr "Выйти без сброса?"
+
+#: src/minicom.c:1538 src/minicom.c:1556
+msgid "Save macros?"
+msgstr "Сохранить макрос?"
+
+#: src/minicom.c:1548
+msgid "Leave Minicom?"
+msgstr "Покинуть Minicom?"
+
+#: src/minicom.c:1567
+msgid "Capture to which file? "
+msgstr "Захват в какой файл? "
+
+#: src/minicom.c:1576 src/minicom.c:1585
+msgid "Capture file"
+msgstr "Файл захвата"
+
+#: src/minicom.c:1620
+msgid "Linewrap ON"
+msgstr "Перенос строк включен"
+
+#: src/minicom.c:1620
+msgid "Linewrap OFF"
+msgstr "Перенос строк выключен"
+
+#: src/minicom.c:1629
+#, fuzzy
+msgid "Timestamp OFF"
+msgstr "Перенос строк выключен"
+
+#: src/minicom.c:1632
+msgid "Timestamp every line (simple)"
+msgstr ""
+
+#: src/minicom.c:1635
+msgid "Timestamp every line (extended)"
+msgstr ""
+
+#: src/minicom.c:1638
+msgid "Timestamp lines every second"
+msgstr ""
+
+#: src/minicom.c:1679
+msgid "Quit without reset while online."
+msgstr "Выход без сброса во время связи"
+
+#: src/rwconf.c:115 src/rwconf.c:149
+msgid "No"
+msgstr "Нет"
+
+#: src/rwconf.c:226
+#, c-format
+msgid "# Machine-generated file - use \"minicom -s\" to change parameters.\n"
+msgstr ""
+"# Автоматически сгенерированный файл - используйте \"minicom -s\" для\n"
+"# изменения параметров.\n"
+
+#: src/rwconf.c:228
+#, c-format
+msgid ""
+"# Machine-generated file - use setup menu in minicom to change parameters.\n"
+msgstr ""
+"# Автоматически сгенерированный файл - используйте меню настройки minicom\n"
+"# для изменения параметров.\n"
+
+#: src/rwconf.c:253
+#, c-format
+msgid "Memory allocation failed.\n"
+msgstr "Выделение памяти не удалось.\n"
+
+#: src/rwconf.c:322
+#, c-format
+msgid "** Line %d of the %s config file is unparsable.\n"
+msgstr "** Строку %d конфигурационного файла %s невозможно распознать.\n"
+
+#: src/rwconf.c:323
+msgid "global"
+msgstr "глобальном"
+
+#: src/rwconf.c:323
+msgid "personal"
+msgstr "персональном"
+
+#: src/script.c:127
+#, c-format
+msgid "script \"%s\": syntax error in line %d %s%s\n"
+msgstr "скрипт \"%s\": синтаксическая ошибка в строке %d %s%s\n"
+
+#: src/script.c:151
+#, c-format
+msgid "script \"%s\": global timeout%s\n"
+msgstr "скрипт \"%s\": глобальный таймаут%s\n"
+
+#: src/script.c:290
+msgid "(word contains ESC or quote)"
+msgstr "(слово содержит ESC или кавычку)"
+
+#: src/script.c:343
+#, c-format
+msgid "runscript: couldn't open \"%s\"%s\n"
+msgstr "runscript: невозможно открыть \"%s\"%s\n"
+
+#: src/script.c:364 src/script.c:476
+#, c-format
+msgid "script \"%s\": out of memory%s\n"
+msgstr "скрипт \"%s\": не хватает памяти%s\n"
+
+#: src/script.c:470
+#, c-format
+msgid "script \"%s\" line %d: unknown variable \"%s\"%s\n"
+msgstr "скрипт \"%s\" строка %d: неизвестная переменная \"%s\"%s\n"
+
+#: src/script.c:515
+#, c-format
+msgid "script \"%s\": unexpected end of file%s\n"
+msgstr "скрипт \"%s\": неожиданный конец файла%s\n"
+
+#: src/script.c:523
+msgid "(garbage after })"
+msgstr "(мусор после })"
+
+#: src/script.c:531
+msgid "(too many arguments)"
+msgstr "(слишком много аргументов)"
+
+#: src/script.c:550
+#, c-format
+msgid "script \"%s\" line %d: nested expect%s\n"
+msgstr "скрипт \"%s\" строка %d: nested expect%s\n"
+
+#: src/script.c:560
+msgid "(garbage after {)"
+msgstr "(мусор после {)"
+
+#: src/script.c:581 src/script.c:846 src/script.c:914
+msgid "(argument expected)"
+msgstr "(ожидается аргумент)"
+
+#: src/script.c:584 src/script.c:848
+msgid "(invalid argument)"
+msgstr "(неверный аргумент)"
+
+#: src/script.c:679
+msgid "(in goto/gosub label)"
+msgstr "(метка в goto/gosub)"
+
+#: src/script.c:686
+#, c-format
+msgid "script \"%s\" line %d: label \"%s\" not found%s\n"
+msgstr "script \"%s\" строка %d: метка \"%s\" не найдена%s\n"
+
+#: src/script.c:708
+#, c-format
+msgid "script \"%s\": no return from gosub%s\n"
+msgstr "скрипт \"%s\": нет return-а из gosub%s\n"
+
+#: src/script.c:751
+msgid "(missing var name)"
+msgstr "(пропущено имя переменной)"
+
+#: src/script.c:768 src/script.c:784
+msgid "(expected variable)"
+msgstr "(ожидается переменная)"
+
+#: src/script.c:816
+msgid "(expected command after if)"
+msgstr "(ожидается команда после if)"
+
+#: src/script.c:831
+msgid "(unknown operator)"
+msgstr "(неизвестный оператор)"
+
+#: src/script.c:870
+msgid "(unexpected argument)"
+msgstr "(неожиданный аргумент)"
+
+#: src/script.c:897
+#, c-format
+msgid "script \"%s\" line %d: break outside of expect%s\n"
+msgstr "скрипт \"%s\" строка %d: break снаружи expect%s\n"
+
+#: src/script.c:917
+#, c-format
+msgid "script \"%s\" line %d: call inside expect%s\n"
+msgstr "скрипт \"%s\" строка %d: call внутри expect%s\n"
+
+#: src/script.c:985
+#, c-format
+msgid "script \"%s\" line %d: unknown command \"%s\"%s\n"
+msgstr "скрипт \"%s\" строка %d: неизвестная команда \"%s\"%s\n"
+
+#: src/script.c:1026
+#, c-format
+msgid "runscript, part of minicom version %s\n"
+msgstr "runscript, часть minicom, версия %s\n"
+
+#: src/script.c:1031
+#, c-format
+msgid "Usage: runscript <scriptfile> [logfile [homedir]]%s\n"
+msgstr "Использование: runscript <файл_скрипта> [логфайл [дом_дир]]%s\n"
+
+#: src/updown.c:73
+#, c-format
+msgid "Cannot chdir to %.30s"
+msgstr "Невозможно перейти в %.30s"
+
+#: src/updown.c:225
+msgid "Upload"
+msgstr "Отправка"
+
+#: src/updown.c:225
+msgid "Download"
+msgstr "Приём"
+
+#: src/updown.c:281
+msgid "Please enter file names"
+msgstr "Пожалуйста введите названия файлов"
+
+#: src/updown.c:290
+#, fuzzy
+msgid "Out of memory: could allocate buffer for command line"
+msgstr "Не хватает памяти: невозможно сделать fork()"
+
+#: src/updown.c:302
+#, c-format
+msgid "%.30s %s - Press CTRL-C to quit"
+msgstr "%.30s %s - Нажмите CTRL-C для выхода"
+
+#: src/updown.c:303
+msgid "upload"
+msgstr "отправка"
+
+#: src/updown.c:303
+msgid "download"
+msgstr "приём"
+
+#: src/updown.c:433
+msgid ""
+"\n"
+" READY: press any key to continue..."
+msgstr ""
+"\n"
+" ГОТОВО: нажмите любую клавишу..."
+
+#: src/updown.c:477
+#, fuzzy
+msgid "Cannot create lockfile!"
+msgstr "Не могу воссоздать lock-файл!"
+
+#: src/updown.c:484
+#, fuzzy, c-format
+msgid "Failed to write lockfile %s\n"
+msgstr "Невозможно записать макрос в файл %s"
+
+#: src/updown.c:492
+#, fuzzy, c-format
+msgid "Cannot create lockfile for %s: %s\n"
+msgstr "Невозможно создать lock-файл. Нет прав?\n"
+
+#: src/updown.c:639
+msgid "Same as last"
+msgstr "То же самое"
+
+#: src/updown.c:640
+msgid " A -   Username        :"
+msgstr " A - Имя пользователя  :"
+
+#: src/updown.c:641
+msgid " B -   Password        :"
+msgstr " B - Пароль            :"
+
+#: src/updown.c:642
+msgid " C -   Name of script  :"
+msgstr " C - Название скрипта       :"
+
+#: src/updown.c:643
+msgid "Change which setting?     (Return to run, ESC to stop)"
+msgstr "Какую настройку изменить? (Enter - запуск, ESC - стоп)"
+
+#: src/updown.c:648
+msgid "Run a script"
+msgstr "Запустить скрипт"
+
+#: src/window.c:1938
+#, c-format
+msgid "Environment variable TERM not set\n"
+msgstr "Переменная окружения TERM не установлена\n"
+
+#: src/window.c:1944
+#, c-format
+msgid "No termcap entry for %s\n"
+msgstr "Отсутствует запись termcap для %s\n"
+
+#: src/window.c:1947
+#, c-format
+msgid "No termcap database present!\n"
+msgstr "Отсутствует база данных termcap!\n"
+
+#: src/window.c:1955
+#, c-format
+msgid "No cursor motion capability (cm)\n"
+msgstr "Курсор не способен двигаться\n"
+
+#: src/window.c:1964
+#, c-format
+msgid "Number of terminal lines unknown\n"
+msgstr "Число строк терминала неизвестно\n"
+
+#: src/window.c:1968
+#, c-format
+msgid "Number of terminal columns unknown\n"
+msgstr "Число столбцов терминала неизвестно\n"
+
+#~ msgid "Old dialdir copied as %s.%hd"
+#~ msgstr "Старая книга скопирована в %s.%hd"
+
+#~ msgid " Paste file.........Y"
+#~ msgstr " Вставить файл......Y"
+
+#~ msgid "| scroll Back........B"
+#~ msgstr "| Cкроллинг назад....B"
+
+#~ msgid "Resize not supported, screen may be messed up!"
+#~ msgstr "Изменение размера не поддерживается, экран может сглючить!"
+
+#~ msgid "minicom: there is no global configuration file %s\n"
+#~ msgstr "minicom: отсутствует глобальный файл конфигурации %s\n"
+
+#~ msgid "Ask your sysadmin to create one (with minicom -s).\n"
+#~ msgstr ""
+#~ "Попросите вашего системного администратора создать его (с помощью minicom "
+#~ "-s).\n"
+
+#~ msgid "minicom: WARNING: configuration file not found, using defaults\n"
+#~ msgstr ""
+#~ "minicom: ВНИМАНИЕ: файл конфигурации не найден, использую настройки\n"
+#~ "                   по умолчанию\n"
+
+#~ msgid "You are not allowed to create a configuration"
+#~ msgstr "Вам не позволено создавать конфигурацию"
+
+#~ msgid "minicom: -s switch needs root privilige\n"
+#~ msgstr "minicom: ключ -s требует привилегий root\n"
+
+#~ msgid ""
+#~ "minicom: WARNING: please don't run minicom as root when not maintaining\n"
+#~ "                  it (with the -s switch) since all changes to the\n"
+#~ "                  configuration will be GLOBAL !.\n"
+#~ msgstr ""
+#~ "minicom: ВНИМАНИЕ: пожалуйста не запускайте minicom как root если не\n"
+#~ "                   настраиваете его (с ключом -s) т.к. все изменения в\n"
+#~ "                   конфигурации будут ГЛОБАЛЬНЫМИ !.\n"
+
+#~ msgid "Sorry %s. You are not allowed to use configuration %s.\n"
+#~ msgstr "Извините %s. Вам не позволено использовать конфигурацию %s.\n"
+
+#~ msgid "Ask your sysadmin to add your name to %s\n"
+#~ msgstr "Попросите системного администратора добавить ваше имя в %s\n"
+
+#~ msgid "Minicom: Device disappeared, aborting!\n"
+#~ msgstr "Minicom: устройство пропало, останов\n"

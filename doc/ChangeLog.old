@@ -1,0 +1,349 @@
+$Id: ChangeLog.old,v 1.1.1.1 2003-03-30 18:55:36 al-guest Exp $
+Log of changes made to Minicom.
+
+Until 1996
+Miquel van Smoorenburg, miquels@cistron.nl
+                        miquels@drinkel.ow.org
+                        miquels@xs4all.nl
+                        miquels@htsa.hva.nl
+                        (In preferred order, one of these should work!)
+Since 1997
+Jukka Lahtinen, walker@clinet.fi
+                walker@megabaud.fi
+See the file 'AUTHORS' for a full list of current developers.
+--------------------------------------------------------------------------
+
+November 1999
+        - released 1.83
+
+September 1999
+        - added 'moVe' command to the dial directory to move directory
+        entries up/down on the list
+
+August 1999
+        - support for DTE speed 230400 bps added
+
+June 1999
+        - Korean translations added (Kim soyoung <nexti@chollian.net>)
+        - lock file creation moved to before opening the serial port
+        - flag %f added to the upload/download protocol program command
+        lines to allow passing the port file descriptor to c-kermit
+        (mauro <smcsd@his.it>)
+
+May 1999
+        - changed the command line option -d to accept multiple comma-
+        separated entries as the parameter
+        - a fix for the timeout command in runscript
+        (Bulent Murtezaoglu <bm@acm.org>)
+
+April 1999
+        - fixed possible overflows when inputting long strings in
+        manual dial and "find entry" windows in the dial dir
+        - added options for the logfile name and which events to log.
+        Now you can also disable logging by deleting the filename.
+        - added multiline untag option to untag all phonedir entries
+        with the same name when one of them answers
+        (Vangelis Rokas, valis@acrogate.ath.forthnet.gr)
+        - FSF address fixed in the Copyright file
+        - xminicom script fixed for Debian (miquels@cistron.nl)
+        - newline delay option added in the terminal settings
+        (miquels@cistron.nl)
+
+February 1999
+        - released 1.82.1
+
+January 1999
+        - the mailing list address changed, so because it is mentioned in
+        the 'developers' file, a new packet was considered necessary
+        although there are no big changes after 1.82
+        - the program doesn't any more unnecessarily remind you of the need
+        to save config and restart before the history buffer size change
+        takes effect, if you started with -s option and didn't change it
+        during THAT session.
+
+November 1998
+        - option to show line speed on the status line (instead of DTE speed)
+
+September 1998
+        - Polish (pl) translations by Arkadiusz Miskiewicz
+        (misiek@pld.org.pl)
+
+        - released 1.82
+
+August 1998
+        - some fixes for 'half-character' display troubles and formatted
+        output with multibyte character languages such as Japanese. (kubota)
+        - default value for control key changed back to ^A from Escape(meta)
+        - added notations \u for username and \p for password in the
+        macro strings. If the \ character is needed, it must be keyed in
+        double (as \\).
+        - the included conversion tables in the tables directory have been
+        renamed from .mc* to mc.*
+        - citation facility added to the scrollback buffer, and a bug in
+        the history search fixed (kubota)
+        - French (fr) translations by Gaël Quéri (gqueri@mail.dotcom.fr)
+
+July 1998
+        - command line option "-C filename" added to start capturing at
+        program startup (kubota@debian.or.jp)
+        - the character conversion tables are now also used when writing the
+        capture file, unless you unset the capture convert option
+        - if you try dialing from the dial directory while you are online,
+        you'll get an error message (if you have the DCD setting on)
+        - added command line option "-S script" to run the named script at
+        program startup (before dialing the entry you may have specified
+        with the -d option)
+        - added log command to runscript. Now you can write text from
+        your scripts with the command "log this is the log entry"
+        - y2k fix: the date is written in the phone directory and the log file
+        with 4 numbers in the year
+        - Japanese translations by Tomohiro Kubota (kubota@debian.or.jp)
+        - fixed a minor bug that the security fixes for 1.81.1 had caused:
+        the file browser didn't always get some strings properly initialized,
+        so the directory name at the top of the browser window wasn't shown
+        correctly and neither did the first directory change work right
+        - changed the function name 'tell' to 'mc_tell' to avoid conflict with
+        a system function on some systems
+
+June 1998
+        - Added call duration to the "Gone offline" log message.
+        - If the program reads an old version of the dialing directory
+        (one with shorter entry length than the current version), it backs
+        up the old one, with the entry length added as a suffix to the
+        name.
+        - fix for sig11 when the statusline is not used (vlk@st.simbirsk.su)
+
+May 1998
+        Applied a patch by Alan Cox (alan@lxorguk.ukuu.org.uk) to avoid
+        string overflows
+        Released 1.81.1
+
+April 1998
+        Replaced the filename selection window with a better one written by
+        Jim Seymour
+        Changed the dialing function to start searching for dial tags from
+        the highlighted entry, instead of the beginning of the list, when
+        the highlighted one is not tagged. So that now, if entries 1, 2 and 5
+        are tagged, and the highlight cursor is on entry number 3, the program
+        dials entry 5 first, not entry 1.
+        Some fixes to the chartab.h table
+        Released 1.81
+
+February-March, 1998
+        Merged changes made by robotti@erols.com (Kent Robotti) to his
+        version 1.78-s.
+        Added and enhanced the filename selection window written by
+        Hans Georg Keller (WINNIE@hanse.antar.com).
+        Released 1.79
+        Arnaldo Carvalho de Melo (acme@conectiva.com.br) internationalized
+        the program and translated the strings to Brazilian Portuguese.
+        Jukka did the Finnish translations.
+        Released 1.80.1
+        Added multiple device support by Jim Seymour
+        (jseymour@jimsun.LinxNet.com)
+        Fixed some documentation and sent another packet of 1.80.1 to
+        the world..
+
+January, 1998
+        Fixed a memory freeing bug when closing the history window
+        (thanks to dickey@clark.net)
+        Added last login date & time to the dialing window
+        Patchlevel 1.78.2
+
+November, 1997
+        Released 1.78
+
+October, 1997
+        Changed the DTE speed from int to long. Now it should also work on
+        modems faster than 32768 bps even if your compiler uses 16-bit int.
+        Added some patches that Miquel had made during the last year.
+
+September, 1997
+        Added user-configurable character conversion tables to the Screen
+        and keyboard menu. Conversion tables .mciso, .mcpc8 and .mcsf7
+        (later renamed mc.*) included in the main directory for no
+        conversion, pc8 and sf7 character sets, respectively.
+        Environment variable TERMLIN for runscript to tell the actual terminal
+        lines (LINES - 1 if you use the status line, same as LINES if you
+        don't)
+        Added logging of sz/rz file transfers.
+        Fixed a bug that sometimes caused the wrong login script to run.
+        Miquel said he was too busy to go on with minicom.
+
+June, 1997
+        Added logging of connects and disconnects to $HOME/minicom.log,
+        added the last login time & date and login count to the phone dir
+        Made the DTR drop time adjustable, because my modem needs DTR
+        to be down more than just 1 second before it drops the carrier.
+
+Spring 1997
+        Jukka Lahtinen, walker@clinet.fi
+                        walker@megabaud.fi
+        saw that Minicom was a good program, but lacked character conversion
+        tables and a logfile, so decided to work on them myself..
+
+June, 1996
+        Added some minor patches. Released 1.75.
+
+March, 1996.
+        Added ascii-xfr
+        Added patch from "T.E.Dickey" <dickey@clark.net> color initialization
+        Added patches for FreeBSD
+
+Januari, 1996
+        Fixed rwconf.c. Added drop_all_privs(). Released minicom 1.74.
+
+Januari, 1996
+        Fixed security hole in rwconf.c. Made debian package. 1.73-1.
+
+September, 1995
+        Added some patches for Minix back in. The "real ANSI" ACK compiler
+        can't deduce prototypes from K&R declarations, but I'm not
+        going to add 100 prototypes for one stupid compiler.
+        Added -D_DCDFLOW for systems that have to have hardware
+        handshaking turned off when DCD is low (FreeBSD, SunOS).
+
+August, 1995
+        Rewrote terminal emulation (numerical arguments) a bit to be
+        more generic. Put in some of the SunOS patches (DTR handling).
+
+Juli, 1995
+        Fixed termcap a bit. Added terminal type to dialdir. Added "-p"
+        flag. Fixed null arguments in escape sequences (for CompuServe).
+
+May, 1995
+        Added :am: to linux termcap entry. Added changes for variable
+        history size buffer (Mark Rejhon <mdrejhon@magi.com>). Patches
+        for DG/UX (Dario_Ballabio@milano.europe.dg.com). Fixed color
+        save problem. Added a setuid() here and there. Garbled .dialdir
+        files are no longer deleted. '-m and -M flags. Only write
+        .dialdir when changed. Version 1.71.
+
+Februari, 1995
+        Added complete termcap files into the termcap subdirectory.
+        Official release of 1.70 since 1.69 has proved itself stable.
+
+Januari, 1995
+        Fixed ALT key, now listen to either 8th bit or ESC, not both.
+        Deleted all Minix stuff, including the Minix terminal emul.
+        Minicom is so big now, it won't compile on Minix or Coh3 anyway.
+        Added PD-zmodem "lszrz0.12a" to the minicom distribution.
+
+November, 1994
+        Complete VT102 emulation (tested with vttest). Ported to SCO.
+        Runscript fixes. Made minicom drop root privs whenever possible.
+        Minicom can send NUL (\0 or ^@) characters now.
+
+October, 1994
+        Added the customizable colors and macro patches. Support for
+        terminals with a status line. Fixed bug in ANSI emulation
+        (instead of ANSI emulated VT100, hmm). Support for alternate
+        character set if termcap provides it. Vt100 insert mode. Bug fixes.
+
+Februari, 1994.
+        Got rid of bugs due to the double level of buffering in wkeys.c
+        Added auto check for Meta-key mode on the console (ESC-X, etc).
+        Added vt100 line character set emulation. Added dial-a-list.
+        Zmodem auto-download.
+
+Januari, 1994.
+        Got report that after up/download RTS sometimes is low. Enabled
+        it specifically in sysdep1.c - hope it helps? Wrote a manual page
+        for runscript - finally! Fixed a few bugs in runscript - now it
+        even works :-).
+
+December, 1993.
+        Fixed bug in dialing directory. Made minicom screen-size aware in
+        more places. Online time keeps running during scripts and up/down
+        load. Fixed resize code (you cannow resize minicom in an xterm).
+        Changed version number to 1.60 - note the omission of the letter.
+
+November, 1993.
+        Fixed bug in ANSI emulation (reset ESC-[m would not set colors to
+        white on black). Added 'current' speed in dial menu.
+
+October, 1993.
+        Added local echo and multiple dial strings, both can be set
+        in the dialing directory. Changed the wgets() function to
+        allow longer lines to be editted (now scrolls).
+        Added a scroll back buffer (yeah!).
+        Fixed bug in m_dtrtoggle: dtr never got set high again.. How
+        could this ever have worked?? Put it up for ftp as version 1.5b.
+
+August, 1993.
+        Changed minicom to use the select() system call, if present.
+        The keyserv process is no longer needed for such systems.
+        Fixed some bugs in the vt100 emulation (still not complete,
+        and never will be..) so that it does not crash anymore.
+        Fixed other bugs. Minicom should be pretty stable now.
+        'Modulized' the window.c and vt100.c, so that they can be
+        used for some other project (can you say: ANSI-BBS?).
+        Version number bumped up to 1.5.
+April, 1993.
+        Put a beta version of minicom 1.4 up for ftp. Changes made
+        _after_ this are:
+        Corrected documentation for the new configuration with
+        Makefile and config.h. Changed internals of vt100.c and
+        window.c so that window.c now handles the translation of
+        IBM characters to normal characters, if needed. Can use IBM
+        characters in windows now (status line, help window).
+
+March, 1993.
+        Been working on new version of minicom that does not use the
+        keyserv process on systems with select, has sz/rz builtin,
+        has new configuration files and so on. However, this is a
+        _big_ project. So I decided to give the 'old' minicom 1.3.2
+        a revision because people have been complaining about bugs some
+        time. This revision is only tested under Linux and Minix: be warned.
+
+Juli, 1992.
+        Got a 386, so installed Linux. Of course, the first thing to do
+        (after getting X up :-) was to work on minicom. Now ISIG is on
+        when running up/download protocols and runscript, so that you
+        can interrupt them. Removed flushing from ipc.c, now the bug with
+        windows not getting deleted is solved. Added nice sound effect
+        for Linux when connected and when up/download is ready.
+        Removed bugs with scroll regions in both vt100.c and window.c.
+        ALT key now works under Linux.
+
+Sun, Jun 21 1992
+        Posted diffs for 1.3 -> 1.3.2
+
+- June, 1992.
+        Posted version 1.3 to comp.os.minix.
+        Did not seem to work under Linux. Added ~NOECHONL to routines
+        in sysdep1.c. Added special Linux case hard coded escape
+        sequence for color. Found bug in window.c:wscroll. In full
+        screen mode insert line / delete line did not work OK.
+        Found bug in window.c:wdelchar. Character under the cursor
+        was not correctly deleted. Found bug in keyserv: when running
+        an external command (up/download, runscript) and ^A or some
+        ALT combination was pressed, keyserv would send too many
+        ACK signals back so that minicom would be killed. Now call
+        m_flush(0) in ipc.c:keyserv before re-starting keyserv.
+        (Posix signal interface could solve this ; however, a lot of
+        systems don't have that including Minix 1.5).
+        Changed DCD handling ; minicom first tried to find out for
+        itself it the OS and modem supported the DCD line. Now it's
+        a configuration option in "modem and dialing".
+        Found bug in keyserv.c for Coherent: used #ifdef COHERENT
+        instead of _COHERENT.
+
+- Februari, 1992.
+        Posted Minix version 1.2 to comp.os.minix. Got some feedback ;
+        it even ran under Coherent. Changed keyserv to communicate
+        with minicom through pipes. Changed some menu's and command
+        line interface. Ported it to Sysv and Linux. Changed the
+        configuration file to ASCII. Added redialing.
+
+- Somewhere in middle 1991
+        Made first version of Minicom, based on a not-yet-finished
+        window library of Fred van Kempen. Used Non blocking IO
+        patches to the kernel for asynchronous IO. Used lots of
+        CPU time. Ran under my version of Minix only.
+        Decided later to write my own window routines.
+        Did away with non blocking IO, started to use a separate
+        process for the IO from keyboard to modem.
+        Added color routines, perfected communication between
+        "keyserv" and minicom.
+        Got it running under BSD.

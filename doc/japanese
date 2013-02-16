@@ -1,0 +1,43 @@
+minicom Japanese
+
+Japanese EUC and Shift JIS are supported.  To display Japanese
+invoke with -8 option or set LANG to a string beginning with 'ja'
+(ex. ja_JP.ujis).
+
+With this, Minicom let 8bit characters passed through as is and
+avoid inserting excess control codes between 8bit characters.
+(Minicom inserts locate/attribute control codes at each
+characters even if locate/attribute is not changed.  This 
+destroys the continuity of multibyte characters.)
+No recognition nor conversion of character code are supported.
+Korean and Chinese characters may be displayed.
+
+ISO-2022-JP (JIS coding) is not supported.
+
+Set LANG variable to ja_JP.ujis or ja_JP.sjis and Japanese
+messages will be displayed.
+
+Translation: Tomohiro KUBOTA <kubota@debian.or.jp>
+
+--------
+
+minicom 日本語対応版
+
+日本語 EUC と Shift-JIS の表示が可能です。日本語を表示するには、
+-8 オプションをつけて起動するか、環境変数 LANG に ja で始まる
+文字列 (例: ja_JP.ujis) を指定してください。
+
+これは、8 ビットをそのまま通し、最上位ビットが立ったバイトと
+次のバイトの間には余分な制御コードを入れないようにしているだけです。
+(デフォルトでは、たんに左から右に文字を表示するときでも、
+逐一、表示位置決定や表示属性決定のための制御コードを出力
+するようになっています)。文字コードの認識や変換は行いません。
+もしかしたら、韓国語や中国語の表示にも対応できるかもしれません。
+
+ISO-2022-JP (JIS コード) の表示はできません。
+
+日本語 EUC と Shift-JIS の catalog ファイルがあります。
+LANG を ja_JP.ujis または ja_JP.sjis にすると、日本語で
+メッセージが表示されるようになります。
+
+翻訳: 久保田智広 Tomohiro KUBOTA <kubota@debian.or.jp>

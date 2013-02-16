@@ -1,0 +1,49 @@
+
+1. Graphics with termcap.
+
+Some terminals, such as most consoles on Unixes that run on IBM
+compatible PC's, can display special line drawing characters.
+If these characters map 1-to-1 to the IBM character set, you can just
+use the '-l' (literal) flag when invoking minicom. If your
+terminal cannot display the IBM characters directly, you should add
+the 'as', 'ae' and 'ac' entries to your termcap.
+
+The Linux console only maps 1-to-1 in a special mode. Therefore you need to
+make a special termcap entry in /etc/termcap that initializes the
+console on startup. For an example see the files in the termcap/ directory.
+This defines a termcap entry called "mc".
+To use this information instead of the normal 'console' information,
+minicom has to be invoked with the '-t mc' option (meaning use TERM=mc
+instead of the normal TERM environment variable).
+
+And, in my /etc/profile I have added the lines:
+
+        case "$TERM" in
+          con*|linux)
+                MINICOM="-l -m -con -tmc" ; export MINICOM
+                ;;
+        esac
+
+So when I log in on the console I can use minicom in full color,
+full ANSI mode.
+
+
+2. About the included termcap files.
+
+I've written some termcap entries for the VT family of terminals
+from scratch. These entries are correct and solve the long-
+standing "my arrow keys don't work!" etc. problems.
+
+This is probably obsolete now the world is changing to terminfo.
+Fortunately the master terminfo file is reasonably accurate.
+
+There are two termcap files in this subdirectory, termcap.short
+and termcap.long. You should only use termcap.long if your
+library version is < 4.6.27 (it probably is). Newer libraries
+have my new termcap code and won't break on the tc= entries
+in termcap.short.
+
+If you don't use exotic termcap entries you might just want to
+copy the new termcap file over /etc/termcap (make a backup copy
+first!). Otherwise you'll have to edit, cut and paste.
+

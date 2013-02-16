@@ -1,0 +1,30 @@
+minicom TODO list
+-----------------
+
+important:
+
+* update/complete existing translations, see also [1]
+* fix documentation for new -7 switch and the new semantics of
+  -l and -L
+
+normal:
+
+* sync AUTHORS with man/minicom.1
+* merge ChangeLog with */ChangeLog*
+* update to gettext 0.11
+* fix Debian BTS bugs
+* documentation cleanup
+* minicom homepage
+
+* src/dial.c: dhili(): split menu string so that translators can translate
+                       it without headaches
+* when showing errors also consider showing errno if available/appropriate
+
+wishlist:
+
+* incorporate outstanding patches from debian/patches
+* make minicom.1 an .in file using @sysconfdir@ etc.
+
+* src/rwconf.c: detect paths to [sr][zbx],kermit via configuration
+
+[1] http://www.iro.umontreal.ca/contrib/po/HTML/matrix.html

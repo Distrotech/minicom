@@ -1,0 +1,57 @@
+$Id: minicom.FAQ,v 1.1.1.1 2003-03-30 18:55:39 al-guest Exp $
+
+Frequently Asked Questions about Minicom:
+
+
+Q1: I have a "winmodem". How can I use it with minicom?
+
+A1: This is actually a hardware problem, not a minicom problem.
+Sorry, but there is often no hope to use those things in Linux at all.
+They are not actually real modems, they rely on the processor to do much
+of the work that really belongs to the modem. So they need some drivers.
+And many manufacturers of them are ignorant. So they write the drivers
+only for windows, and don't care about people who use something better.
+Not even enough to publish information that would be required to write
+drivers for more decent operating systems. However, some of them DO have
+the necessary drivers. The list should be available at
+    http://www.linmodems.org/ 
+If your "winmodem" is mentioned there as Linux-compatible, then you should
+be able to use it like any real modem, once you get it installed properly.
+Follow the instructions on the website.
+If your device is not mentioned, it probably is not supported in Linux
+at all and you should get a real modem.
+As far as I know, most PCI modems (but not all) are these "winmodems".
+All external modems and almost all ISA card modems are real things, and
+they can be used with no problem (or if you seem to have problems with an
+ISA modem responding slowly or losing characters, see the next question).
+
+
+Q2: Why does my modem respond so SLOWLY to everything I type? Even the init
+string seems to pause for seconds between each character.
+
+A2: This is another hardware problem.  
+You have an interrupt conflict in your computer. That means, some other
+device is using the same IRQ as your modem. This happens quite often if you
+have an internal modem set up as /dev/ttyS2 or /dev/ttyS3 (also known as
+com3 or com4 on some other operating systems). By default, /dev/ttyS0 and
+/dev/ttyS2 (or com1 and com3) use IRQ 4 and /dev/ttyS1 and /dev/ttyS3 (or
+com2 and com4) use IRQ 3. So, if you have an internal modem, disable the
+serial port using the same irq on your motherboard or i/o card (check the
+motherboard manual), or change one of the ports to use some other irq
+(probably with the setserial command in /etc/rc.d/rc.local or some other
+bootup script).
+
+
+Q3: When I try dialing out, minicom just says "you are already online" and
+refuses to dial. Why does it do that and what should I do?
+
+A3: Since version 1.82, Minicom doesn't begin dialing if the modem says that
+you are online by keeping the carrier signal on.
+Maybe your modem always keeps the carrier signal on. Consult the manual of
+your modem for the right command to use the carrier signal properly.
+On my modem, the command would be at&c1 but it may be different in your
+modem. Save the changed modem settings or add &c1 (or whatever it is) to
+your init string. 
+If your modem is broken and can't handle the carrier signal, you may set
+minicom to ignore DCD by going to the "modem and dialing" settings and
+turning off the "Modem has DCD line" setting.

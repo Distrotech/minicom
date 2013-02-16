@@ -1,0 +1,51 @@
+The file selector is designed to be very intuitive.  It should nearly
+always do the expected thing.  So a minimal amount of explanation is
+all that should be necessary.  (If I did it right.)
+
+    Minicom's current working directory is changed to whatever directory
+	is displayed on the selector's title bar.
+
+    Double-tapping the space-bar (taps within a second or so of each
+	other) while on a directory entry will move you into that
+	directory.
+
+    The "Goto" requester will always initialize to whatever is configured
+	for the default upload/download directory, as appropriate.  If
+	blank: the user's HOME directory is where it'll go to.
+
+    The first time the selector is entered, it will go to the default
+	download or upload directory--depending on which was called-up:
+	an upload or a download.
+
+    Subsequent invocations of the selector will result in it coming-up in
+	whichever directory it was last--dependent on whether uploading
+	or downloading.  (Doing "Goto" <ret> will easily get you to the
+	default directory for the operation, as noted above.)
+
+    When the selector's display is constrained by a wild-card pattern via
+	the "Show" menu selection, moving to a new directory will result
+	in a full display again.  This was intentional.  But the pattern
+	is remembered, so simply doing "Show" <ret> will re-invoke the
+	filter.  I felt this would be less confusing.
+
+    The functions at the bottom of the selector are:
+
+	 Goto - Go to a particular directory
+	 Prev - Go to previous directory
+	 Show - Limit display to (wildcard) pattern
+	  Tag - Tag files with (wildcard) pattern
+	Untag - Untag files with (wildcard) pattern
+	 Okay - All done
+
+    The functions at the bottom of the selector ("Goto", etc.) are hot-
+        keyed on their first letter.  Right-left cursor motion works on
+	them as well.
+
+    If "selectable download directory" enabled (zmodem, ymodem, etc.):
+
+	For downloads where the filenames are determined by the protocol
+	    (e.g.: zmodem): files will appear in the selector, but
+	    attempts to tag them are a no-op.  (Nothing happens.)
+	    
+	    You select the desired download directory by entering it.
+

@@ -1,0 +1,66 @@
+$Id: README-FIRST,v 1.1.1.1 2003-03-30 18:55:39 al-guest Exp $
+=============================================================================
+minicom-1.78-s + lrzsz-0.12.16 X, Y, Zmodem protocols + modemu.
+Compiled for a linux libc5 elf system, source included. (2-29-98) 
+By Kent Robotti
+=============================================================================
+
+This verion of minicom-1.78 has the additional 'histsearch' feature, 
+described in doc/HistSearch, and a few changes, it no longer gives 
+a warning when started without the -s switch, it goes right into 
+terminal mode.
+
+There are also other additions to minicom-1.78, read /doc/Readme.jl
+for info on them.
+
+Color in on by default, to start minicom up in mono mode,
+do this.>  ~# minicom -c off  <-Turn off color.)
+
+You can put this in the /etc/profile file to turn color off.
+export MINICOM="-c off"
+
+All minicom defaults can be changed by starting minicom
+this way.>   ~# minicom -s  (Then.>  [save setup as dfl]
+
+To Install minicom, runscript, lrz, lsz, modemu, man pages, all...
+
+minicom-1.78-s/linux# INSTALL-MINI   <-Run script to install all.)
+
+You can look at INSTALL-MINI to see where things will be installed.
+/usr/bin/minicom runscript ascii-xfr xminicom modemu lrz lsz mtelnet
+/etc/minirc.dfl minicom.users
+
+Minicom can be run in X windows...# startx  (Then.>  # xminicom
+
+If you want to compile minicom do this.
+
+You need libncurses to compile minicom.
+
+minicom-1.78-s/src# make
+                  # make install
+
+Modemu is a program that will allow you to use minicom over a
+telnet connection, after you're slip/ppp connected.
+
+~# mtelnet   <-Use minicom over telnet.)
+
+atdt"bbs.foo.com   (Or.>   atdt"206.114.97.65
+
+Login to telnet host, download something using zmodem etc.
+Close connection with telnet host.
+NO CARRIER
+
+Press:   Alt-Q   [Suspend without reset?] = Yes
+~#
+
+There are some scripts in demos and docs in doc, put them somewhere.
+
+~# man minicom           <-Man pages.)
+       runscript
+       lrz
+       lsz
+       ascii-xfr
+       modemu
+       
+End... (2-29-98)
+=============================================================================

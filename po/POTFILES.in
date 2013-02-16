@@ -1,0 +1,18 @@
+# List of source files containing translatable strings.
+#
+# NOTE: relative to top level directory, not "po" directory
+#
+src/config.c
+src/dial.c
+src/file.c
+src/getsdir.c
+src/help.c
+src/ipc.c
+src/main.c
+src/minicom.c
+src/rwconf.c
+src/script.c
+src/updown.c
+src/windiv.c
+src/window.c
+

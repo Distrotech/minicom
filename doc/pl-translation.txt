@@ -1,0 +1,24 @@
+Wrzesieñ 1998
+Arkadiusz Mi¶kiewicz <misiek@pld.org.pl>
+                      http://www.misiek.eu.org
+
+Jêzyk polski jest ju¿ wspierany. By uzykaæ polskie komunikaty ustaw zmienn±
+LANG=pl_PL (lub LANG=pl)
+oraz zmienn±
+MINICOM="-L" (lub MINICOM="-8")
+(np. w /etc/profile)
+
+Wszelkie uwagi mile widziane :-)
+---------------------------------------------------------------------------
+September 1998
+Arkadiusz Mi¶kiewicz <misiek@pld.org.pl>
+                      http://www.misiek.eu.org
+		     
+Polish language is now supported. To get polish messages set enviroment to
+LANG=pl_PL (or LANG=pl)
+and
+MINICOM="-L" (or MINICOM="-8")
+(for example in /etc/profile)
+
+Please send any comments :-)
+

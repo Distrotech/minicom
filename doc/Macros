@@ -1,0 +1,187 @@
+miquels, 25-Oct-1994:
+Merged the patches with my minicom version.
+The original README below from the author of the patches
+is still valid except that
+	- your menu's may look a bit different
+	- no bugs in ^control handling
+	- File mode of macro's dir is set to 0600 when created
+	- If file does not start with '/' it's assumed relative
+	  to your home directory.
+	- default file name if not set is ".macros".
+
+Original MACROS readme file follows:
+
+
+(fmg 8/22/97: update e-mail)
+E-mail: filipg@paranoia.com       (best)
+        fmgst+@pitt.edu           (so so)
+
+----------------------------------------------------------------------------------
+
+Intro:
+        This patch should have patched all the files, created this file, and
+        modified the Makefile (added a -DWANT_FKEYS to FLAGS and some extra
+        documentation lines).
+
+Colors:
+        These patches will allow you to modify the [ghastly] default
+        screen colors. These changes will be saved to either the system
+        or private config files. Here's a copy of my screen:
+
+              +=================[Screen and keyboard]=================+
+              |                                                       |
+            +=| A - Command key is         : ^A                       |
+            | | B - Backspace key sends    : BS                       |
+            | | C - Macros file            : /home/fmg/.macros        |
+            | | D - Edit Macros                                       |
+            | | E - Status line is         : enabled                  |
+            | | F - Foreground Color (menu): YELLOW                   |
+            | | G - Background Color (menu): BLUE                     |
+            | | H - Foreground Color (term): CYAN                     |
+            | | I - Background Color (term): BLACK                    |
+            +=| J - Foreground Color (stat): RED                      |
+              | K - Background Color (stat): BLACK                    |
+              |                                                       |
+              |  Change which setting?  (Esc to exit)                 |
+              |                                                       |
+              +=======================================================+
+
+	Hitting letters F thru K will cycle that entry thru all the
+	available colors. 
+
+	Note that crude sanity checks are employed so you can't set the
+	menu or terminal foreground == background. It just won't let you.
+	You can do that for the status line since it's just another way
+	to shut it off :-)
+
+	Oh, one more thing: cycling the terminal & menu colors will only
+	change the color name (ie. the physical screen will not change
+	colors). The Status bar, OTOH, does cycle with the key presses.
+	Go figure ;-)
+
+Macros:
+        In the first version of macros for minicom, they were also saved to 
+        the regular config files. A few weeks ago I ran into a situation
+        where I needed macros of more than the maximum 64 characters and
+        reworked them to take up to 256 bytes (this value is arbitrary - 
+        make it 4K if you like - I do :-) bytes. Note that these mods use
+        set length strings so they take up space if you use them or not.
+        I will make them dynamic for next version of minicom, just for 
+        fun ;-)
+
+        For now, the length of macros may be specified at compile time in 
+        the Makefile with -DMAC_LEN=nnnn (bytes). It's set to 256 bytes 
+        by default.
+
+        There was a big kludge necessary in the window.c file because the
+        window line editing functions uses a set buffer of 256 bytes. You
+        definitely don't want to see how I got around that ;-) I also made
+        a small modification to wgets function which moves the cursor to
+        the end of the line when called (useful for editing macros longer
+        than the width of the window).
+
+        BTW, I tested it with 4096 byte macros... works just fine. However,
+        most editors will choke on lines that long...
+
+Config file & Macros:
+        Since they are separate, and I didn't want to interfere with
+        people using config files with other versions of minicom, the
+        macros are saved to a file of your choice. Just run minicom,
+        press C-A O, Screen and keyboard, C, and enter something like:
+        /usr/home/filip/.macros (and pray that your full path is less
+        than 64 characters :-)
+
+        After you specify the macros file, do the above but hit D
+        (Edit Macros) and you will get a new window with 10 numbered
+        lines. Just select using 1 thru A and remember:
+
+	^ + M = CONTROL-M (\n)
+	^ + L = CONTROL-L (\f)
+	^ + G = CONTROL-G (\b aka bell)
+	^ + R = CONTROL-R (\r)
+	^ + ~ = 1 second sleep() call (useful in login sequences)
+	^ + ^ = ^
+
+	(This is included at the bottom of the edit screen - see below)
+
+	There are some bugs if you try to fool it with, say, ^^^M, but
+	I plan to fix that RSN. 
+
+	Examples? Here's a sample screen:
+
+  +===========================[F1 to F10 Macros]============================+
+  |                                                                         |
+  | 1 : telnet alpha.med.pitt.edu^M^~filip^M                                |
+  | 2 : telnet beta.med.pitt.edu^M^~fmg^M                                   |
+  | 3 : stty rows 39^M^~stty columns 100^M                                  |
+  | 4 :                                                                     |
+  | 5 : anonymous^M                                                         |
+  | 6 : -filip@alpha.med.pitt.edu^M                                         |
+  | 7 : /js/tmp/k/                                                          |
+  | 8 : ftp sunsite.unc.edu^M^~^~anonymous^M^~-filip@alpha.med.pitt.edu^M^~ |
+  | 9 :                                                                     |
+  | A : atdt6215954^M                                                       |
+  |                                                                         |
+  | Change which setting?  (Esc to exit)                                    |
+  |                                                                         |
+  |  (LEGEND: ^M = C-M, ^L = C-L, ^G = C-G, ^R = C-R, ^~ = pause 1 second)  |
+  +=========================================================================+
+              +=======================================================+
+
+	(The "A" stands for F10 because I wanted to keep things to single
+	key presses...)
+
+    Note that macro #8 is actually longer than that:
+	ftp sunsite.unc.edu^M^~^~anonymous^M^~-filip@alpha.med.pitt.edu^M^~\
+	cd pub/Linux^M^~dir^M
+
++-------------------------------------------------------------------------+
+|* DANGER * DANGER * DANGER * DANGER * DANGER * DANGER * DANGER * DANGER *|
+|                                                                         |
+|  Be *VERY* careful with passwords!!! minicom just creates the file,     |
+|  it's *YOUR* responsibility to set the protections! Better yet,         |
+|  *NEVER* store passwords (just type them in)                            |
+|                                                                         |
+|* DANGER * DANGER * DANGER * DANGER * DANGER * DANGER * DANGER * DANGER *|
++-------------------------------------------------------------------------+
+
+	The macros are store in ASCII format. I find it useful to edit
+	macros with a good editor (like vi :-) and, since I run selection,
+	I can just cut&paste complicated stuff right in, etc. (but see the
+	note above on high MAC_LENs)
+
+Saving:
+	Be sure to "Save setup as dfl" from the top menu. At this point,
+	you will also find out if the macros filename you specified was
+	good or if you'll have to change it. If name is not set and you
+	change macros and you go to save, minicom will warn you of this
+	fact (but it won't save you butt and save to a temporary file :-)
+
+	If you change any macros, don't explicily save them, and later
+	try to exit, you will be given a second chance to do so. If,
+	for some reason, the macros filename is incorrect or missing
+	and you try to exit and save macros, you will be given a chance 
+	to go back and set/reset the filename.
+
+	The nice thing about keeping the macros filename in the standard
+	config file is that you can have different macro files with 
+	different config files (see the -c argument to minicom) or you
+	may have the same macro file with ALL your config files :-)
+
+Bugs:
+	None. I also have a bridge for sale. Call me. If you find something 
+	that's screwy with colors & macros, please send me e-mail. Please be
+	descriptive or, better yet, include a fix :-)
+
+----------------------------------------------------------------------------------
+
+----------------
+// fmg 2/20/93 - Added color selection to Screen & Keyboard menu
+
+----------------
+// fmg 2/15/94 - Added macro filename & Macro define selection to
+                 Screen & Keyboard menu. Added window for macro
+                 definition.
+
+----------------
+// fmg 3/1/94  - Modified the man page source to indicate changes.

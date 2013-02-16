@@ -1,0 +1,63 @@
+
+This file lists the most important changes to
+the previous released version. For a full list of changes
+please refer to the ChangeLog file.
+
+New for version 2.6.2:
+ - Alternative hex output (to be improved)
+ - Print creation date of serial device file (if < 20 hrs), useful for
+   identifying just plugged in USB-Serial adapters 
+ - Support ':' (colon) in device path names. Note, that this changes old
+   behaviour which used ':' as a device path delimiter.
+ - Several language updates.
+
+New for version 2.6:
+ - Add possibility to add delay after every character transmission.
+ - Fix build issues on Mac OS X.
+ - Stop providing default modem init and reset strings (still available when
+   editing).
+ - Added possibility for timestamps in output, added by minicom
+ - Added lockdev support.
+ - Added new dialdir format that is supposed to be interoperable between 32
+   and 64 bits archs.
+
+New for version 2.5:
+ - Handle device reconnected more smoothly (USB-serial dongles)
+ - Translation updates: Danish
+ - Several fixes (see ChangeLog)
+
+New for version 2.4:
+ - Add -D and -b options to specify device and baud rate on the command
+   line.
+ - Do character conversion between local and remote side (-R option)
+ - Added indonesian translation
+ - Compatibility fixes for recent build environments
+ - Remove code that handled very old systems
+
+New for version 2.3:
+ - Fix build on Mac OS X
+ - New version of the dial format to be little and big endian as well as
+   32/64 bit safe
+ - Support more baud rates
+ - Handle device disappearances (e.g. serial-USB device unplug)
+ - Various build and other fixes
+
+New for version 2.2:
+ - Vietnamese translation added
+ - Norwegian translation added
+ - Traditional chinese translation added
+ - Swedish translation added
+ - Romanian translation added
+ - default to 8bit mode if LANG or LC_ALL are set
+ - default baud rate set to 115200
+ - Various code cleanups and fixes
+
+New for version 2.1:
+ - applied some pending patches (see ChangeLog for a complete list)
+ - added support for socket connections
+ - fixed compiling issues on Solaris
+ - new maintainer: Adam Lackorzynski
+ - new homepage: http://minicom.alioth.debian.org/
+ - new mailinglists (-devel and -announce):
+      http://alioth.debian.org/mail/?group_id=31
+

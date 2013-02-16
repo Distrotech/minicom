@@ -1,0 +1,3 @@
+# To login to htsa
+call unixlogin
+send "DialUpPassword"

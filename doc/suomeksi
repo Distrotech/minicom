@@ -1,0 +1,25 @@
+Minicom suomeksi!
+
+Nyt voit käyttää Minicomia myös suomenkielisenä.
+
+Lisää profiiliisi (/etc/profile:ssa on systeemin oletusprofiili,
+kotihakemistossasi olevassa .profile:ssa käyttäjäkohtainen profiili)
+seuraavat rivit:
+
+LC_CTYPE=ISO-8859-1
+LANG=fi
+export LANG LC_CTYPE
+
+Poistu systeemistä exit:illä ja kirjaudu uudestaan sisään. 
+Kun käynnistät minicomin, tekstien pitäisi olla enimmäkseen suomenkielisiä.
+Jos tekstit ovat edelleen englanninkielisiä, niin tarkista minicomin 
+alkuruudulta käännösoptiot. Näytön yläosassa pitäisi olla tämäntapainen
+rivi:
+
+OPTIOT: History Buffer, F-key Macros, Search History Buffer, I18n
+
+Jos riviltä puuttuu "I18n", joudut kääntämään ohjelman uudestaan saadaksesi
+suomenkieliset käännöstekstit mukaan.
+
+5.4.1998
+Jukka Lahtinen <walker@netsonic.fi>

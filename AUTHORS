@@ -1,0 +1,68 @@
+$Id: AUTHORS,v 1.4 2003-07-01 08:44:33 godisch Exp $
+
+Author:     Miquel van Smoorenburg <miquels@cistron.nl>   (1991-1996)
+Maintainer: Jukka Lahtinen <walker@netsonic.fi>           (1997-2002)
+Maintainer: Adam Lackorzynski <adam@os.inf.tu-dresden.de> (since 2003)
+
+The minicom developers can be reached via their mailing list at
+http://lists.alioth.debian.org/mailman/listinfo/minicom-devel.
+Note: The address has changed on March 2003.
+
+The following people have contributed to minicom:
+
+Arnaldo Carvalho de Melo <acme@conectiva.com.br>
+  * internationalization stuff
+  * Portuguese translations
+	
+Tomohiro Kubota <kubota@debian.or.jp>
+  * Japanese translations
+	
+Jeff Garzik <jgarzik@pretzel.normnet.org>
+  * base of autoconf/automake support
+	
+Gaël Quéri <gqueri@mail.dotcom.fr>
+  * French translation
+	
+Arkadiusz Miskiewicz <misiek@pld.org.pl>
+  * Polish translation
+  * finished autoconf/automake support
+  * previous CVS repository for minicom
+	
+Kim Soyoung <nexti@chollian.net>
+  * Korean translation
+
+Andrea Mara Pimenta Alonso <pimenta@conectiva.com.br>
+  * Spanish translation
+
+Jiri Pavlovsky <pavlovsk@ff.cuni.cz>
+  * Czech translation
+
+Dmitry Artamonow <mad_soft@inbox.ru>
+  * Russian translation
+
+Márton Németh <nm127@hszk.bme.hu>
+  * Hungarian translation
+
+Miquel van Smoorenburg <miquels@cistron.nl>
+  * Debian maintainer up to 2002
+
+Jordi Mallach <jordi@debian.org>
+  * Debian maintainer since 2001
+
+Martin Godisch <martin@godisch.de>
+  * Debian maintainer since 2003
+
+Robert Millan <zeratul2@wanadoo.es>
+  * porting to GNU/Hurd
+
+Ricardo Javier Cardenes <ricardo@conysis.com>
+  * Spanish debconf translation
+
+Christian Perrier <bubulle@kheops.frmug.org>
+  * French debconf translation
+
+André Luís Lopes <andrelop@ig.com.br>
+  * Portuguese debconf translation
+
+Daniel Tschan <tschan+rpm@devzone.ch>
+  * Red Hat packages

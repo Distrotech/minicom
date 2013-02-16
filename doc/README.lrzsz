@@ -1,0 +1,16 @@
+Lrz/Lsz is a cosmetically modified zmodem/ymodem/xmodem package built from the
+public-domain version of Chuck Forsberg's rzsz package.  This package contains
+NO code from later releases of rzsz which would preclude it from being released
+under the GPL.
+
+Lrz/Lsz was created to provide a working GNU copylefted zmodem solution for
+the Debian GNU/Linux distribution, although it will work for any Linux
+system.
+
+Please note that credit should be given to Chuck Forsberg (rzsz) and Stephen
+Satchell/Satchell Evaluations (crc routines) for this package, any
+modifications by myself were minor and merely introduced to better mesh rzsz
+with the standard Linux communications programs.
+
+lrzsz 0.11 4-17-94
+Matt Porter <porter+@osu.edu>

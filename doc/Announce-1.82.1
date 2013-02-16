@@ -1,0 +1,29 @@
+		Announcing minicom 1.82.1
+
+A short summary of what minicom is:
+
+Minicom is a communications program that resembles the MSDOS Telix
+somewhat. It has a dialing directory, color, full ANSI and VT100
+emulation, an (external) scripting language and more.
+
+Tested platforms:
+Linux 2.0.34, 
+
+Supported but untested (may need a little tweaking):
+DGUX, FreeBSD, NetBSD, Coherent, HP/UX, SysVR4, Apollo Domain/OS, SunOS, SCO.
+
+There is not much changed between versions 1.82.1 and 1.82.
+The main reason for this release is the change of the mailing list
+address mentioned somewhere in the doc directory.
+The main differencies in the program itself:
+
+- option to show line speed on the status line (instead of DTE speed)
+
+- some more strings have been internationalized, basically in the runscript
+  program
+
+- the program doesn't any more unnecessarily remind you of the need to save 
+  config and restart before the history buffer size change takes effect,
+  if you started with -s option and didn't change it during THAT session.
+
+Jukka Lahtinen, walker@clinet.fi

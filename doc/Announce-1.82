@@ -1,0 +1,92 @@
+		Announcing minicom 1.82
+
+A short summary of what minicom is:
+
+Minicom is a communications program that resembles the MSDOS Telix
+somewhat. It has a dialing directory, color, full ANSI and VT100
+emulation, an (external) scripting language and more.
+
+Tested platforms:
+Linux 2.0.34, 
+
+Supported but untested (may need a little tweaking):
+DGUX, FreeBSD, NetBSD, Coherent, HP/UX, SysVR4, Apollo Domain/OS, SunOS, SCO.
+
+New in Minicom 1.82: 
+
+- call duration in the "Gone offline" and "Hangup" log messages.  
+
+- Old phonedir version (one with shorter entry length than the current
+  version), if found, is backed up at program start
+
+- command line option "-C filename" to start capturing at program startup
+
+- the character conversion tables are now also used when writing the
+  capture file, unless you unset the capture convert option
+
+- log command added to runscript. Now you can write text from your scripts
+  with the command "log this is the log entry"
+
+- the date is now written in the phone directory and the log file with 
+  4 numbers in the year
+
+- default value for control key changed back to ^A from Escape(meta)
+
+- notations \u for username and \p for password in the macro strings.
+  If you need the \ character in macros, type it double (as \\)
+
+- citation facility in the scrollback buffer: When viewing the scrollback
+  buffer, move cursor where you want the citation to start, press c, move
+  cursor to the end of text to be citated, and press c again. The marked
+  text will be sent to the modem, each line prefixed with >
+
+- Japanese, French and Polish have been added to the language selection
+
+
+New in Minicom 1.81:
+
+- The filename selection window has been rewritten by James Seymour
+  (jseymour@jimsun.LinxNet.com). When you upload files, you can use this
+  window to select the filenames from the upload directory. You can also use
+  change the upload directory within this window. New setting 'multi' has 
+  been added to the file transfer protocol configuration screen to define
+  which protocols can send multiple files with one command.
+  The program can also be set to prompt for the directory each time you
+  download something. (Setting 'O', "Prompt for download directory", in the
+  file transfer protocol configuration menu.)
+
+- When you start dialing and the highlighted phone directory entry is not
+  tagged, the dialing function starts searching for tagged entries from the
+  highlighted one, not from the beginning. Thus, if entries 1, 2 and 5 are
+  tagged and entry 3 is highlighted, the dialing starts from entry 5.
+
+- Multiple device support: You can define multiple serial ports in the
+  Serial device setting in the Serial port setup configuration menu by
+  separating them with commas, if you have more than one modem
+  attached. When Minicom starts, it will look for the first available one
+  and use it. This feature was also written by Jim Seymour.
+
+New in version 1.80:
+
+- Internationalization. The text strings can be changed to localized ones.
+  Set the environment variable LANG to the code for your country. If you
+  use bash, you can do that with "export LANG=xx_XX" in your .bash_profile,
+  where xx_XX is the code for your country. Currently supported codes are
+  pt_BR for Brazilian Portuguese and fi_FI for Finnish.
+  You may also have to set LC_CTYPE to indicate the character set used
+  in your country (ISO-8859-1 is the right one for many).
+
+New in version 1.79:
+
+- The changes from version 1.78-s, published by Kent Robotti, were included: 
+  - history buffer search 
+  - The X, Y, Zmodem protocols lrzsz-0.12.16, are included.
+  - The program 'modemu.v.0.0.1', is also included, this allows you to use
+    minicom over a telnet connection.
+
+- Filename selection window was added, along with the setting 'N', 
+  "Use filename selection window", in the File transfer protocols setting
+  menu to toggle for using the feature. The window itself has been rewritten
+  for version 1.81.
+
+Jukka Lahtinen, walker@clinet.fi

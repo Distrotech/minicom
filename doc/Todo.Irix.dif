@@ -1,0 +1,127 @@
+From: "Dominique Avatravaux" <dom@cwi.nl>
+Date: Wed, 29 May 1996 15:43:46 -0600
+To: miquels@cistron.nl
+Subject: Minicom patch : porting to IRIX and Solaris
+
+   Hello,
+
+  Here is a patch needed to compile Minicom under IRIX 5.3 and Solaris 2.3/2.4.
+The two compilations were done with gcc. The most interesting points are :
+
+   * There is no Makefile modification needed : the Linux entry works fine in
+both cases.
+   * IRIX has no usleep() library call at all, and some Solaris boxes have
+one and others don't, causing the binaries to be incompatible amongst the same
+machines :-( (works with libc dated oct 27 1995 and not with the one dated mai
+23 1995, no time for further investigation, sorry). ok the source from GNU
+libc to fill this hole and put it in sysdep2.c; didn't dare to put it in
+sysdep1 since I would have had to name it "m_usleep" :-). The side effect is
+that "runscript" now needs sysdep2.o as well.
+
+  Hope this is useful to you ! Please forgive my approximate English, I'm
+french (as may *NOT* be seen on my email adress... My real one follows).
+
+  Note : you two (Miquel and Joshua) had better agree on this strange
+dual-headed Minicom release. I don't know which kind of relationship exists
+between you two and I don't care about it, but please have a thought for your
+users : they surely would appreciate a unified version. And a schism is a
+pointless workforce dispersion in any way...
+
+  With best regards and great consideration for your work,
+
+--
+						Dominique Quatravaux
+					Dominique.Quatravaux@ens.fr
+--
+diff -r -C 4 minicom-1.74/src/Makefile minicom-1.74.orig/src/Makefile
+*** minicom-1.74/src/Makefile	Wed May 29 15:01:20 1996
+--- minicom-1.74.orig/src/Makefile	Sun Apr 21 03:41:12 1996
+***************
+*** 143,151 ****
+  	  windiv.o sysdep1.o sysdep2.o rwconf.o main.o
+
+  KOBJS	= keyserv.o wkeys.o sysdep2.o
+
+! SOBJS	= script.o sysdep1.o sysdep2.o
+
+  CFLAGS	= $(FLAGS) -DLIBDIR=\"$(LIBDIR)\"
+
+  R	= $(ROOTDIR)
+--- 143,151 ----
+  	  windiv.o sysdep1.o sysdep2.o rwconf.o main.o
+
+  KOBJS	= keyserv.o wkeys.o sysdep2.o
+
+! SOBJS	= script.o sysdep1.o
+
+  CFLAGS	= $(FLAGS) -DLIBDIR=\"$(LIBDIR)\"
+
+  R	= $(ROOTDIR)
+diff -r -C 4 minicom-1.74/src/port.h minicom-1.74.orig/src/port.h
+*** minicom-1.74/src/port.h	Mon May 27 19:22:56 1996
+--- minicom-1.74.orig/src/port.h	Thu Jan 18 19:44:48 1996
+***************
+*** 104,113 ****
+  #  if !defined(_SVR2) && !defined(_SYSV3) && !defined(_COH42)
+  #    define HAS_FCHOWN
+  #  endif
+  #endif
+-
+- /* The usleep existence test needs to be factorized somehow, but the
+#inclusion
+-  scheme does not allow it right now. */
+- #if defined(__sgi__) || ( defined (__sun__) && defined (__svr4__))
+-  int usleep(unsigned int usec);
+- #endif
+--- 104,107 ----
+diff -r -C 4 minicom-1.74/src/sysdep.h minicom-1.74.orig/src/sysdep.h
+*** minicom-1.74/src/sysdep.h	Wed May 29 14:38:23 1996
+--- minicom-1.74.orig/src/sysdep.h	Thu Jan 18 19:44:49 1996
+***************
+*** 153,164 ****
+  #  define cfsetispeed(xtty, xspd) \
+  		((xtty)->c_cflag = ((xtty)->c_cflag & ~CBAUD) | (xspd))
+  #  define cfsetospeed(tty, spd)
+  #endif
+-
+- /* IRIX has no usleep, nor do some versions of Solaris 2.4's libc.  */
+- #if defined(__sgi__) || ( defined (__sun__) && defined (__svr4__))
+- #  define NO_USLEEP
+- #  include <sys/time.h>
+- #  include <signal.h>
+-    int usleep(unsigned int useconds);
+- #endif
+--- 153,156 ----
+diff -r -C 4 minicom-1.74/src/sysdep2.c minicom-1.74.orig/src/sysdep2.c
+*** minicom-1.74/src/sysdep2.c	Wed May 29 14:38:50 1996
+--- minicom-1.74.orig/src/sysdep2.c	Thu Jan 18 19:44:49 1996
+***************
+*** 267,287 ****
+    return(exstat);
+  }
+  #endif
+
+- /* If we have no usleep, it's about time we make one... Excerpt from
+-   glibc 1.09.1.
+-   Could stupid OSes lack both select() and usleep() ? I hope not ! */
+- #ifdef NO_USLEEP
+- int usleep(unsigned int useconds)
+- {
+-   struct timeval delay;
+-
+-   delay.tv_sec = 0;
+-   delay.tv_usec = useconds;
+-
+-   (void) select (0, (fd_set *) NULL, (fd_set *) NULL, (fd_set *) NULL,
+-                    &delay);
+-
+-   return 0;
+- }
+- #endif
+--- 267,270 ----
+
+
+-- 
+							Dominique Quatravaux
+						Dominique.Quatravaux@ens.fr
+

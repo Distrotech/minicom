@@ -1,0 +1,1894 @@
+# Vietnamese translation for Minicom.
+# Copyright © 2012 Free Software Foundation, Inc.
+# This file is distributed under the same license as the minicom package.
+# Clytie Siddall <clytie@riverland.net.au>, 2006-2008.
+# Trần Ngọc Quân <vnwildman@gmail.com>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: minicom 2.6.1.90\n"
+"Report-Msgid-Bugs-To: minicom-devel@lists.alioth.debian.org\n"
+"POT-Creation-Date: 2013-02-06 18:21+0100\n"
+"PO-Revision-Date: 2012-12-10 14:47+0700\n"
+"Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
+"Language-Team: Vietnamese <translation-team-vi@lists.sourceforge.net>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Team-Website: <http://translationproject.org/team/vi.html>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: LocFactoryEditor 1.7b1\n"
+
+#: src/config.c:75
+#, c-format
+msgid "minicom: cannot open macro file %s\n"
+msgstr "minicom: không thể mở tập tin vĩ lệnh %s\n"
+
+#: src/config.c:245
+msgid " A - File name (empty=disable) :"
+msgstr " A - Tên tập tin (rỗng = tắt) :"
+
+#: src/config.c:246
+msgid " B - Log connects and hangups  :"
+msgstr " B - Ghi nhật ký kết nối và tạm dừng:"
+
+#: src/config.c:247
+msgid " C - Log file transfers        :"
+msgstr " C - Ghi nhật ký truyền tập tin:"
+
+#: src/config.c:248 src/config.c:302 src/config.c:544 src/config.c:652
+#: src/config.c:1197 src/dial.c:1187
+msgid "Change which setting?"
+msgstr "Thay đổi cài đặt nào?"
+
+#: src/config.c:252
+msgid "Logging options"
+msgstr "Tùy chọn ghi nhật ký"
+
+#: src/config.c:294
+msgid " A - Download directory :"
+msgstr " A - Thư mục tải về     :"
+
+#: src/config.c:295
+msgid " B - Upload directory   :"
+msgstr " B - Thư mục tải lên    :"
+
+#: src/config.c:296
+msgid " C - Script directory   :"
+msgstr " C - Thư mục văn lệnh   :"
+
+#: src/config.c:297
+msgid " D - Script program     :"
+msgstr " D - Chương trình văn lệnh:"
+
+#: src/config.c:298
+msgid " E - Kermit program     :"
+msgstr " E - Chương trình Kermit:"
+
+#: src/config.c:300
+msgid " F - Logging options"
+msgstr " F - Tùy chọn nhật ký"
+
+#: src/config.c:355 src/rwconf.c:114 src/rwconf.c:147 src/rwconf.c:148
+msgid "Yes"
+msgstr "Có"
+
+#: src/config.c:355
+msgid "No "
+msgstr "Không "
+
+#: src/config.c:430
+msgid "M  Zmodem download string activates..."
+msgstr "M  Chuỗi tải về Zmodem kích hoạt..."
+
+#: src/config.c:431
+msgid "N  Use filename selection window......"
+msgstr "N  Dùng cửa sổ chọn tên tập tin..."
+
+#: src/config.c:432
+msgid "O  Prompt for download directory......"
+msgstr "P  Nhắc nhập thư mục tải về..."
+
+#: src/config.c:433
+msgid "Change which setting? (SPACE to delete)"
+msgstr "Thay đổi thiết lập nào? (Bấm phím dài để xoá)"
+
+#: src/config.c:436
+msgid "     Name             Program"
+msgstr "     Tên              Chương trình"
+
+#. TRANSLATORS:
+#. * Name: Protocol sends filename internally
+#. * U/D: Command is used for upload or download
+#. * FullScr: Command runs fullscreen
+#. * IO-Red: Redirect output of commands to logfile
+#. * Multi: Protocol can transfer multiple files at once
+#: src/config.c:445
+msgid "Name U/D FullScr IO-Red. Multi"
+msgstr "Tên L/X ToànMH VR-ChTi. Đa"
+
+#: src/config.c:476
+msgid "Delete which protocol? "
+msgstr "Xoá giao thức nào? "
+
+#: src/config.c:537
+msgid " A -    Serial Device      :"
+msgstr " A -    Thiết bị nối tiếp  :"
+
+#: src/config.c:538
+msgid " B - Lockfile Location     :"
+msgstr " B - Vị trí khoá tập tin   :"
+
+#: src/config.c:539
+msgid " C -   Callin Program      :"
+msgstr " C -   Chương trình gọi đến:"
+
+#: src/config.c:540
+msgid " D -  Callout Program      :"
+msgstr " D -  Chương trình gọi ra  :"
+
+#: src/config.c:541
+msgid " E -    Bps/Par/Bits       :"
+msgstr " E -    Bps/Par/Bit        :"
+
+#: src/config.c:542
+msgid " F - Hardware Flow Control :"
+msgstr " F - Điều khiển luồng phần cứng:"
+
+#: src/config.c:543
+msgid " G - Software Flow Control :"
+msgstr " G - Điều khiển luồng phần mềm :"
+
+#: src/config.c:622
+msgid "DTE speed "
+msgstr "Tốc độ DTE "
+
+#: src/config.c:624
+msgid "line speed"
+msgstr "tốc độ đường dây"
+
+#: src/config.c:632
+msgid " A - Init string ........."
+msgstr " A - Chuỗi khởi tạo ..."
+
+#: src/config.c:633
+msgid " B - Reset string ........"
+msgstr " B - Chuỗi đặt lại ..."
+
+#: src/config.c:634
+msgid " C - Dialing prefix #1...."
+msgstr " C - Tiền tố quay số #1..."
+
+#: src/config.c:635
+msgid " D - Dialing suffix #1...."
+msgstr " D - Hậu tố quay số #1..."
+
+#: src/config.c:636
+msgid " E - Dialing prefix #2...."
+msgstr " E - Tiền tố quay số #2..."
+
+#: src/config.c:637
+msgid " F - Dialing suffix #2...."
+msgstr " F - Hậu tố quay số #2..."
+
+#: src/config.c:638
+msgid " G - Dialing prefix #3...."
+msgstr " G - Tiền tố quay số #3..."
+
+#: src/config.c:639
+msgid " H - Dialing suffix #3...."
+msgstr " H - Hậu tố quay số #3..."
+
+#: src/config.c:640
+msgid " I - Connect string ......"
+msgstr " I - Chuỗi kết nối ..."
+
+#: src/config.c:641
+msgid " J - No connect strings .."
+msgstr " J - Không có chuỗi kết nối ..."
+
+#: src/config.c:642
+msgid " K - Hang-up string ......"
+msgstr " K - Chuỗi ngừng nói..."
+
+#: src/config.c:643
+msgid " L - Dial cancel string .."
+msgstr " L - Chuỗi thôi quay số ..."
+
+#: src/config.c:644
+msgid " M - Dial time ..........."
+msgstr " M - Thời gian quay số ..."
+
+#: src/config.c:645
+msgid " N - Delay before redial ."
+msgstr " N - Khoảng đợi quay số lại ..."
+
+#: src/config.c:646
+msgid " O - Number of tries ....."
+msgstr " O - Số lần thử lại ..."
+
+#: src/config.c:647
+msgid " P - DTR drop time (0=no)."
+msgstr " P - Thời gian thả DTR (0 = không)."
+
+#: src/config.c:648
+msgid " Q - Auto bps detect ....."
+msgstr " Q - Tự động phát hiện bps ..."
+
+#: src/config.c:649
+msgid " R - Modem has DCD line .."
+msgstr " R - Bộ điều giải có tuyến DCD ..."
+
+#: src/config.c:650
+msgid " S - Status line shows ..."
+msgstr " S - Dòng trạng thái hiển thị ..."
+
+#: src/config.c:651
+msgid " T - Multi-line untag ...."
+msgstr " T - Bỏ thẻ đa dòng ..."
+
+#: src/config.c:663
+msgid "Modem and dialing parameter setup"
+msgstr "Thiết lập và tham số về bộ điều giải và quay số"
+
+#: src/config.c:696
+msgid "    Return or Esc to exit. Edit A+B to get defaults."
+msgstr "    Phím Return hay Esc để thoát. Sửa A+BIẾN để lấy mặc định."
+
+#: src/config.c:834
+msgid " A - Command key is         :"
+msgstr " A - Phím lệnh là           :"
+
+#: src/config.c:835
+msgid " B - Backspace key sends    :"
+msgstr " B - Phím Xoá lùi gửi       :"
+
+#: src/config.c:836
+msgid " C - Status line is         :"
+msgstr " C - Dòng trạng thái là     :"
+
+#: src/config.c:837
+msgid " D - Alarm sound            :"
+msgstr " D - Tiếng báo động         :"
+
+#: src/config.c:838
+msgid " E - Foreground Color (menu):"
+msgstr " E - Màu tiền cảnh (trình đơn):"
+
+#: src/config.c:839
+msgid " F - Background Color (menu):"
+msgstr " F - Màu nền (trình đơn):"
+
+#: src/config.c:840
+msgid " G - Foreground Color (term):"
+msgstr " G - Màu cảnh gần (thiết bị cuối):"
+
+#: src/config.c:841
+msgid " H - Background Color (term):"
+msgstr " H - Màu nền (thiết bị cuối):"
+
+#: src/config.c:842
+msgid " I - Foreground Color (stat):"
+msgstr " I - Màu Tiền cảnh (thống kê):"
+
+#: src/config.c:843
+msgid " J - Background Color (stat):"
+msgstr " J - Màu nền (trạng thái):"
+
+#: src/config.c:844
+msgid " K - History Buffer Size    :"
+msgstr " K - Kích cỡ bộ đệm lược sử :"
+
+#: src/config.c:845
+msgid " L - Macros file            :"
+msgstr " L - Tập tin vĩ lệnh        :"
+
+#: src/config.c:846
+msgid " N - Macros enabled         :"
+msgstr " N - Vĩ lệnh đã bật         :"
+
+#: src/config.c:847
+msgid " O - Character conversion   :"
+msgstr " O - Chuyển đổi ký tự       :"
+
+#: src/config.c:848
+msgid " P - Add linefeed           :"
+msgstr " P - Thêm ký tự xuống dòng  :"
+
+#: src/config.c:849
+msgid " Q - Local echo             :"
+msgstr " Q - Lặp lại cục bộ         :"
+
+#: src/config.c:850
+msgid " R - Line Wrap              :"
+msgstr " R - Ngắt dòng              :"
+
+#: src/config.c:851
+msgid " S - Hex Display            :"
+msgstr " S - Hiển thị kiểu thập lục :"
+
+#: src/config.c:852
+msgid " T - Add carriage return    :"
+msgstr " T - Thêm ký hiệu về đầu dòng:"
+
+#: src/config.c:853 src/config.c:1607
+msgid "Change which setting?  (Esc to exit)"
+msgstr "Thay đổi thiết lập nào? (Esc để thoát)"
+
+#: src/config.c:857 src/config.c:1379
+msgid "Screen and keyboard"
+msgstr "Màn hình và bàn phím"
+
+#: src/config.c:876
+msgid " M - Edit Macros\n"
+msgstr " M - Sửa vĩ lệnh\n"
+
+#: src/config.c:904
+msgid "You can't change colors in black and white mode"
+msgstr "Bạn không thể thay đổi màu sắc ở chế độ đen trắng."
+
+#: src/config.c:916
+msgid "Menu foreground == background color, change!"
+msgstr "Trong trình đơn, màu cảnh gần và màu nền là trùng: phải thay đổi!"
+
+#: src/config.c:925
+msgid "Terminal foreground == background color, change!"
+msgstr "Trong thiết bị cuối, màu cảnh gần và màu nền là trùng: phải thay đổi!"
+
+#: src/config.c:937
+msgid "History Buffer Size"
+msgstr "Kích cỡ bộ đệm lược sử"
+
+#: src/config.c:938
+msgid ""
+"\n"
+"                You have changed the history buffer size.\n"
+"                You will need to save the configuration file and\n"
+"                restart minicom for the change to take effect.\n"
+"\n"
+"                Hit a key to Continue... "
+msgstr ""
+"\n"
+"                Bạn đã thay đổi kích cỡ của bộ đệm lược sử.\n"
+"                Vì vậy bạn sẽ cần phải lưu tập tin cấu hình\n"
+"                và khởi chạy lại minicom, để thay đổi có tác dụng.\n"
+"\n"
+"                Bấm phím nào để Tiếp tục..."
+
+#: src/config.c:955
+msgid "Program new command key"
+msgstr "Đặt phím lệnh mới"
+
+#: src/config.c:957
+msgid ""
+"\n"
+" Press the new command key. If you want to use\n"
+" the META or ALT key enter:\n"
+"\n"
+"  o SPACE if your meta key sets the 8th bit high\n"
+"  o ESC   if your meta key sends the ESCAPE prefix (standard)\n"
+"\n"
+"\n"
+" Press new command key: "
+msgstr ""
+"\n"
+" Bấm phím lệnh mới. Muốn sử dụng phím META hay ALT thì nhập:\n"
+"\n"
+"  o SPACE nếu phím meta đặt bit thứ tám cao\n"
+"  o ESC   nếu phím meta gửi tiền tố ESCAPE (chuẩn)\n"
+"\n"
+"\n"
+" Bấm phím lệnh mới: "
+
+#: src/config.c:966
+msgid "Meta-8th bit "
+msgstr "Meta-bit thứ 8 "
+
+#: src/config.c:968
+msgid "Escape (Meta)"
+msgstr "Escape (Meta)"
+
+#: src/config.c:1002 src/config.c:1250
+msgid "disabled"
+msgstr "bị tắt"
+
+#: src/config.c:1005 src/config.c:1253 src/rwconf.c:146
+msgid "enabled"
+msgstr "đã bật"
+
+#: src/config.c:1120
+msgid "ERROR: you do not have permission to create a file there!"
+msgstr "LỖI : bạn không có quyền tạo tập tin ở đó !"
+
+#: src/config.c:1126
+#, c-format
+msgid "ERROR: cannot open macro file %s"
+msgstr "LỖI : không thể mở tập tin bộ lệnh %s"
+
+#: src/config.c:1132
+msgid "Reading macros"
+msgstr "Đang đọc các bộ lệnh..."
+
+#: src/config.c:1191
+msgid " A -      Terminal emulation :"
+msgstr " A -   Mô phỏng thiết bị cuối:"
+
+#: src/config.c:1192
+msgid " B -     Backspace key sends :"
+msgstr " B -     Gửi ký tự Xoá lùi   :"
+
+#: src/config.c:1193
+msgid " C -          Status line is :"
+msgstr " C -       Dòng trạng thái là:"
+
+#: src/config.c:1194
+msgid " D -   Newline tx delay (ms) :"
+msgstr " D - Khoảng trễ xuống dòng tx (mili-giây):"
+
+#: src/config.c:1195
+msgid " E -          ENQ answerback :"
+msgstr " E -        ENQ trả lại ngược:"
+
+#: src/config.c:1196
+msgid " F - Character tx delay (ms) :"
+msgstr " D - Trễ ký tự tx (mili-giây):"
+
+#: src/config.c:1200
+msgid "Terminal settings"
+msgstr "Thiết lập thiết bị cuối"
+
+#: src/config.c:1304
+#, c-format
+msgid "Cannot write to %s"
+msgstr "Không thể ghi vào %s"
+
+#: src/config.c:1311
+msgid "Configuration saved"
+msgstr "Cấu hình đã được lưu"
+
+#: src/config.c:1326
+msgid "ERROR: Macros have changed but no filename is set!"
+msgstr "LỖI: vĩ lệnh đã thay đổi còn chưa đặt tên tập tin !"
+
+#: src/config.c:1330
+#, c-format
+msgid "Cannot write macros file %s"
+msgstr "Không thể ghi tập tin bộ lệnh %s"
+
+#: src/config.c:1336
+msgid "Macros saved"
+msgstr "Bộ lệnh đã được lưu"
+
+#: src/config.c:1353
+msgid "Give name to save this configuration?"
+msgstr "Nhập tên để lưu cấu hình này không?"
+
+#: src/config.c:1375
+msgid "Filenames and paths"
+msgstr "Tên tập tin và đường dẫn"
+
+#: src/config.c:1376
+msgid "File transfer protocols"
+msgstr "Giao thức truyền tập tin"
+
+#: src/config.c:1377
+msgid "Serial port setup"
+msgstr "Thiết lập cổng nối tiếp"
+
+#: src/config.c:1378
+msgid "Modem and dialing"
+msgstr "Bộ điều giải và quay số"
+
+#: src/config.c:1381
+msgid "Save setup as.."
+msgstr "Lưu thiết lập dạng..."
+
+#: src/config.c:1382
+msgid "Exit"
+msgstr "Thoát"
+
+#: src/config.c:1383
+msgid "Exit from Minicom"
+msgstr "Thoát khỏi Minicom"
+
+#: src/config.c:1395
+#, c-format
+msgid "Save setup as %s"
+msgstr "Lưu thiết lập dạng %s"
+
+#: src/config.c:1401
+msgid "configuration"
+msgstr "cấu hình"
+
+#: src/config.c:1410
+msgid "BLACK"
+msgstr "ĐEN"
+
+#: src/config.c:1410
+msgid "RED"
+msgstr "ĐỎ"
+
+#: src/config.c:1410
+msgid "GREEN"
+msgstr "LỤC"
+
+#: src/config.c:1410
+msgid "YELLOW"
+msgstr "VÀNG"
+
+#: src/config.c:1411
+msgid "BLUE"
+msgstr "XANH"
+
+#: src/config.c:1411
+msgid "MAGENTA"
+msgstr "ĐỎ TƯƠI"
+
+#: src/config.c:1411
+msgid "CYAN"
+msgstr "XANH LÁ MẠ"
+
+#: src/config.c:1411
+msgid "WHITE"
+msgstr "TRẮNG"
+
+#: src/config.c:1441
+msgid "Comm Parameters"
+msgstr "Tham số viễn thông"
+
+#: src/config.c:1446
+msgid " Speed            Parity      Data\n"
+msgstr " Tốc độ     Tính chẵn lẻ     Dữ liệu\n"
+
+#: src/config.c:1447
+msgid " A: <next>        L: None     S: 5\n"
+msgstr " A: <kế>          L: Không    S: 5\n"
+
+#: src/config.c:1448
+msgid " B: <prev>        M: Even     T: 6\n"
+msgstr " B: <lùi>         M: Chẵn     T: 6\n"
+
+#: src/config.c:1449
+msgid " C:   9600        N: Odd      U: 7\n"
+msgstr " C:   9600        N: Lẻ       U: 7\n"
+
+#: src/config.c:1450
+msgid " D:  38400        O: Mark     V: 8\n"
+msgstr " D:  38400        O: Dấu      V: 8\n"
+
+#: src/config.c:1451
+msgid " E: 115200        P: Space\n"
+msgstr " E: 115200        P: Space\n"
+
+#: src/config.c:1453
+msgid " Stopbits\n"
+msgstr " Bit dừng\n"
+
+#: src/config.c:1454
+msgid " W: 1             Q: 8-N-1\n"
+msgstr " W: 1             Q: 8-N-1\n"
+
+#: src/config.c:1455
+msgid " X: 2             R: 7-E-1\n"
+msgstr " X: 2             R: 7-E-1\n"
+
+#: src/config.c:1457
+msgid " K: Current\n"
+msgstr " K - Hiện thời\n"
+
+#: src/config.c:1460
+msgid ""
+"\n"
+" Choice, or <Enter> to exit? "
+msgstr ""
+"\n"
+" Chọn, hay <Enter> để thoát ?"
+
+#: src/config.c:1468
+#, c-format
+msgid "Current: %5s %s%s%s  "
+msgstr "HIện thời : %5s %s%s%s  "
+
+#: src/config.c:1610
+msgid "F1 to F10 Macros"
+msgstr "Vĩ lệnh F1 đến F10"
+
+#: src/config.c:1629
+msgid " (LEGEND: ^M = C-M, ^L = C-L, ^G = C-G, ^R = C-R, ^~ = pause 1 second,"
+msgstr ""
+" (CHU GIẢI: ^M = C-M, ^L = C-L, ^G = C-G, ^R = C-R, ^~ = tạm dừng 1 giây,"
+
+#: src/config.c:1631
+msgid "  \\u = username, \\p = password, \\\\ = \\, \\e = toggle echo, "
+msgstr ""
+"  \\u = tên người dùng, \\p = mật khẩu, \\\\ = \\, \\e = bật/tắt phản chiếu, "
+
+#: src/config.c:1633
+msgid ""
+"  \\l = toggle LF, \\bX1..Xn<sp> = change baud rate. Example: \"\\beq \""
+msgstr ""
+"  \\l = bật/tắt LF, \\bX1..Xn<sp> = thay đổi tỷ lệ baud. Ví dụ: \"\\bfq \""
+
+#: src/config.c:1635
+msgid ""
+"  = 115200 8N1. (See the \"Comm Parameters\" menu for valid values of X.))"
+msgstr ""
+"  = 192000 8N1. (Xem trình đơn \"Comm Parameters\" để tìm các giá trị X hợp "
+"lệ.))"
+
+#: src/config.c:1650
+msgid "CHANGED"
+msgstr "ĐÃ ĐỔI"
+
+#: src/config.c:1737
+msgid "Character conversion"
+msgstr "Chuyển đổi ký tự"
+
+#: src/config.c:1742
+msgid " char    in out    char    in out    char    in out    char    in out\n"
+msgstr ""
+" k.tự    vào ra    k.tự    vào ra    k.tự    vào ra    k.tự    vào ra\n"
+
+#: src/config.c:1764
+msgid ""
+"\n"
+" A - load table\tB - save table"
+msgstr ""
+"\n"
+" A - nạp bảng\tB - lưu bảng"
+
+#: src/config.c:1766
+#, c-format
+msgid "\tfile:%s"
+msgstr "\ttập tin:%s"
+
+#: src/config.c:1767
+msgid ""
+"\n"
+" C - edit char\tD - next screen\tE - prev screen\n"
+msgstr ""
+"\n"
+" C - sửa ký tự\tD - màn hình kế\tE - màn hình lùi\n"
+
+#: src/config.c:1768
+#, c-format
+msgid " F - convert capture: %s\n"
+msgstr " F - chuyển đổi đồ bắt: %s\n"
+
+#: src/config.c:1783
+#, c-format
+msgid "Load file: %s"
+msgstr "Nạp tập tin: %s"
+
+#: src/config.c:1795
+#, c-format
+msgid "Save as file: %s"
+msgstr "Lưu dạng tập tin: %s"
+
+#: src/config.c:1806
+msgid "Character to be edited: "
+msgstr "Ký tự cần sửa: "
+
+#: src/config.c:1814 src/config.c:1826 src/config.c:1838
+msgid "Input character ascii value 0-255"
+msgstr "Giá trị ASCII ký tự nhập 0-255"
+
+#: src/config.c:1820
+#, c-format
+msgid "Change input to: %s"
+msgstr "Thay đổi dữ liệu nhập thành: %s"
+
+#: src/config.c:1832
+#, c-format
+msgid "Change output to: %s"
+msgstr "Thay đổi kết xuất thành: %s"
+
+#: src/config.c:1870
+#, c-format
+msgid "Cannot open conversion table %s"
+msgstr "Không thể mở bảng chuyển đổi %s"
+
+#: src/config.c:1876
+#, fuzzy, c-format
+msgid "Cannot read conversion table %s"
+msgstr "Không thể ghi bảng chuyển đổi %s"
+
+#: src/config.c:1888
+#, c-format
+msgid "Cannot write conversion table %s"
+msgstr "Không thể ghi bảng chuyển đổi %s"
+
+#: src/dial.c:251
+msgid "Initializing Modem"
+msgstr "Đang sơ khởi bộ điều giải..."
+
+#: src/dial.c:267
+msgid "Resetting Modem"
+msgstr "Đang đặt lại bộ điều giải..."
+
+#: src/dial.c:281
+msgid "Hanging up"
+msgstr "Đang ngừng nói..."
+
+#: src/dial.c:285
+#, c-format
+msgid "Hangup (%ld:%02ld:%02ld)"
+msgstr "Ngừng nói (%ld:%02ld:%02ld)"
+
+#: src/dial.c:317
+msgid "Sending BREAK"
+msgstr "Đang gửi tín hiệu BREAK (ngắt)"
+
+#: src/dial.c:383
+#, c-format
+msgid "    No connection: %s.      \n"
+msgstr "    Không có kết nối : %s.  \n"
+
+#: src/dial.c:385
+msgid "   Press any key to continue..    "
+msgstr "   Bấm phím nào để tiếp tục...    "
+
+#: src/dial.c:390 src/dial.c:402
+#, c-format
+msgid "     Retry in %2d seconds             "
+msgstr "     Thử lại sau %2d giây             "
+
+#: src/dial.c:428
+msgid "Max retries"
+msgstr "Số lần thử lại tối đa"
+
+#: src/dial.c:438
+msgid "You are already online! Hang up first."
+msgstr "Bạn đang trực tuyến ! Hãy ngừng nói trước."
+
+#: src/dial.c:443
+msgid "Autodial"
+msgstr "Tự động quay số"
+
+#: src/dial.c:447 src/dial.c:477
+msgid "Dialing"
+msgstr "Đang quay số..."
+
+#: src/dial.c:448 src/dial.c:480
+#, c-format
+msgid "      At : %s"
+msgstr "      Lúc: %s"
+
+#: src/dial.c:451 src/dial.c:484
+#, c-format
+msgid " Last on : %s at %s"
+msgstr " Kết nối cuối cùng : %s lúc %s"
+
+#: src/dial.c:499
+#, c-format
+msgid "    Time : %-3d"
+msgstr "    Thời gian : %-3d"
+
+#: src/dial.c:501
+#, c-format
+msgid "     Attempt #%d"
+msgstr "     Lần thử #%d"
+
+#: src/dial.c:502
+msgid ""
+"\n"
+"\n"
+"\n"
+" Escape to cancel, space to retry."
+msgstr ""
+"\n"
+"\n"
+"\n"
+" Phím Esc để thôi, phím cách để thử lại"
+
+#: src/dial.c:543
+msgid "Cancelled"
+msgstr "Bị thôi"
+
+#: src/dial.c:599
+msgid "Connected. Press any key to continue"
+msgstr "Đã kết nối. Bấm phím nào để tiếp tục"
+
+#: src/dial.c:679
+msgid "Timeout"
+msgstr "Quá hạn"
+
+#: src/dial.c:881
+msgid "Manually entered number"
+msgstr "Số đã tự nhập"
+
+#: src/dial.c:890
+msgid "Cannot open ~/.dialdir: permission denied"
+msgstr "Không thể mở “~/.dialdir”: không đủ quyền"
+
+#: src/dial.c:912
+#, fuzzy
+msgid "Failed to read dialing directory\n"
+msgstr "Tràn bộ nhớ trong khi đọc bản liệt kê số quay"
+
+#: src/dial.c:946
+msgid "Phonelist garbled (unknown version?)"
+msgstr "Danh sách điện thoại lộn xộn (phiên bản không rõ ?)"
+
+#: src/dial.c:953 src/dial.c:961
+msgid "Phonelist corrupted"
+msgstr "Danh sách điện thoại bị hỏng"
+
+#: src/dial.c:966
+msgid "Unknown dialing directory version"
+msgstr "Không rõ phiên bản danh bạ số quay"
+
+#: src/dial.c:973
+msgid "Phonelist garbled (?)"
+msgstr "Danh sách điện thoại lộn xộn (?)"
+
+#: src/dial.c:995
+msgid "Out of memory while reading dialing directory"
+msgstr "Tràn bộ nhớ trong khi đọc bản liệt kê số quay"
+
+#: src/dial.c:1047
+#, c-format
+msgid "Converted dialdir to new format, old saved as %s.v%hd"
+msgstr ""
+"Đã chuyển đổi dialdir sang định dạng mới, cái cũ được lưu thành %s.v%hd"
+
+#: src/dial.c:1082
+msgid "Cannot open ~/.dialdir for writing!"
+msgstr "Không thể mở “~/.dialdir” để ghi !"
+
+#: src/dial.c:1098 src/dial.c:1110
+msgid "Error writing to ~/.dialdir!"
+msgstr "Lỗi ghi vào “~/.dialdir” !"
+
+#: src/dial.c:1175
+msgid " A -  Name                :"
+msgstr " A -  Tên                 :"
+
+#: src/dial.c:1176
+msgid " B -  Number              :"
+msgstr " B -  Số                  :"
+
+#: src/dial.c:1177
+msgid " C -  Dial string #       :"
+msgstr " C -  Chuỗi quay số #     :"
+
+#: src/dial.c:1178
+msgid " D -  Local echo          :"
+msgstr " D -  Phản chiếu cục bộ   :"
+
+#: src/dial.c:1179
+msgid " E -  Script              :"
+msgstr " E -  Văn lệnh            :"
+
+#: src/dial.c:1180
+msgid " F -  Username            :"
+msgstr " F -  Tên người dùng      :"
+
+#: src/dial.c:1181
+msgid " G -  Password            :"
+msgstr " G -  Mật khẩu            :"
+
+#: src/dial.c:1182
+msgid " H -  Terminal Emulation  :"
+msgstr " H -  Mô phỏng thiết bị cuối:"
+
+#: src/dial.c:1183
+msgid " I -  Backspace key sends :"
+msgstr " I -  Gửi ký tự Xoá lùi   :"
+
+#: src/dial.c:1184
+msgid " J -  Linewrap            :"
+msgstr " J -  Ngắt dòng           :"
+
+#: src/dial.c:1185
+msgid " K -  Line Settings       :"
+msgstr " K -  Thiết lập tuyến :"
+
+#: src/dial.c:1186
+msgid " L -  Conversion table    :"
+msgstr " L -  Bảng chuyển đổi     :"
+
+#: src/dial.c:1199 src/dial.c:1271 src/dial.c:1278
+msgid "Delete"
+msgstr "Xoá"
+
+#: src/dial.c:1199 src/dial.c:1271 src/dial.c:1278
+msgid "Backspace"
+msgstr "Xoá lùi"
+
+#: src/dial.c:1201 src/dial.c:1273 src/dial.c:1283
+msgid "On"
+msgstr "Bật"
+
+#: src/dial.c:1201 src/dial.c:1273 src/dial.c:1283
+msgid "Off"
+msgstr "Tắt"
+
+#: src/dial.c:1205
+#, c-format
+msgid "      Last dialed         : %s %s\n"
+msgstr "      Quay số cuối cùng   : %s %s\n"
+
+#: src/dial.c:1206
+#, c-format
+msgid "      Times on            : %d"
+msgstr "      Lần đã kết nối      : %d"
+
+#. TRANSLATORS: Translation of each of these menu items should not be
+#. * longer than 7 characters. The upper-case letter is a shortcut,
+#. * so keep them unique and ASCII; 'h', 'j', 'k', 'l' are reserved
+#: src/dial.c:1307
+msgid "Dial"
+msgstr "Quay số"
+
+#: src/dial.c:1307
+msgid "Find"
+msgstr "Tìm"
+
+#: src/dial.c:1307
+msgid "Add"
+msgstr "Thêm"
+
+#: src/dial.c:1307
+msgid "Edit"
+msgstr "Sửa"
+
+#: src/dial.c:1307
+msgid "Remove"
+msgstr "Bỏ"
+
+#: src/dial.c:1307
+msgid "moVe"
+msgstr "Di chuyển"
+
+#: src/dial.c:1308
+msgid "Manual"
+msgstr "bằng tay"
+
+#: src/dial.c:1454 src/file.c:71 src/minicom.c:68 src/minicom.c:71
+msgid "   Yes  "
+msgstr "   Có  "
+
+#: src/dial.c:1454 src/file.c:71 src/minicom.c:68 src/minicom.c:71
+msgid "   No   "
+msgstr "   Không "
+
+#: src/dial.c:1547
+#, c-format
+msgid "Entry \"%s\" not found. Enter dialdir?"
+msgstr "Không tìm thấy mục nhập “%s”. Vào thư mục quay số dialdir không?"
+
+#: src/dial.c:1577 src/file.c:429
+msgid "( Escape to exit, Space to tag )"
+msgstr "( Phím Esc để thoát, phím cách để đặt thẻ )"
+
+#: src/dial.c:1578
+msgid " Move entry up/down, Escape to exit"
+msgstr " Đem mục lên/xuống, phím Esc để thoát"
+
+#: src/dial.c:1598
+msgid "Dialing Directory"
+msgstr "Danh bạ số quay"
+
+#: src/dial.c:1600
+msgid "     Name            Number            Last on      Times Script\n"
+msgstr "     Tên             Số                Lần cuối     Lần   Văn lệnh\n"
+
+#: src/dial.c:1774
+msgid "Find an entry"
+msgstr "Tìm mục nhập"
+
+#: src/dial.c:1835
+msgid "Remove entry?"
+msgstr "Gỡ bỏ mục nhập ?"
+
+#: src/dial.c:1879
+msgid "Enter number"
+msgstr "Nhập số"
+
+#. TRANSLATORS: Translation of each of these menu items should not be
+#. * longer than 7 characters. The upper-case letter is a shortcut,
+#. * so keep them unique and ASCII; 'h', 'j', 'k', 'l' are reserved
+#: src/file.c:59
+msgid "[Goto]"
+msgstr "[tới]"
+
+#: src/file.c:59
+msgid "[Prev]"
+msgstr "[Trước]"
+
+#: src/file.c:59
+msgid "[Show]"
+msgstr "[Hiện]"
+
+#: src/file.c:59
+msgid "[Tag]"
+msgstr "[Thẻ]"
+
+#: src/file.c:59
+msgid "[Untag]"
+msgstr "[Bỏ thẻ]"
+
+#: src/file.c:60
+msgid "[Okay]"
+msgstr "[Okay]"
+
+#: src/file.c:322
+#, c-format
+msgid "Could not change to directory %s (%s)"
+msgstr "Không thể chuyển đổi sang thư mục %s (%s)"
+
+#: src/file.c:346
+msgid "Select one or more files for download"
+msgstr "Chọn một hay nhiều tập tin cần tải về"
+
+#: src/file.c:348
+msgid "Select a file for download"
+msgstr "Chọn một tập tin cần tải về"
+
+#: src/file.c:350
+msgid "Select a directory for download"
+msgstr "Chọn một thư mục để tải về"
+
+#: src/file.c:353
+msgid "Select one or more files for upload"
+msgstr "Chọn một hay nhiều tập tin cần tải lên"
+
+#: src/file.c:355
+msgid "Select a file for upload"
+msgstr "Chọn một tập tin cần tải lên"
+
+#: src/file.c:357
+msgid "Select a directory for upload"
+msgstr "Chọn một thư mục để tải lên"
+
+#: src/file.c:366
+#, c-format
+msgid "Directory: %%-%ds"
+msgstr "Thư mục: %%-%ds"
+
+#: src/file.c:454
+msgid "Can't back up!"
+msgstr "Không thể sao lưu!"
+
+#: src/file.c:552 src/file.c:565
+msgid "Too many files tagged - buffer would overflow"
+msgstr "Quá nhiều tập tin có thẻ - sẽ tràn bộ đệm"
+
+#: src/file.c:669 src/file.c:796
+msgid "Can select only one!"
+msgstr "chỉ có thể chọn một cái!"
+
+#: src/file.c:771
+msgid "Goto directory:"
+msgstr "Tới thư mục:"
+
+#: src/file.c:785
+msgid "Filename pattern:"
+msgstr "Mẫu tên tập tin:"
+
+#: src/file.c:802
+msgid "Tag pattern:"
+msgstr "Mẫu thẻ :"
+
+#: src/file.c:806
+msgid "No file(s) tagged"
+msgstr "Không có tập tin có thẻ"
+
+#: src/file.c:823
+msgid "Untag pattern:"
+msgstr "Mẫu bỏ thẻ:"
+
+#: src/file.c:827
+msgid "No file(s) untagged"
+msgstr "Không có tập tin có thẻ bị bỏ"
+
+#: src/file.c:843
+msgid "No file selected - enter filename:"
+msgstr "Chưa chọn tập tin - gõ tên tập tin:"
+
+#: src/file.c:853
+#, c-format
+msgid "File: \"%s\" exists! Overwrite?"
+msgstr "Tập tin “%s” đã có. Ghi đè không?"
+
+#: src/file.c:864
+msgid "no such file!"
+msgstr "không có tập tin như vậy!"
+
+#: src/getsdir.c:315
+#, c-format
+msgid "%d files:\n"
+msgstr "%d tập tin\n"
+
+#: src/help.c:41
+msgid "Minicom Command Summary"
+msgstr "Tóm tắt lệnh Minicom"
+
+#: src/help.c:45
+#, c-format
+msgid "Commands can be called by %s<key>"
+msgstr "Có thể gọi lệnh bằng phím %s<key>"
+
+#: src/help.c:51
+msgid "Main Functions"
+msgstr "Chức năng chính"
+
+#: src/help.c:53
+msgid "Other Functions"
+msgstr "Chức năng khác"
+
+#: src/help.c:55
+msgid " Dialing directory..D  run script (Go)....G | Clear Screen.......C\n"
+msgstr " Danh bạ số quay...D  chạy văn lệnh (Đi)...G | Xóa màn hình.......C\n"
+
+#: src/help.c:56
+msgid " Send files.........S  Receive files......R | cOnfigure Minicom..O\n"
+msgstr " Gửi tập tin........S  Nhận tập tin.......R | Cấu hình Minicom..O\n"
+
+#: src/help.c:57
+msgid " comm Parameters....P  Add linefeed.......A | "
+msgstr " Tham số kết nối....P  Xuống dòng.........A | "
+
+#: src/help.c:59
+msgid "Suspend minicom....J\n"
+msgstr "Ngưng minicom....J\n"
+
+#: src/help.c:61
+msgid "Jump to a shell....J\n"
+msgstr "Nhảy tới hệ vỏ.....J\n"
+
+#: src/help.c:63
+msgid " Capture on/off.....L  Hangup.............H | eXit and reset.....X\n"
+msgstr " Bật/tắt bắt........L  Tạm Ngừng..........H | Thoát và đặt lại...X\n"
+
+#: src/help.c:64
+msgid " send break.........F  initialize Modem...M | Quit with no reset.Q\n"
+msgstr " gửi ngắt...........F  khởi tạo modem.....M | Thoát, không đặt lại.Q\n"
+
+#: src/help.c:65
+msgid " Terminal settings..T  run Kermit.........K | Cursor key mode....I\n"
+msgstr ""
+" Cài đặt t.b.cuối...T  chạy Kermit........K | Chế độ phím con trỏ...I\n"
+
+#: src/help.c:66
+msgid " lineWrap on/off....W"
+msgstr " Bật/tắt ngắt dòng....W"
+
+#: src/help.c:67
+msgid "  local Echo on/off..E | Help screen........Z\n"
+msgstr "  Bật/tắt phản chiếu cục bộ..E | Trợ giúp........Z\n"
+
+#: src/help.c:68
+msgid " Paste file.........Y  Timestamp toggle...N | scroll Back........B\n"
+msgstr " Dán tập tin........Y  Timestamp Bật/Tắt..N | cuộn Back..........B\n"
+
+#: src/help.c:69
+msgid " Add Carriage Ret...U"
+msgstr " Thêm con trỏ Trở về đầu dòng...U"
+
+#: src/help.c:71
+msgid "Select function or press Enter for none."
+msgstr "Chọn chức năng, hay bấm Enter để chọn không gì."
+
+#: src/help.c:79
+msgid "Written by Miquel van Smoorenburg 1991-1995"
+msgstr "Tác giả: Miquel van Smoorenburg năm 1991-1995"
+
+#: src/help.c:81
+msgid "Some additions by Jukka Lahtinen 1997-2000"
+msgstr "Bổ sung thêm bởi Jukka Lahtinen năm 1997-2000"
+
+#: src/help.c:83
+msgid "i18n by Arnaldo Carvalho de Melo 1998"
+msgstr "Quốc tế hoá bởi Arnaldo Carvalho de Melo năm 1998"
+
+#: src/main.c:213
+#, c-format
+msgid "Lockfile is stale. Overriding it..\n"
+msgstr "Tập tin khoá quá cũ nên ghi đè lên nó..\n"
+
+#: src/main.c:222 src/updown.c:494
+#, c-format
+msgid "Device %s is locked.\n"
+msgstr "Thiết bị %s bị khoá.\n"
+
+#: src/main.c:237
+#, c-format
+msgid "Could not setup for dial out.\n"
+msgstr "Không thể thiết lập để quay số ra.\n"
+
+#: src/main.c:288
+#, c-format
+msgid "minicom: cannot open %s: %s\n"
+msgstr "minicom: không thể mở %s: %s\n"
+
+#: src/main.c:291
+#, c-format
+msgid "minicom: cannot open %s. Sorry.\n"
+msgstr "minicom: không thể mở %s. Rất tiếc.\n"
+
+#: src/main.c:298 src/main.c:754
+#, c-format
+msgid "Cannot open %s!"
+msgstr "Không thể mở %s !"
+
+#: src/main.c:477
+msgid "Offline"
+msgstr "Ngoại tuyến"
+
+#: src/main.c:477
+msgid "OFFLINE"
+msgstr "NGOẠI TUYẾN"
+
+#: src/main.c:479
+msgid "Online"
+msgstr "Trực tuyến"
+
+#: src/main.c:479
+msgid "ONLINE"
+msgstr "TRỰC TUYẾN"
+
+#: src/main.c:554
+#, c-format
+msgid "Gone offline (%ld:%02ld:%02ld)"
+msgstr "Ngắt kết nối (%ld:%02ld:%02ld)"
+
+#: src/main.c:635
+#, c-format
+msgid " %7.7sZ for help |           |     | Minicom %-6.6s |       | "
+msgstr " %7.7sZ Trợ giúp |           |     | Minicom %-6.6s |       | "
+
+#: src/main.c:735
+msgid "Could not re-initialize window system."
+msgstr "Không thể khởi tạo lại hệ thống cửa sổ."
+
+#: src/minicom.c:56 src/minicom.c:58
+#, c-format
+msgid "Got signal %d"
+msgstr "Nhận được tín hiệu %d"
+
+#: src/minicom.c:69 src/minicom.c:70
+msgid "  Close "
+msgstr "  Đóng "
+
+#: src/minicom.c:69
+msgid " Pause  "
+msgstr " Tạm dừng  "
+
+#: src/minicom.c:69 src/minicom.c:70
+msgid "  Exit  "
+msgstr "  Thoát  "
+
+#: src/minicom.c:70
+msgid " Unpause"
+msgstr " Hủy tạm dừng"
+
+#: src/minicom.c:85
+msgid "Hang-up line?"
+msgstr "Ngừng?"
+
+#: src/minicom.c:96
+#, c-format
+msgid "Killed by signal %d !\n"
+msgstr "Bị giết do tín hiệu %d !\n"
+
+#: src/minicom.c:120
+msgid "Suspended. Type \"fg\" to resume.\n"
+msgstr "Bị ngưng. Gõ “fg” để tiếp tục lại.\n"
+
+#: src/minicom.c:139
+msgid "SHELL variable not set"
+msgstr "Chưa đặt biến SHELL (hệ vỏ)"
+
+#: src/minicom.c:143 src/updown.c:314 src/updown.c:522 src/updown.c:721
+msgid "Out of memory: could not fork()"
+msgstr "Tràn bộ nhớ nên không thể fork() (tạo tiến trình con)"
+
+#: src/minicom.c:153
+msgid "Shelled out. Type \"exit\" to return.\n"
+msgstr "Nằm trong nền hệ vỏ. Gõ “exit” để trở về.\n"
+
+#: src/minicom.c:266
+msgid "SEARCH FOR (ESC=Exit)"
+msgstr "TÌM KIẾM (ESC = thoát)"
+
+#: src/minicom.c:316 src/minicom.c:337
+msgid "Search Wrapping Around to Start!"
+msgstr "Việc tìm kiếm cuộn về đầu !"
+
+#: src/minicom.c:462
+msgid ""
+"HISTORY: U=Up D=Down F=PgDn B=PgUp s=Srch S=CaseLess N=Next C=Cite ESC=Exit "
+msgstr ""
+"LƯỢC SỬ: U=Lên D=Xuống F=PgDn B=PgUp s=Tìm S=Chữ-nào N=Kế C=Trích ESC=Thoát "
+
+#: src/minicom.c:501
+msgid "History buffer Disabled!"
+msgstr "Bộ đệm lược sử bị tắt!"
+
+#: src/minicom.c:506
+msgid "History buffer empty!"
+msgstr "Bộ đệm lược sử là rỗng!"
+
+#: src/minicom.c:564
+msgid ""
+"No previous search!\n"
+"  Please 's' or 'S' first!"
+msgstr ""
+"Không có việc tìm kiếm trước.\n"
+" Háy dùng “s” hay “S” trước tiên."
+
+#: src/minicom.c:721 src/minicom.c:764
+msgid ""
+"  CITATION: ENTER=select start line ESC=exit                               "
+msgstr ""
+"  TRÍCH DẪN: ENTER=chọn dòng đầu ESC=thoát                                 "
+
+#: src/minicom.c:738
+msgid ""
+"  CITATION: ENTER=select end line ESC=exit                                 "
+msgstr ""
+"  TRÍCH DẪN: ENTER=chọn dòng cuối ESC=thoát                                "
+
+#: src/minicom.c:798
+#, c-format
+msgid "Wrong option in environment MINICOM=\"%s\"\n"
+msgstr "Gặp tùy chọn không đúng trong môi trường MINICOM=“%s”\n"
+
+#: src/minicom.c:799
+#, c-format
+msgid "Type \"minicom %s\" for help.\n"
+msgstr "Hãy gõ lệnh “minicom %s” để xem trợ giúp.\n"
+
+#: src/minicom.c:809
+#, c-format
+msgid ""
+"Usage: %s [OPTION]... [configuration]\n"
+"A terminal program for Linux and other unix-like systems.\n"
+"\n"
+"  -b, --baudrate         : set baudrate (ignore the value from config)\n"
+"  -D, --device           : set device name (ignore the value from config)\n"
+"  -s, --setup            : enter setup mode\n"
+"  -o, --noinit           : do not initialize modem & lockfiles at startup\n"
+"  -m, --metakey          : use meta or alt key for commands\n"
+"  -M, --metakey8         : use 8bit meta key for commands\n"
+"  -l, --ansi             : literal; assume screen uses non IBM-PC character "
+"set\n"
+"  -L, --iso              : don't assume screen uses ISO8859\n"
+"  -w, --wrap             : Linewrap on\n"
+"  -H, --displayhex       : display output in hex\n"
+"  -z, --statline         : try to use terminal's status line\n"
+"  -7, --7bit             : force 7bit mode\n"
+"  -8, --8bit             : force 8bit mode\n"
+"  -c, --color=on/off     : ANSI style color usage on or off\n"
+"  -a, --attrib=on/off    : use reverse or highlight attributes on or off\n"
+"  -t, --term=TERM        : override TERM environment variable\n"
+"  -S, --script=SCRIPT    : run SCRIPT at startup\n"
+"  -d, --dial=ENTRY       : dial ENTRY from the dialing directory\n"
+"  -p, --ptty=TTYP        : connect to pseudo terminal\n"
+"  -C, --capturefile=FILE : start capturing to FILE\n"
+"  -T, --disabletime      : disable display of online time\n"
+"  -R, --remotecharset    : character set of communication partner\n"
+"  -v, --version          : output version information and exit\n"
+"  configuration          : configuration file to use\n"
+"\n"
+"These options can also be specified in the MINICOM environment variable.\n"
+msgstr ""
+"Sử dụng: %s [TÙY_CHỌN]... [cấu_hình]\n"
+"Một chương trình thiết bị cuối cho Linux và các hệ thống tương tự unix.\n"
+"\n"
+"  -b, --baudrate         : đặt baudrate (không dùng giá trị này từ cấu "
+"hình)\n"
+"  -D, --device           : đặt tên thiết-bị (không dùng giá trị này từ cấu "
+"hình)\n"
+"  -s, --setup            : vào chế độ cài đặt\n"
+"  -o, --noinit           : không khởi tạo bộ điều giải và các tập tin khoá "
+"khi khởi chạy\n"
+"  -m, --metakey          : dùng phím meta hay alt cho lệnh\n"
+"  -M, --metakey8         : dùng phím meta 8bit cho lệnh\n"
+"  -l, --ansi             : là câu văn; coi màn hình dùng bộ ký tự không-IBM-"
+"PC\n"
+"  -L, --iso              : không coi màn hình dùng ISO-8859\n"
+"  -w, --wrap             : bật ngắt dòng\n"
+"  -H, --displayhex       : hiển thị kết xuất theo kiểu thập lục phân\n"
+"  -z, --statline         : thử dùng dòng trạng thái của thiết bị cuối\n"
+"  -7, --7bit             : ép buộc chế độ 7bit\n"
+"  -8, --8bit             : ép buộc chế độ 8bit\n"
+"  -c, --color=on/off     : bật/tắt sử dụng màu kiểu ANSI\n"
+"  -a, --attrib=on/off    : bật/tắt dùng các thuộc tính ngược hay tô sáng\n"
+"  -t, --term=THIẾT_BỊ_CUỐI : ghi đè lên biến môi trường TERM\n"
+"  -S, --script=VĂN_LỆNH  : chạy văn lệnh này khi khởi chạy\n"
+"  -d, --dial=MỤC         : quay số mục nhập này từ danh bạ số quay\n"
+"  -p, --ptty=TTYP        : kết nối tới thiết bị cuối giả\n"
+"  -C, --capturefile=TẬP_TIN : bắt đầu bắt dữ liệu vào tập tin này\n"
+"  -T, --disabletime      : tắt chức năng hiển thị thời gian trực tuyến\n"
+"  -R, --remotecharset    : bảng mã của đối tác cần truyền thông\n"
+"  -v, --version          : xuất thông tin về phiên bản, rồi thoát\n"
+"  configuration          : tập tin cấu hình cần dùng\n"
+"\n"
+"Cũng có thể chỉ định rõ các tùy chọn này trong biến môi trường MINICOM.\n"
+
+#: src/minicom.c:838
+#, c-format
+msgid "This variable is currently set to \"%s\".\n"
+msgstr "Biến này hiện thời được đặt thành “%s”.\n"
+
+#: src/minicom.c:840
+#, c-format
+msgid "This variable is currently unset.\n"
+msgstr "Biến này hiện thời không có giá trị được đặt.\n"
+
+#: src/minicom.c:843
+#, c-format
+msgid ""
+"The configuration directory for the access file and the configurations\n"
+"is compiled to %s.\n"
+"\n"
+"Report bugs to <minicom-devel@lists.alioth.debian.org>.\n"
+msgstr ""
+"Thư mục cấu hình cho tập tin truy cập và các cấu hình được biên dịch thành "
+"%s\n"
+"\n"
+"Hãy thông báo lỗi cho địa chỉ “minicom-devel@lists.alioth.debian.org”.\n"
+
+#: src/minicom.c:1159
+#, c-format
+msgid "%s version %s"
+msgstr "%s phiên bản %s"
+
+#: src/minicom.c:1161
+#, c-format
+msgid " (compiled %s)"
+msgstr " (đã biên dịch %s)"
+
+#: src/minicom.c:1164
+#, c-format
+msgid ""
+"Copyright (C) Miquel van Smoorenburg.\n"
+"\n"
+msgstr ""
+"Tác quyền © của Miquel van Smoorenburg.\n"
+"\n"
+
+#: src/minicom.c:1187
+#, c-format
+msgid "minicom: argument to -p must be a pty\n"
+msgstr "minicom: đối số đối với “-p” phải là một thuộc tính\n"
+
+#: src/minicom.c:1251 src/minicom.c:1571
+msgid "Cannot open capture file"
+msgstr "Không thể mở tập tin bắt"
+
+#: src/minicom.c:1310
+msgid "You don't exist. Go away.\n"
+msgstr "Người lạ. Cút đi !\n"
+
+#: src/minicom.c:1385
+msgid "Sorry. Your screen is too small.\n"
+msgstr "Màn hình này quá nhỏ.\n"
+
+#: src/minicom.c:1454
+msgid "Welcome to minicom"
+msgstr "Chào mừng bạn dùng minicom"
+
+#: src/minicom.c:1455
+msgid "OPTIONS"
+msgstr "TÙY CHỌN"
+
+#: src/minicom.c:1457
+msgid "Compiled on"
+msgstr "Biên dịch vào"
+
+#: src/minicom.c:1473
+msgid "Port"
+msgstr "Cổng"
+
+#: src/minicom.c:1476
+msgid "Using character set conversion"
+msgstr "Dùng bộ ký tự chuyển đổi"
+
+#: src/minicom.c:1477
+#, c-format
+msgid ""
+"\n"
+"Press %sZ for help on special keys%c\n"
+"\n"
+msgstr ""
+"\n"
+"Bấm %sZ để xem trợ giúp về các phím đặc biệt%c\n"
+"\n"
+
+#: src/minicom.c:1498
+msgid "Add linefeed ON"
+msgstr "Thêm ký tự xuống dòng đã BẬT"
+
+#: src/minicom.c:1498
+msgid "Add linefeed OFF"
+msgstr "Thêm ký tự xuống dòng bị TẮT"
+
+#: src/minicom.c:1503
+msgid "Add carriage return ON"
+msgstr "Thêm dấu về đầu dòng BẬT"
+
+#: src/minicom.c:1503
+msgid "Add carriage return OFF"
+msgstr "Thêm dấu về đầu dòng TẮT"
+
+#: src/minicom.c:1508
+msgid "Local echo ON"
+msgstr "Phản chiếu cục bộ đã BẬT"
+
+#: src/minicom.c:1508
+msgid "Local echo OFF"
+msgstr "Phản chiếu cục bộ bị TẮT"
+
+#: src/minicom.c:1527
+msgid "You are online. Really initialize?"
+msgstr "Bạn đã kết nối. Thực sự sơ khởi không?"
+
+#: src/minicom.c:1534
+msgid "Leave without reset?"
+msgstr "Thoát mà không đặt lại không?"
+
+#: src/minicom.c:1538 src/minicom.c:1556
+msgid "Save macros?"
+msgstr "Lưu các vĩ lệnh không?"
+
+#: src/minicom.c:1548
+msgid "Leave Minicom?"
+msgstr "Thoát khỏi Minicom không?"
+
+#: src/minicom.c:1567
+msgid "Capture to which file? "
+msgstr "Bắt vào tập tin nào? "
+
+#: src/minicom.c:1576 src/minicom.c:1585
+msgid "Capture file"
+msgstr "Tập tin bắt"
+
+#: src/minicom.c:1620
+msgid "Linewrap ON"
+msgstr "Ngắt dòng đã BẬT"
+
+#: src/minicom.c:1620
+msgid "Linewrap OFF"
+msgstr "Ngắt dòng bị TẮT"
+
+#: src/minicom.c:1629
+msgid "Timestamp OFF"
+msgstr "Dấu thời gian TẮT"
+
+#: src/minicom.c:1632
+msgid "Timestamp every line (simple)"
+msgstr "Dấu vết thời gian mỗi dòng (đơn giản)"
+
+#: src/minicom.c:1635
+msgid "Timestamp every line (extended)"
+msgstr "Dấu vết thời gian mỗi dòng (có mở rộng)"
+
+#: src/minicom.c:1638
+msgid "Timestamp lines every second"
+msgstr "Dấu vết thời gian mỗi giây"
+
+#: src/minicom.c:1679
+msgid "Quit without reset while online."
+msgstr "Thoát mà không đặt lại trong khi trực tuyến."
+
+#: src/rwconf.c:115 src/rwconf.c:149
+msgid "No"
+msgstr "Không"
+
+#: src/rwconf.c:226
+#, c-format
+msgid "# Machine-generated file - use \"minicom -s\" to change parameters.\n"
+msgstr ""
+"# Tập tin được máy tạo ra - hãy dùng lệnh “minicom -s” để thay đổi tham số.\n"
+
+#: src/rwconf.c:228
+#, c-format
+msgid ""
+"# Machine-generated file - use setup menu in minicom to change parameters.\n"
+msgstr ""
+"# Tập tin được máy tạo ra - hãy dùng trình đơn thiết lập trong minicom để "
+"thay đổi tham số.\n"
+
+#: src/rwconf.c:253
+#, c-format
+msgid "Memory allocation failed.\n"
+msgstr "Lỗi cấp phát bộ nhớ.\n"
+
+#: src/rwconf.c:322
+#, c-format
+msgid "** Line %d of the %s config file is unparsable.\n"
+msgstr "** Không thể phân tích dòng %d của tập tin cấu hình %s.\n"
+
+#: src/rwconf.c:323
+msgid "global"
+msgstr "toàn cục"
+
+#: src/rwconf.c:323
+msgid "personal"
+msgstr "cá nhân"
+
+#: src/script.c:127
+#, c-format
+msgid "script \"%s\": syntax error in line %d %s%s\n"
+msgstr "văn lệnh “%s”: gặp lỗi cú pháp trên dòng %d %s%s\n"
+
+#: src/script.c:151
+#, c-format
+msgid "script \"%s\": global timeout%s\n"
+msgstr "văn lệnh “%s”: quá hạn toàn cục%s\n"
+
+#: src/script.c:290
+msgid "(word contains ESC or quote)"
+msgstr "(từ chứa ESC hay dấu trích dẫn)"
+
+#: src/script.c:343
+#, c-format
+msgid "runscript: couldn't open \"%s\"%s\n"
+msgstr "runscript: không thể mở “%s”%s\n"
+
+#: src/script.c:364 src/script.c:476
+#, c-format
+msgid "script \"%s\": out of memory%s\n"
+msgstr "văn lệnh “%s”: tràn bộ nhớ%s\n"
+
+#: src/script.c:470
+#, c-format
+msgid "script \"%s\" line %d: unknown variable \"%s\"%s\n"
+msgstr "văn lệnh “%s” dòng %d: không rõ biến “%s”%s\n"
+
+#: src/script.c:515
+#, c-format
+msgid "script \"%s\": unexpected end of file%s\n"
+msgstr "văn lệnh “%s”: gặp kết thúc tập tin bất thường%s\n"
+
+#: src/script.c:523
+msgid "(garbage after })"
+msgstr "(ký tự rác nằm sau dấu ngoặc móc phải } )"
+
+#: src/script.c:531
+msgid "(too many arguments)"
+msgstr "(quá nhiều đối số)"
+
+#: src/script.c:550
+#, c-format
+msgid "script \"%s\" line %d: nested expect%s\n"
+msgstr "văn lệnh “%s” dòng %d: chuỗi mong đợi lồng nhau%s\n"
+
+#: src/script.c:560
+msgid "(garbage after {)"
+msgstr "(ký tự rác nằm sau dấu ngoặc móc trái { )"
+
+#: src/script.c:581 src/script.c:846 src/script.c:914
+msgid "(argument expected)"
+msgstr "(cần đối số)"
+
+#: src/script.c:584 src/script.c:848
+msgid "(invalid argument)"
+msgstr "(đối số không hợp lệ)"
+
+#: src/script.c:679
+msgid "(in goto/gosub label)"
+msgstr "(trong nhãn goto/gosub)"
+
+#: src/script.c:686
+#, c-format
+msgid "script \"%s\" line %d: label \"%s\" not found%s\n"
+msgstr "văn lệnh “%s” dòng %d: không tìm thấy nhãn “%s”%s\n"
+
+#: src/script.c:708
+#, c-format
+msgid "script \"%s\": no return from gosub%s\n"
+msgstr "văn lệnh “%s”: gosub chưa trả lại%s\n"
+
+#: src/script.c:751
+msgid "(missing var name)"
+msgstr "(thiếu tên biến)"
+
+#: src/script.c:768 src/script.c:784
+msgid "(expected variable)"
+msgstr "(mong đợi biến)"
+
+#: src/script.c:816
+msgid "(expected command after if)"
+msgstr "(ngờ lệnh nằm sau “if” [nếu])"
+
+#: src/script.c:831
+msgid "(unknown operator)"
+msgstr "(gặp toán tử không rõ)"
+
+#: src/script.c:870
+msgid "(unexpected argument)"
+msgstr "(gặp đối số bất thường)"
+
+#: src/script.c:897
+#, c-format
+msgid "script \"%s\" line %d: break outside of expect%s\n"
+msgstr ""
+"văn lệnh “%s” dòng %d: sự ngắt [break] nằm bên ngoài chuỗi mong đợi "
+"[expect]%s)\n"
+
+#: src/script.c:917
+#, c-format
+msgid "script \"%s\" line %d: call inside expect%s\n"
+msgstr ""
+"văn lệnh “%s” dòng %d: lời gọi [call] nằm bên trong chuỗi mong đợi "
+"[expect]%s)\n"
+
+#: src/script.c:985
+#, c-format
+msgid "script \"%s\" line %d: unknown command \"%s\"%s\n"
+msgstr "văn lệnh “%s” dòng %d: không rõ lệnh “%s”%s\n"
+
+#: src/script.c:1026
+#, c-format
+msgid "runscript, part of minicom version %s\n"
+msgstr "runscript (chạy lệnh), thuộc về minicom phiên bản %s\n"
+
+#: src/script.c:1031
+#, c-format
+msgid "Usage: runscript <scriptfile> [logfile [homedir]]%s\n"
+msgstr "Sử dụng: runscript <văn_lệnh> [bản_ghi [thư_mục_chính]]%s\n"
+
+#: src/updown.c:73
+#, c-format
+msgid "Cannot chdir to %.30s"
+msgstr "Không thể chdir (chuyển đổi thư mục) sang %.30s"
+
+#: src/updown.c:225
+msgid "Upload"
+msgstr "Tải lên"
+
+#: src/updown.c:225
+msgid "Download"
+msgstr "Tải về"
+
+#: src/updown.c:281
+msgid "Please enter file names"
+msgstr "Hãy nhập các tên tập tin"
+
+#: src/updown.c:290
+msgid "Out of memory: could allocate buffer for command line"
+msgstr "Hết bộ nhớ: không thể cấp phát bộ đệm cho dòng lệnh"
+
+#: src/updown.c:302
+#, c-format
+msgid "%.30s %s - Press CTRL-C to quit"
+msgstr "%.30s %s - Bấm tổ hợp phím CTRL-C để thoát"
+
+#: src/updown.c:303
+msgid "upload"
+msgstr "tải lên"
+
+#: src/updown.c:303
+msgid "download"
+msgstr "tải về"
+
+#: src/updown.c:433
+msgid ""
+"\n"
+" READY: press any key to continue..."
+msgstr ""
+"\n"
+"SẴN SÀNG: bấm phím nào để tiếp tục..."
+
+#: src/updown.c:477
+msgid "Cannot create lockfile!"
+msgstr "Không thể tạo tập tin khoá!"
+
+#: src/updown.c:484
+#, fuzzy, c-format
+msgid "Failed to write lockfile %s\n"
+msgstr "Không thể ghi tập tin bộ lệnh %s"
+
+#: src/updown.c:492
+#, c-format
+msgid "Cannot create lockfile for %s: %s\n"
+msgstr "Không thể tạo tập tin khoá cho %s: %s\n"
+
+#: src/updown.c:639
+msgid "Same as last"
+msgstr "Cũng vậy"
+
+#: src/updown.c:640
+msgid " A -   Username        :"
+msgstr " A -   Tên người dùng  :"
+
+#: src/updown.c:641
+msgid " B -   Password        :"
+msgstr " B -   Mật khẩu        :"
+
+#: src/updown.c:642
+msgid " C -   Name of script  :"
+msgstr " C -   Tên văn lệnh    :"
+
+#: src/updown.c:643
+msgid "Change which setting?     (Return to run, ESC to stop)"
+msgstr "Thay đổi thiết lập nào?     (Return để chạy, ESC để dừng chạy)"
+
+#: src/updown.c:648
+msgid "Run a script"
+msgstr "Chạy văn lệnh"
+
+#: src/window.c:1938
+#, c-format
+msgid "Environment variable TERM not set\n"
+msgstr "Chưa đặt biến môi trường TERM (kiểu thiết bị cuối)\n"
+
+#: src/window.c:1944
+#, c-format
+msgid "No termcap entry for %s\n"
+msgstr "Chưa tạo mục nhập termcap cho %s\n"
+
+#: src/window.c:1947
+#, c-format
+msgid "No termcap database present!\n"
+msgstr "Hiện tại không có cơ sở dữ liệu termcap!\n"
+
+#: src/window.c:1955
+#, c-format
+msgid "No cursor motion capability (cm)\n"
+msgstr "Không có khả năng di chuyển con trỏy (cm - cursor motion)\n"
+
+#: src/window.c:1964
+#, c-format
+msgid "Number of terminal lines unknown\n"
+msgstr "Không hiểu số dòng của thiết bị cuối\n"
+
+#: src/window.c:1968
+#, c-format
+msgid "Number of terminal columns unknown\n"
+msgstr "Không hiểu số cột của thiết bị cuối\n"
+
+#~ msgid "minicom: WARNING: configuration file not found, using defaults\n"
+#~ msgstr ""
+#~ "minicom: CẢNH BÁO : không tìm thấy tập tin cấu hình nên dùng các giá trị "
+#~ "mặc định\n"
+
+#~ msgid "minicom: there is no global configuration file %s\n"
+#~ msgstr "minicom: không có tập tin cấu hình toàn cục %s\n"
+
+#~ msgid "Ask your sysadmin to create one (with minicom -s).\n"
+#~ msgstr ""
+#~ "Hãy xin quản trị hệ thống tạo tập tin như vậy (bằng “minicom -s”).\n"
+
+#~ msgid "You are not allowed to create a configuration"
+#~ msgstr "Bạn không có quyền tạo cấu hình"
+
+#~ msgid "Old dialdir copied as %s.%hd"
+#~ msgstr "dialdir (thư mục quay số) cũ đã được sao chép dạng %s.%hd"
+
+#~ msgid " Paste file.........Y"
+#~ msgstr " Dán tập tin.........Y"
+
+#~ msgid "| scroll Back........B"
+#~ msgstr "| Cuộn lùi........B"
+
+#~ msgid "Resize not supported, screen may be messed up!"
+#~ msgstr ""
+#~ "Không hỗ trợ chức năng thay đổi kích cỡ, có lẽ trình screem bị hỏng."
+
+#~ msgid "Minicom: Device disappeared, aborting!\n"
+#~ msgstr "Minicom: Thiết bị đã biến mật nên hủy bỏ !\n"
+
+#~ msgid "minicom: -s switch needs root privilige\n"
+#~ msgstr "minicom: cái chuyển “-s” cần quyền của người chủ\n"
+
+#~ msgid ""
+#~ "minicom: WARNING: please don't run minicom as root when not maintaining\n"
+#~ "                  it (with the -s switch) since all changes to the\n"
+#~ "                  configuration will be GLOBAL !.\n"
+#~ msgstr ""
+#~ "minicom: CẢNH BÁO : đừng chạy minicom với tư cách người chủ (root)\n"
+#~ "khi không duy trì nó (bằng cái chuyển “-s”), vì trong trường hợp đó,\n"
+#~ "mọi thay đổi trong cấu hình sẽ là TOÀN CỤC !\n"
+
+#~ msgid "Sorry %s. You are not allowed to use configuration %s.\n"
+#~ msgstr "%s không có quyền dùng cấu hình %s.\n"
+
+#~ msgid "Ask your sysadmin to add your name to %s\n"
+#~ msgstr "Hãy xin quản trị hệ thống thêm tên của bạn vào %s.\n"

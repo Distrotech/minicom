@@ -1,0 +1,29 @@
+# A little demonstration of the possibilities of "runscript".
+# This script can be executed by typing: "runscript scriptdemo".
+#
+# Adjust the stty's below to your system: BSD-like or SysV-like.
+# Linux ofcourse accepts both :-)
+#
+
+  goto main
+left:
+  print "\010 \010\010*\c"
+  return
+right:
+  print "\010 *\c"
+  return
+main:
+# ! stty -echo cbreak
+  ! stty -echo -icanon min 1
+  verbose off
+  print Demo! press 'q' to move left, 'w' to move right, 'ESC' to stop.
+  print "                   *\c"
+  expect {
+  	"q"	gosub left
+  	"w"	gosub right
+  	"\033"	break
+  }
+  print \nEnd of demonstration.
+# ! stty -cbreak echo
+  ! stty icanon echo min 5
+  sleep 1

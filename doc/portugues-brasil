@@ -1,0 +1,16 @@
+Minicom em Português (Brasil)!
+
+
+Para que as mensagens do Minicom apareçam em português, edite o arquivo
+/etc/profile (ou equivalente) e inclua as seguintes linhas:
+
+LC_CTYPE=ISO-8859-1
+LANG=pt_BR
+MINICOM=-con -L   # -L para que as bordas apareçam corretamente
+export LANG LC_CTYPE MINICOM
+
+Quaisquer sugestões/correções devem ser enviadas para acme@conectiva.com.br,
+para inclusão na próxima versão.
+
+18.3.1998
+Arnaldo Carvalho de Melo <acme@conectiva.com.br>

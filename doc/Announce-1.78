@@ -1,0 +1,61 @@
+		Announcing minicom 1.78
+
+A short summary of what minicom is:
+
+Minicom is a communications program that resembles the MSDOS Telix
+somewhat. It has a dialing directory, color, full ANSI and VT100
+emulation, an (external) scripting language and more.
+
+Tested platforms:
+Linux 2.0.30
+
+Supported but untested (maybe needs a little tweaking):
+DGUX, FreeBSD, NetBSD, Coherent, HP/UX, SysVR4, Apollo Domain/OS, SunOS, SCO.
+
+New in minicom 1.78:
+
+- A logfile is kept of connects, disconnects and file transfers.
+When you dial a number from the phone directory and the other end answers,
+the connect string from the modem is written to the logfile with the entry
+name and phone number. When the carrier drops, the text "Offline" is written.
+The command line of file transfers are also written. The file names and sizes
+are taken from the external protocol driver output lines beginning with 
+"Sending", "Receiving" and "Bytes". I tested this with rz and sz.
+All output lines in the logfile are preceded with the system date and time.
+If you want to disable logging, you may comment out the LOGFILE macro in 
+config.h and recompile the program. If you don't want to compile it, and
+you don't care about the logfile, you may create an empty file "minicom.log" 
+in your home directory with no write permissions.
+
+- The date and time of the latest call, and a call counter is stored for 
+each phone directory entry. They are shown in the phone dir instead of
+some things I found less interesting, like the terminal emulation setting
+and serial port parameters.
+
+- The DTR drop time with the hangup command is now adjustable. Some modems
+need DTR to be down more than just one second before they hang up.
+
+- Character conversion tables for calling systems that use a character set
+different from your computer. You may define a conversion table for each 
+phone directory entry, and the defined table will be loaded when you call 
+that entry, before running the login script. If no table is defined in the
+phone dir, the table is not changed. Tables .mciso, .mcpc8 and .mcsf7 are
+included to be used when calling systems that use iso-8859-1, pc character
+set and the Finnish sf7 coding, respectively. The .mciso actually doesn't
+convert anything. Copy the tables to your home directory. There is no
+actual restriction of the filenames for the conversion tables (except that
+it shouldn't be longer than 16 characters), I just began them all with .mc
+to keep them together in the ls listings.
+
+- Added environment variable TERMLIN for runscript. It is the number of
+lines on the terminal screen. (That is, LINES - 1 if you use the statusline,
+same as LINES if you don't.)
+
+- Fixed a bug that caused runscript to always run the login script of the
+first number dialed when several entries were tagged for dialing, regardless
+which one of them answered.
+
+- Changed the DTE speed from int to long. Now it should also work on modems 
+faster than 32768 bps.
+
+Jukka Lahtinen, walker@clinet.fi

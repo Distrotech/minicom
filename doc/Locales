@@ -1,0 +1,70 @@
+Minicom Native Language Support
+
+Now minicom has internationalization (i18n for short) support. To make it
+work please do the following steps:
+
+- make sure you have gettext installed and if you compile the program
+yourself, check src/Makefile that "PO = po" is defined and "-D_I18N_"
+is included in the OPFLAGS definition
+
+- in your profile (/etc/profile or something like that for the system 
+profile, or $HOME/.profile for your personal profile) include the 
+following environment variable settings:
+
+---------------------------- 8< ------------------------------------------
+LC_CTYPE=ISO-8859-1 # or the correct ISO code for your character set
+LANG=pt_BR          # change pt_BR to the correct iso code for your language
+export LANG LC_CTYPE
+---------------------------- 8< ------------------------------------------
+
+In the next login just run minicom!
+
+Currently supported languages are Brasilian Portuguese (pt_BR), Finnish
+(fi), Hungarian (hu), Japanese (ja_JP.sjis and ja_JP.ujis), French (fr),
+Polish (pl), Czech (cs), Spanish (es) and Russian (ru).
+Turkish translations are under construction (for a long time... :( ).
+
+If you want to add support for more languages, this is what to do:
+(I suppose you already have downloaded and unpacked the source packet)
+
+- go to the po directory
+- copy minicom.pot (or some existing *.po file) as xx.po where xx is the
+  iso code for your language
+- edit the xx.po file to include the translations of the English strings
+  to your language. The lines beginning with "msgid" contain the English
+  string, and the lines beginning with "msgstr" is where you should write
+  the translations. See the existing *.po files.
+  Check that the translated strings fit their places and don't overflow.
+  (This shouldn't cause problems in running the program, but the user
+  might not understand the truncated text, and screen layouts may become
+  ugly.)
+  Pay special attention to the dialing directory menu (Dial/Find/Add etc.)
+  if you translate it, check that the highlight cursor makes sense.
+  The width of the highlight will be the length of the whole string divided
+  by the number of entries. Pad the string with spaces where necessary so
+  that there is a reasonable "cell" for each entry.
+- add xx (the iso code of your language) to the ALL_LINGUAS list in
+  the "configure" and "configure.in" files (depending on where you got the
+  source, you might not have both of them) in the minicom source base
+  directory and rerun ./configure to add it to all the other necessary
+  places.
+- run "make" and "make install" in the minicom source base directory,
+  or if you don't want to compile the program itself, you can just run
+  them in the po directory. You'll probably need the root permissions to
+  run "make install", but not for anything else in the process.
+- send your xx.po file to the address(es) below to get it included in
+  the next version of Minicom. I'd appreciate it if you are willing to
+  make the necessary changes to the translation file as the program itself
+  is changed.. it is best done by a native speaker of the language, and
+  I don't even understand all the languages in the world!
+- when new versions are released some new strings probably become available
+  for translation, please go to the src/po directory and execute make
+  update-po, the new strings will be added to the catalogs and should then
+  be translated. Note that any strings already translated but modified
+  should be also fixed/translated. The old ones will be left commented at
+  the end of the catalog.
+
+
+Sat 21 Mar 1998 - Fri 21 Dec 2001
+Arnaldo Carvalho de Melo <acme@conectiva.com.br>
+Jukka Lahtinen <walker@netsonic.fi>

@@ -1,0 +1,200 @@
+SEARCH_HISTORY (in Makefile)
+Version: 0.01
+
+E-mail: filipg@paranoia.com       (best)
+        fmgst+@pitt.edu           (so so)
+
+----------------------------------------------------------------------------------
+
+Intro:
+        This patch adds the ability to search for words and phrases in
+	the History buffer.
+
+Do I
+Need
+It:
+	If you use the "SCROLL MODE" (History Buffer) and wish to be able
+	to search said buffer for words and phrases (case-less search is
+	supported, but no regexp's!) then this patch is for you.
+	
+About
+History
+Buffer
+Search:
+	The History Buffer is a circular buffer[+] of a preset number of
+	lines that holds the contents of your previous 'screens'. I want
+	to point out that this buffer is not a "carbon copy" of
+	_everything_ that you have had on your screens. In fact, some
+	programs can 'fool' minicom into not saving even one line of what
+	was perhaps a dozen screen-fulls of information! (ie. lynx) Still,
+	even with these problems, and the fact that a 5000 line buffer
+	(maximum) increases the size of the minicom executable to several
+	megabytes (!!), the history buffer is _very_ handy. I always wanted
+	an ability to search this buffer (because 5000 lines is a lot of
+	info to scan visually!) but could not wait any longer for _someone
+	else_ to do it... so here we are :-)
+
+Notice:
+	To begin using this patch, you must ensure that your History Buffer
+	is enabled in the Options screen. Enter minicom as usual and open
+	up the Options screen with "C-A O". This will display a menu:
+
+            +=====[configuration]======+
+            | Filenames and paths      |
+            | File transfer protocols  |
+            | Serial port setup        |
+            | Modem and dialing        |
+            | Screen and keyboard      |< Select this option
+            | Save setup as dfl        |
+            | Save setup as..          |
+            | Exit                     |
+            +==========================+
+
+	And a new menu will pop up:
+
+              +=================[Screen and keyboard]=================+
+              |                                                       |
+              | A - Command key is         : ^A                       |
+              | B - Backspace key sends    : BS                       |
+              | C - Status line is         : enabled                  |
+              | D - Alarm sound            : No                       |
+              | E - Foreground Color (menu): YELLOW                   |
+            +=| F - Background Color (menu): BLUE                     |
+            | | G - Foreground Color (term): CYAN                     |
+            | | H - Background Color (term): BLACK                    |
+            | | I - Foreground Color (stat): GREEN                    |
+            | | J - Background Color (stat): BLACK                    |
+            | | K - History Buffer Size    : 2000   <<  <<   <<       |<<
+            | | L - Macros file            : .macros                  |
+            | | M - Edit Macros                                       |
+            | | N - Macros enabled         : Yes                      |
+            +=|                                                       |
+              |  Change which setting?  (Esc to exit)                 |
+              +=======================================================+
+
+	The line you want to edit is marked with "<<"'s. Even though
+	the default in minicom is 250 buffer lines, you may wish to
+	increase it to something more reasonable. 2000 works for me.
+	Hit ESC, and move to "Save setup as dfl" in the previous menu
+	and select to save the current configuration.
+
+Acti-
+vation:
+	I assume that you have an _existing_ and configured version of
+	minicom on your system. If not, please see the minicom man
+	page and setup everything _first_!
+
+	Unless the "-D_SEARCH_HISTORY" option in the "OPFLAGS" in the
+	Makefile was defined _before_ the current minicom you have was
+	built, you will need to re-compile. Apply all the patches you
+	want, edit the Makefile to active them (it's very simple), and
+	type "make". 
+
+	The minicom binary generated from the above compliation, will
+	have all the necessary code to search the history buffer. If
+	you do not plan to debug (there are no bugs :-).. you may wish
+	to "strip minicom" to remove debugging info and make the file
+	a bit smaller. This is optional.
+
+Note:
+	You can not search the history buffer until there is something
+	in it. This means that you will need to connect to some service
+	or BBS to actually test the searching function as nothing short
+	that will add any lines to the History Buffer!
+
+Status
+Line:
+	If enabled (I suggest that you do it for a while), the status
+	line is used to inform you of the allowed key-commands and other
+	info. The typical status line for minicom looks like this:
+
+CTRL-A Z for help |115200 8N1 | NOR | Minicom 1.75 1996 | VT102 | Online 03:37
+
+	When you enter the History Buffer view mode, using "C-A B", this
+	status line will change to:
+
+HISTORY: U=Up1 D=Down1 F=PgDn B=PgUp s=Srch S=CaseLess N=NextHit ESC=Exit
+
+	Where:
+
+      Letter   Note     Function & Notes
+      ======   ====     ===================================================
+	U		Move up one line
+	D		Move down one line
+	F		Move down one page (<SPACE> also works)
+	B		Move up one page
+	s(or /)	[+]	Search (from beginning - oldest end - of buffer)
+			for _exactly_ the pattern you can enter.
+			Note: if you hear a <BEEP>, nothing was found!
+	S(or \)	[+]	Search (from beginning - oldest end - of buffer)
+			for the pattern you can enter _ignoring case_.
+			Note: if you hear a <BEEP>, nothing was found!
+	N		Search for _next_ match (ie. continue search first
+			initiated with either the \ or / command keys). 
+      <ESC>		Exit from HISTORY mode back to the terminal session.
+
+Note [+]:
+	Both search commands will display another status line and enter
+	the input mode:
+
+SEARCH FOR (ESC=Exit)(nn): 
+	
+	Where you will be able to type in the word(s)/phrase to search
+	for. The "(nn)" is the maximum number of characters (this can
+	be changed in ../src/minicom.h as MAX_SEARCH (set to 30 by default))
+	Note that hitting <ESC> will take you back to the HISTORY mode!
+
+	When you accept the entry, the display will be move to the first
+	occurence of the search term. If none is found, you will just hear
+	a <BEEP> (tone). Otherwise, the first match will be highlighted
+	(and advanced to the top of the page)... other matches (if any)
+	will also be high-lighted. You can now press "n" to advance to the
+	next hit (if none are found from the current match to the end of
+	the end of the document, you wee get a <BEEP> AND pressing 'n'
+	again will wrap you around to the first match!). You can also
+	use the page up/down and line up/down keys... any matches of
+	the pattern that are encountered this way will ALSO be high-
+	lighted.
+
+	Hitting <ESC> at any time will dismiss the HISTORY screen and
+	restore the terminal session. If, for some reason, the screen is
+	not correctly redrawn, hitting ^R (C-R) will refresh it.
+
+Bugs:
+	Minicom appears to have some windowing bugs that show themselves
+	when the screen is not correctly restored when windows are closed.
+	These bugs seem to occure more often when used with "odd" console
+	screen sizes (I run 100x37 :-) and now and then I need to refresh
+	the screen with ^R (C-R) after window-operations. I will track
+	this down when I have some time... It's been in minicom as long as
+	I can remember... it just never bothered me enough :-)
+
+	Feel free to e-mail me with suggestions and feedback:
+
+E-mail: filipg@paranoia.com      	 (best)
+        fmgst+@pitt.edu          	 (so so)
+
+WWW:	http://www.paranoia.com/~filipg/
+	http://www.repairfaq.org/
+
+----------------------------------------------------------------------------------
+
+----------------
+// fmg 8/20/97 - Added History Buffer search (very unstable)
+		 Lots of bugs found and squashed... floor got
+		 really slippery for a while... yuck :-)
+
+----------------
+// fmg 8/21/97 - Added case and case-less options and fixed 'N' search
+		 Started using this minicom as "production". 3 new bugs
+		 found and squashed.
+
+----------------
+// fmg 8/22/97 - Rewrote parts of code, cleaned up variables, #ifdef'ed
+		 everything, and tested make'ing. Added display of
+		 compile options on startup screen. No bugs found.
+		 (sorry, does not mean there aren't any :-)
+
+----------------
+// fmg 8/31/97 - Finished up and cleaned up this page :-)
+

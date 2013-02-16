@@ -1,0 +1,30 @@
+		Announcing minicom 1.83
+
+A short summary of what minicom is:
+
+Minicom is a communications program that resembles the MSDOS Telix
+somewhat. It has a dialing directory, color, full ANSI and VT100
+emulation, an (external) scripting language and more.
+
+Tested platforms:
+Linux 2.0.34-2.2.5, Solaris
+
+Supported but untested (may need a little tweaking):
+DGUX, FreeBSD, NetBSD, Coherent, HP/UX, SysVR4, Apollo Domain/OS, SunOS, SCO.
+
+Some of the main changes after 1.82.1:
+- fixed some possible overflows caused by i18N
+- added some options to change the logfile name or disable logging, and
+  to select which events to log
+- multiline untag option for systems with several phonedir entries
+- newline delay option in the terminal settings
+- multiple phonedir entries may be given for the -d command line option
+- support for 230400 bps DTE speed
+- now you can reorder the phonedir by moving entries up and down
+
+Unfortunately the Portuguese translations are not yet up-to-date, but it 
+will become available at http://www.clinet.fi/~walker/minicom.html and
+an updated packet will be sent to ftp://sunsite.unc.edu as soon as I get
+an updated version of the file.
+
+Jukka Lahtinen, walker@clinet.fi

@@ -1,0 +1,13 @@
+Some things that should be fixed. If you fix some of the problems described
+below, please tell me (walker@netsonic.fi):
+
+- sometimes when the program closes a window, the terminal window under
+  that gets improperly restored.
+  Probably happens because of the cursor movement commands from the other
+  end when the screen was written.
+
+- When run from xterm, Minicom doesn't restore the window colors on exit
+  (Then again, there is the xminicom script..)
+
+- the scripts are reported not to wait for the shell commands (beginning
+  with !) to finish before continuing the script

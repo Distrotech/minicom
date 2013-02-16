@@ -1,0 +1,12 @@
+VT102 emulation is complete now, except for:
+  	- Emulation of keypad keys in applications mode (impossible?)
+  	- Double width / double height / 132 characters (impossible?)
+  	- Line printer support
+  	- LED functions.
+  As you see, none of these are likely to be needed much.
+- Probably Viditel (Prestel) support will be added. (sometimes).
+
+* Idle timeout
+* after connect in dial window: CONNECT 28000/ARQ etc
+* Option to turn off "press any key to continue".
+* Check if write to .dialdir fails and issue warning (file system full?)

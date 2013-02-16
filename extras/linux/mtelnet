@@ -1,0 +1,2 @@
+modemu -e "at%b0=3%b1=3" -c "minicom -c on -o -m -t linux -p tty%s"  
+

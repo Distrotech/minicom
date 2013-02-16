@@ -1,0 +1,48 @@
+1. Missing capability in the linux terminfo entry.
+
+You should check if your linux terminfo description has `csr'
+defined; do this with "infocmp linux | grep csr". If not, do
+the following:
+
+# infocmp linux > linux
+# vi linux
+  [ add the line "csr=\E[%i%p1%d;%p2%dr," ]
+# tic linux
+
+
+2. Using the real ANSI or IBM-PC graphic characters.
+
+If you install this terminfo entry you can use the options
+"-l -tmc" to let minicom use the IBM-PC character set on
+the linux console.
+
+You can do this by entering (as root):
+
+# tic minicom
+
+Some terminals, such as most consoles on Unixes that run on IBM
+compatible PC's, can display special line drawing characters.
+If these characters map 1-to-1 to the IBM character set, you can just
+use the '-l' (literal) flag when invoking minicom. If your
+terminal cannot display the IBM characters directly, you should add
+the 'as', 'ae' and 'ac' entries to your termcap or terminfo.
+
+The Linux console only maps 1-to-1 in a special mode. Therefore you need to
+make a special terminfo entry that initializes the
+console on startup. For an example see the file minicom.
+This defines a terminfo entry called "mc".
+To use this information instead of the normal 'console' information,
+minicom has to be invoked with the '-t mc' option (meaning use TERM=mc
+instead of the normal TERM environment variable).
+
+And, in my /etc/profile I have added the lines:
+
+        case "$TERM" in
+          con*|linux)
+                MINICOM="-l -m -con -tmc" ; export MINICOM
+                ;;
+        esac
+
+So when I log in on the console I can use minicom in full color,
+full ANSI mode.
+

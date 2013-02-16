@@ -1,0 +1,151 @@
+--- window.c	Wed May 22 23:40:36 1996
++++ ../../source/window.c	Thu May  9 23:55:04 1996
+@@ -38,6 +38,7 @@
+ 
+ #ifndef BBS
+ #include "config.h"
++#include "configsym.h"
+ #endif
+ 
+ #define BUFFERSIZE 2048
+@@ -1589,6 +1590,9 @@
+   int direct = dirflush;
+   int delete = 1;
+ 
++  char *emacskeymap_from = "\001\002\004\005\006" /*"\013"*/ ; 
++  int emacskeymap_to[] = { K_HOME, K_LT, K_DEL, K_END, K_RT } ;
++
+   x = w->curx;
+   y = w->cury;
+ 
+@@ -1609,6 +1613,11 @@
+ 		once--;
+ 	} else {
+ 		c = getch();
++		/* maybe this stuff (below) should be #ifndef BBS?? */
++		if (P_EMACSKEYS[0] == 'Y' && strchr(emacskeymap_from,c))
++			c = emacskeymap_to[(int)strchr(emacskeymap_from,c) -
++				(int)emacskeymap_from];
++			
+ 		if (c > 255 || c == K_BS || c == K_DEL) delete = 0;
+ 	}
+ 	switch(c) {
+@@ -1677,7 +1686,18 @@
+ 			wlocate(w, x + idx - offs, y);
+ 			wflush();
+ 			break;
++		case 'K'-'@':	/* CTRL-K */
++				/* Delete rest of line */
++			if(P_EMACSKEYS[0] == 'Y') {
++				buf[idx] = 0;
++				lredraw(w, x + idx - offs, y, buf + idx,
++					linelen - (idx - offs));
++				wlocate(w, x + idx - offs, y);
++				wflush();
++			}
++			break;
+ 		default:
++			if (c < 32 || c > 127) break;
+ 			/* If delete == 1, delete the buffer. */
+ 			if (delete) {
+ 				if ((i = strlen(buf)) > linelen)
+@@ -1691,7 +1711,6 @@
+ 			}
+ 
+ 			/* Insert character at cursor position. */
+-			if (c < 32 || c > 127) break;
+ 			if (idx + 1 >= maxlen) break;
+ 			for(f = strlen(buf) + 1; f > idx; f--)
+ 				buf[f] = buf[f-1];
+--- ./config.c	Wed May 22 23:23:18 1996
++++ ../source/config.c	Thu May  9 22:58:38 1996
+@@ -593,13 +593,13 @@
+   int tmp_c;    /* fmg - need it to color keep in sanity checks */
+   char buf[16];
+   int miny = 4, 
+-  maxy = 17;
++  maxy = 18;
+   int old_stat = P_STATLINE[0];
+ #if _HAVE_MACROS
+   FILE	*fp;
+ 
+   miny = 3;
+-  maxy = 19;
++  maxy = 20;
+ #endif
+ 
+   w = wopen(15, miny, 69, maxy, BDOUBLE, stdattr, mfcolor, mbcolor, 0, 0, 1);
+@@ -621,11 +621,13 @@
+   /* MARK updated 02/17/95 - Configurable history buffer size */
+   wprintf(w, " K - History Buffer Size    : %s\n", P_HISTSIZE);
+ 
++  wprintf(w, " L - Enable Emacs keys      : %s\n", P_EMACSKEYS);
++
+ #if _HAVE_MACROS
+   /* fmg - macros support */
+-  wprintf(w, " L - Macros file            : %s\n", P_MACROS);
+-  wprintf(w, " M - Edit Macros\n");
+-  wprintf(w, " N - Macros enabled         : %s\n", P_MACENAB);
++  wprintf(w, " M - Macros file            : %s\n", P_MACROS);
++  wprintf(w, " N - Edit Macros\n");
++  wprintf(w, " O - Macros enabled         : %s\n", P_MACENAB);
+ #endif
+ 
+   wredraw(w, 1);
+@@ -855,9 +857,14 @@
+ 			werror("This system does not support history");
+ #endif
+ 			break;
++		case 'L': /* enable emacs editing keys */
++			psets(P_EMACSKEYS, yesno(P_EMACSKEYS[0] == 'N'));
++			wlocate(w, 30, 12);
++			wprintf(w, "%s", P_EMACSKEYS);
++			break;
+ #if _HAVE_MACROS
+-                case 'L': /* fmg - get local macros storage file */
+-                        pgets(w, 30, 12, P_MACROS, 64, 64);
++                case 'M': /* fmg - get local macros storage file */
++                        pgets(w, 30, 13, P_MACROS, 64, 64);
+ 
+ 			/* Try to open the file to read it in. */
+ 			fp = sfopen(pfix_home(P_MACROS), "r+");
+@@ -880,12 +887,12 @@
+ 			readmacs(fp, 0);
+ 			fclose(fp);
+                         break;
+-                case 'M': /* fmg - Bring up macro editing window */
++                case 'N': /* fmg - Bring up macro editing window */
+                         domacros();
+                         break;
+-		case 'N':
++		case 'O':
+ 			psets(P_MACENAB, yesno(P_MACENAB[0] == 'N'));
+-			wlocate(w, 30, 14);
++			wlocate(w, 30, 15);
+ 			wprintf(w, "%s", P_MACENAB);
+ 			break;
+ #endif
+--- orig_source/configsym.h	Wed Mar 15 18:37:36 1995
++++ source/configsym.h	Thu May  9 22:34:32 1996
+@@ -117,7 +117,8 @@
+ 
+ #define P_SOUND		mpars[75].value
+ #define P_HISTSIZE      mpars[76].value  /* History buffer size */
+- 
++#define P_EMACSKEYS	mpars[77].value  /* Enable emacs keys in line edits */
++
+ /* fmg - macros struct */
+ 
+ #define P_MAC1          mmacs[0].value
+--- orig_source/rwconf.c	Wed Mar 15 18:37:36 1995
++++ source/rwconf.c	Thu May  9 22:35:56 1996
+@@ -140,6 +140,9 @@
+   /* MARK updated 02/17/95 - History buffer size */
+   { "256",             PUBLIC,    "histlines" },
+ 
++  /* Enable Emacs editing keys in line editings */
++  { "Yes",		PUBLIC,   "emacskeys" },
++
+   /* That's all folks */
+   { "",                 0,         (char *)NULL },
+ };

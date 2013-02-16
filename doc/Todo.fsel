@@ -1,0 +1,36 @@
+A Todo list by jseymour@jimsun.LinxNet.com, some things removed as they
+have been dealt with..
+
+Things yet To Do with file selector code - in no particular order
+
+    . Clean up & mild re-structuring of "file.c" - it's kind of
+      sloppy at the moment.  (Too many file-global static vars,
+      etc.)
+
+    . After tagging, untagging, etc., selector should reset sub-menu
+      to "Okay" selection (?).  (Requires re-write of "dhili()" to do
+      this well.)
+
+    . Maybe display count of selected files on title bar?
+
+    . On (wildcard) tag: if no tagged file(s) would be in current window,
+      re-display so that first tagged is shown?
+
+    . After wildcard tag: briefly display count of newly tagged and total
+      tagged?
+
+    . On "Untag": if no tagged files, display "nothing to untag"?
+
+    . Do a check for directory/file write-ability and warn the user, if
+      necessary, for certain operations?  (I.e.: downloads.)
+
+    . I have concerns about certain line-lengths and buffer sizes:
+
+	. The buffer-full of filenames returned by filedir(): this
+	  somehow needs to be length-limited to the max buffer-len
+	  that the system can handle.  If the number tagged would
+	  exceed this, a warning pop-up should show.
+
+    . I don't know how scripts are used, but perhaps the selector could
+      be enhanced to work for selecting these, as well?
+

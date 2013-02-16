@@ -1,0 +1,7 @@
+# Entry for minicom so it uses the PC (IBM) character set.
+minicom|mc|ansi-mc|termcap entry for minicom on the console, 
+	acsc@, enacs@, smacs@, rmacs@,
+	bel=\E(B\007\E(U, flash=\E(B\007\E(U,
+	is1=\E[m\E>\E(U, rs1=\E[m\E>\E(B,
+	csr=\E[%i%p1%d;%p2%dr,
+	use=linux,

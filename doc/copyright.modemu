@@ -1,0 +1,27 @@
+This package was put together by John Goerzen <jgoerzen@complete.org>.  The
+only changes made were compiling with -O2 and the addition of the brief
+"QuickStart" document.  Below is the copyright information from the modemu
+distribution on sunsite.unc.edu/pub/Linux/apps/comm/modemu-0.0.1.tar.gz.
+
+Debian GNU/Linux users can find the GNU General Public License in the file
+/usr/doc/copyright/GPL or /usr/doc/copyright/GPL.gz
+
+			 Modemu Version 0.0.1
+			 ====================
+				   
+		Copyright (c) 1995, 1996 Toru Egashira
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or (at
+your option) any later version.
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+
