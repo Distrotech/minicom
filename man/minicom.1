@@ -525,6 +525,14 @@ Minicom will then try to connect to this socket as a client. As long as it
 cannot connect to the socket it stays 'offline'. As soon as the connection
 establishes, minicom goes 'online'. If the server closes the socket, minicom
 switches to 'offline' again.
+.br
+To use an INET socket for communication the device name must be prefixed
+with "inet#" followed by a node and a service. The 'node' may be symbolic
+(eg "localhost"), an IPv4 address in dotted decimal notation (eg "127.0.0.1"),
+or an IPv6 address enclosed in angular brackets (eg "[::1]"). The 'service'
+may be symbolic (eg "telnet") or numeric (eg "23").
+'Node' and 'service' must be separated by a colon (':') and no white space
+may be inside the entire string.
 .TP 0.5i
 .B B - Lock file location
 On most systems This should be /usr/spool/uucp. GNU/Linux systems use
