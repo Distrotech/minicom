@@ -125,11 +125,10 @@ void term_socket_connect(void)
   if (!portfd_is_socket || portfd_is_connected)
     return;
 
-  if ((portfd = socket(AF_UNIX, SOCK_STREAM, 0)) == -1)
+  if ((portfd = socket(portfd_sock_addr.sa_family, SOCK_STREAM, 0)) == -1)
     return;
 
-  if (connect(portfd, (struct sockaddr *)&portfd_sock_addr,
-              sizeof(portfd_sock_addr)) == -1)
+  if (connect(portfd, &portfd_sock_addr, sizeof(portfd_sock_addr)) == -1)
     term_socket_close();
   else
     portfd_is_connected = 1;
@@ -165,9 +164,11 @@ int open_term(int doinit, int show_win_on_error, int no_msgs)
 #endif
 
 #ifdef USE_SOCKET
-#define SOCKET_PREFIX "unix#"
+#define UNIX_SOCKET_PREFIX "unix#"
+#define INET_SOCKET_PREFIX "inet#"
     portfd_is_socket = portfd_is_connected = 0;
-    if (strncmp(dial_tty, SOCKET_PREFIX, strlen(SOCKET_PREFIX)) == 0) {
+    if (strncmp(dial_tty, UNIX_SOCKET_PREFIX, strlen(UNIX_SOCKET_PREFIX)) == 0
+     || strncmp(dial_tty, INET_SOCKET_PREFIX, strlen(INET_SOCKET_PREFIX)) == 0) {
       portfd_is_socket = 1;
     }
 #endif
@@ -247,11 +248,43 @@ nolock:
     alarm(20);
 #ifdef USE_SOCKET
     if (portfd_is_socket) {
-      portfd_sock_addr.sun_family = AF_UNIX;
-      strncpy(portfd_sock_addr.sun_path,
-              dial_tty + strlen(SOCKET_PREFIX),
-              sizeof(portfd_sock_addr.sun_path)-1);
-      portfd_sock_addr.sun_path[sizeof(portfd_sock_addr.sun_path)-1] = 0;
+      if (strncmp(dial_tty, UNIX_SOCKET_PREFIX, strlen(UNIX_SOCKET_PREFIX)) == 0) {
+	struct sockaddr_un *portfd_sock_addr_un = (struct sockaddr_un *) &portfd_sock_addr;
+        portfd_sock_addr_un->sun_family = AF_UNIX;
+        strncpy(portfd_sock_addr_un->sun_path,
+                dial_tty + strlen(UNIX_SOCKET_PREFIX),
+                sizeof(portfd_sock_addr_un->sun_path)-1);
+        portfd_sock_addr_un->sun_path[sizeof(portfd_sock_addr_un->sun_path)-1] = 0;
+      } else if (strncmp(dial_tty, INET_SOCKET_PREFIX, strlen(INET_SOCKET_PREFIX)) == 0) {
+        struct addrinfo *ai;
+	char *node, *service, *dp, deleted_char;
+	node = &dial_tty[strlen(INET_SOCKET_PREFIX)];
+	service = NULL;
+	dp = NULL;
+	if (*node == '[') {	/* IPv6? */
+	  node++;
+	  service = strchr(node, ']');
+	  if (service != NULL && strncmp(service, "]:", 2) == 0) {
+	    dp = service; deleted_char = *dp;
+	    *service = '\0';	/* terminate IP address */
+	    service += 2;
+          }
+        } else {		/* ipv4 */
+	  service = strchr(node, ':');
+	  if (service != NULL) {
+	    dp = service; deleted_char = *dp;
+	    *service++ = '\0';
+	  }
+	}
+	if (getaddrinfo(node, service, NULL, &ai) == 0) {
+	  memcpy(&portfd_sock_addr, ai[0].ai_addr, ai[0].ai_addrlen);
+	  freeaddrinfo(ai);
+	} else {
+	  if (dp != NULL)
+	    *dp = deleted_char;
+	  fprintf(stderr, "bad address: \"%s\"\n", dial_tty);
+	}
+      }
       term_socket_connect();
     }
 #endif /* USE_SOCKET */

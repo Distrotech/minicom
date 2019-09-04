@@ -43,6 +43,8 @@
 #ifdef USE_SOCKET
 #include <sys/socket.h>
 #include <sys/un.h>
+#include <netdb.h>
+#include <netinet/in.h>
 #endif
 
 /*
@@ -115,7 +117,7 @@ EXTERN char *dial_pass;     /* Our password */
 #ifdef USE_SOCKET
 EXTERN int portfd_is_socket;	/* File descriptor is a unix socket */
 EXTERN int portfd_is_connected;	/* 1 if the socket is connected */
-EXTERN struct sockaddr_un portfd_sock_addr;	/* the unix socket address */
+EXTERN struct sockaddr portfd_sock_addr;	/* the unix socket address */
 #define portfd_connected ((portfd_is_socket && !portfd_is_connected) \
                            ? -1 : portfd)
 #else

@@ -30,7 +30,7 @@
 #ifdef USE_SOCKET
 int portfd_is_socket;
 int portfd_is_connected;
-struct sockaddr_un portfd_sock_addr;
+struct sockaddr portfd_sock_addr;
 #endif
 
 /*
