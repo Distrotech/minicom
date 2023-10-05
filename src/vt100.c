@@ -1012,7 +1012,7 @@ void vt_out(int ch)
   switch (esc_s) {
     case 0: /* Normal character */
       if (vt_docap == 1)
-        fputc(P_CONVCAP[0] == 'Y' ? vt_inmap[c] : c, capfp);
+        fputwc(wc, capfp);
       if (!using_iconv()) {
         c = vt_inmap[c];    /* conversion 04.09.97 / jl */
 #if TRANSLATE
